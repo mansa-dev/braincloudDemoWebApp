@@ -435,6 +435,11 @@ require_once('backend.php');
                   </tr>
                 </thead>
                 <tbody>
+                  <?php 
+$sql = "SELECT * FROM contacts";
+$result = RunQuery($sql, true);
+foreach($result as $key => $value){
+                  ?>
                   <tr>
                     <td>
                       <div class="custom-control custom-checkbox">
@@ -454,6 +459,9 @@ require_once('backend.php');
                     <td>#datagroup</td>
                     <td>20</td>
                   </tr>
+                  <?php
+                }
+                ?>
                 </tbody>
               </table>
             </div>
@@ -469,7 +477,7 @@ require_once('backend.php');
       <div class="footer_inner d-flex align-items-center justify-content-between">
         <ul class="d-flex align-items-center">
           <li class="li_buttons">
-            <button type="button" class="list_btn not_active" name="button" onclick="switchVisible();"><i class="fa fa-list"></i></button><button type="button" class="grid_btn active" name=" button" onclick="switchVisible();"><i class="fa fa-th-large"></i></button>
+            <button type="button" class="list_btn " name="button"><i class="fa fa-list"></i></button><button type="button" class="grid_btn active" name=" button"><i class="fa fa-th-large"></i></button>
           </li>
           <li><i class="fa fa-check"></i> 0 Selected</li>
           <li><i class="fa fa-filter"></i> 239 Filter Result</li>
