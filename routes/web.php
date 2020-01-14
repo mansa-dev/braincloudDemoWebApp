@@ -11,8 +11,5 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('/', 'Contact@test');
+Route::get('/', 'Contact@index')->middleware('cors');

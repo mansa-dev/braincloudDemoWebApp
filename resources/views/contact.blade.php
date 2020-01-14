@@ -9,23 +9,29 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css"> -->
 
-  <link rel="stylesheet" href="http://localhost/brain_cloud/resources/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://localhost/brain_cloud/resources/css/common.css">
-  <link rel="stylesheet" href="http://localhost/brain_cloud/resources/css/style.css">
+  <link rel="stylesheet" href="http://127.0.0.1/brain_cloud/resources/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://127.0.0.1/brain_cloud/resources/css/common.css">
+  <link rel="stylesheet" href="http://127.0.0.1/brain_cloud/resources/css/style.css">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--   <script type="text/javascript" src="{{ URL::asset('resources/js/jquery.min.js') }}"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="{{ URL::asset('resources/js/custom.js') }}"></script> -->
-  <script type="text/javascript" src=" http://localhost/brain_cloud/resources/js/jquery.min.js"></script>
-  <script src=" http://localhost/brain_cloud/resources/js/popper.min.js"></script>
-  <script src=" http://localhost/brain_cloud/resources/js/bootstrap.min.js"></script>
-  <script src=" http://localhost/brain_cloud/resources/js/custom.js"></script>
+  <script type="text/javascript" src="http://127.0.0.1/brain_cloud/resources/js/jquery.min.js"></script>
+  <script src="http://127.0.0.1/brain_cloud/resources/js/popper.min.js"></script>
+  <script src="http://127.0.0.1/brain_cloud/resources/js/bootstrap.min.js"></script>
+  <script src="http://127.0.0.1/brain_cloud/resources/js/custom.js"></script>
+<!--   <script src="http://127.0.0.1/brain_cloud/resources/js/prefixfree.min.js"></script> -->
+
 
  
 </head>
 <body>
+
   <div class="g_wrapper">
     <div class="navbar_coustom_area d-flex align-items-center">
       <div class="site_navbar_logo">
@@ -126,7 +132,7 @@
       <div class="main_content_inner_area">
         <div class="tab-content">
           <div id="people" class="container tab-pane active">
-            <div class="grid_view" id="grid_view">
+<!--             <div class="grid_view" id="grid_view">
               <div class="user_pf_area xl">
                 <div class="check_box">
                   <div class="custom-control custom-checkbox">
@@ -427,8 +433,8 @@
                   </ul>
                 </div>
               </div>
-            </div>
-            <div class="list_view" id="list_view">
+            </div> -->
+<!--             <div class="list_view" id="list_view">
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -445,6 +451,7 @@
                   </tr>
                 </thead>
                 <tbody>
+                @foreach ($data->slice(0, 10) as $value)    
                   <tr>
                     <td>
                       <div class="custom-control custom-checkbox">
@@ -464,9 +471,32 @@
                     <td>#datagroup</td>
                     <td>20</td>
                   </tr>
+                @endforeach
                 </tbody>
               </table>
-            </div>
+            </div> -->
+
+            <ul id="products" class="list clearfix">
+      <!-- row 1 -->
+            <li class="clearfix">
+              <section class="left">
+                <img src="images/products/list-default-thumb.png" alt="default thumb" class="thumb">
+                <h3>Product Name</h3>
+                <span class="meta">Product ID: 543J423</span>
+              </section>
+              
+              <section class="right">
+                <span class="price">$45.00</span>
+                <span class="darkview">
+                <a href="javascript:void(0);" class="firstbtn"><img src="images/read-more-btn.png" alt="Read More..."></a>
+                <a href="javascript:void(0);"><img src="images/add-to-cart-btn.png" alt="Add to Cart"></a>
+                </span>
+              </section>
+            </li>
+            
+            
+          </ul>
+
           </div>
           <div id="companies" class="container tab-pane fade">
           </div>
@@ -478,9 +508,13 @@
     <footer class="footer">
       <div class="footer_inner d-flex align-items-center justify-content-between">
         <ul class="d-flex align-items-center">
-          <li class="li_buttons">
-            <button type="button" class="list_btn " name="button"><i class="fa fa-list"></i></button><button type="button" class="grid_btn active" name=" button"><i class="fa fa-th-large"></i></button>
-          </li>
+              <span class="list-style-buttons">
+        <a href="#" id="gridview" class="switcher"><img src="images/grid-view.png" alt="Grid"></a>
+        <a href="#" id="listview" class="switcher active"><img src="images/list-view-active.png" alt="List"></a>
+      </span>
+ <!--          <li class="li_buttons">
+            <button type="button" id="list-view" class="list_btn " name="button"><i class="fa fa-list"></i></button><button type="button" id="grid-view" class="grid_btn active" name=" button"><i class="fa fa-th-large"></i></button>
+          </li> -->
           <li><i class="fa fa-check"></i> 0 Selected</li>
           <li><i class="fa fa-filter"></i> 239 Filter Result</li>
           <li><i class="fa fa-list"></i> 732 All Items</li>
