@@ -12,4 +12,6 @@
 */
 
 
-Route::get('/', 'Contact@index')->middleware('cors');
+Route::get('/', 'Contact@index');
+
+Route::post('/loadContactData', 'AjaxController@index');

@@ -1,4 +1,6 @@
 
+var base_url = window.location.href;
+
 $(document).ready(function(){
 
 	 $('button').click(function(){
@@ -79,5 +81,25 @@ $(document).ready(function(){
 		}
 
 	});
+
+	$(document).on('click','.show_more',function(){
+		
+        var id = $(this).attr('id');
+        var content = $('meta[name="csrf_token"]').attr('content');
+
+
+        $('.show_more').hide();
+        $.ajax({
+            type:'POST',
+            url: base_url+'loadContactData',
+            data:'id='+id,
+
+            success:function(html){
+            	alert(html);
+                $('#show_more_main'+ID).remove();
+                $('.postList').append(html);
+            }
+        });
+    });
 
 });

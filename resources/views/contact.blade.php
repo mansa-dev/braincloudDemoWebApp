@@ -3,6 +3,8 @@
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
+
 <!-- 
   Need to add dynamic links on the place of direct links  -->
 <!--   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -476,12 +478,13 @@
               </table>
             </div> -->
 
-            <ul id="products" class="list clearfix">
-      <!-- row 1 -->
+            <ul id="contact_data" class="list clearfix">
+            @foreach($data as $value) 
+            <?php $id = $value->id; ?>
             <li class="clearfix">
               <section class="left">
                 <img src="images/products/list-default-thumb.png" alt="default thumb" class="thumb">
-                <h3>Product Name</h3>
+                <h3></h3>
                 <span class="meta">Product ID: 543J423</span>
               </section>
               
@@ -493,7 +496,10 @@
                 </span>
               </section>
             </li>
-            
+            @endforeach
+
+            <div class="show_more_main" id="show_more_main<?php echo $id; ?>">
+            <span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show more</span>
             
           </ul>
 
