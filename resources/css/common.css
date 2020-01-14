@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: segoe_b;
+  src: url(fonts/Segoe_UI_Bold.woff);
+}
+@font-face {
+  font-family: segoe_r;
+  src: url(fonts/Segoe_UI.woff);
+}
+body {
+  font-family: segoe_r;
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #747a80;
+  text-align: left;
+  background-color: #fafafa;
+}
+h1, h2, h3, h4, h5, p, ul, a{
+  text-decoration: none !important;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
