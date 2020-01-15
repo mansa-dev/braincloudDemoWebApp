@@ -262,7 +262,187 @@
         <div class="tab-content">
           <div id="people" class="container tab-pane active">
             <div class="grid_view" id="grid_view">
+ <!--                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -1041,8 +1221,728 @@
                                         </li>
                                     </ul>
                                 </div>
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="user_pf_area xs_zomm">
+                                <div class="check_box">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                        <label class="custom-control-label" for="customCheck"></label>
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                </div>
+                                <div class="basic_info">
+                                    <h1 class="name">Allen Moreno</h1>
+                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <div class="private_info mb-3">
+                                        <span class="d-block w-100">0123456789</span>
+                                        <span class="d-block w-100">Test@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="proffesional_tags mb-2">
+                                    <ul>
+                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">#HR</li>
+                                        <li class="color_name basic_tags">#Data</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#Bussiness Line</li>
+                                        <li class="color_name basic_tags">#Function</li>
+                                        <li class="color_name basic_tags">#Network</li>
+                                        <li class="color_name basic_tags">#IT</li>
+                                    </ul>
+                                </div>
+                                <div class="friend_list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -1761,8 +2661,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -1821,8 +2721,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -1881,8 +2781,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -1941,8 +2841,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -2001,8 +2901,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -2061,8 +2961,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -2121,8 +3021,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -2181,8 +3081,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -2241,8 +3141,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -2301,8 +3201,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -2361,8 +3261,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -2421,8 +3321,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
+                            </div> -->
+<!--                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -2481,7 +3381,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
+                        @foreach($data as $value)
                             <div class="user_pf_area xs_zomm">
                                 <div class="check_box">
                                     <div class="custom-control custom-checkbox">
@@ -2493,23 +3394,23 @@
                                     <img src="images/face8.jpg" alt="" class="rounded-circle">
                                 </div>
                                 <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
+                                    <h1 class="name">{{$value->First_Name}}</h1>
+                                    <p class="little_description mb-2">{{$value->Job1_Title}} at {{$value->Job1_Company}}<b>, </b>{{$value->Age}}/p>
                                     <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
+                                        <span class="d-block w-100">{{$value->PhoneNumber1}}</span>
+                                        <span class="d-block w-100">{{$value->Email1}}</span>
                                     </div>
                                 </div>
                                 <div class="proffesional_tags mb-2">
                                     <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
+                                        <li class="color_name basic_tags">{{'#'.$value->Tag1}}</li>
+                                        <li class="color_name basic_tags">{{'#'.$value->Tag2}}</li>
+                                        <li class="color_name basic_tags">{{'#'.$value->Tag3}}</li>
+                                        <li class="color_name basic_tags">{{'#'.$value->Tag4}}</li>
+                                        <li class="color_name basic_tags">{{'#'.$value->Tag5}}</li>
+                                        <li class="color_name basic_tags">{{'#'.$value->Tag6}}</li>
+                                        <li class="color_name basic_tags">{{'#'.$value->Tag7}}</li>
+                                        <li class="color_name basic_tags">{{'#'.$value->Tag8}}</li>
                                     </ul>
                                 </div>
                                 <div class="friend_list">
@@ -2542,906 +3443,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="user_pf_area xs_zomm">
-                                <div class="check_box">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                </div>
-                                <div class="basic_info">
-                                    <h1 class="name">Allen Moreno</h1>
-                                    <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                    <div class="private_info mb-3">
-                                        <span class="d-block w-100">0123456789</span>
-                                        <span class="d-block w-100">Test@gmail.com</span>
-                                    </div>
-                                </div>
-                                <div class="proffesional_tags mb-2">
-                                    <ul>
-                                        <li class="color_name basic_tags">#IT</li>
-                                        <li class="color_name basic_tags">#HR</li>
-                                        <li class="color_name basic_tags">#Data</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#Bussiness Line</li>
-                                        <li class="color_name basic_tags">#Function</li>
-                                        <li class="color_name basic_tags">#Network</li>
-                                        <li class="color_name basic_tags">#IT</li>
-                                    </ul>
-                                </div>
-                                <div class="friend_list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                      @endforeach
              </div>
                         <div class="list_view" id="list_view">
                             <table class="table table-striped">
@@ -3514,7 +3516,7 @@
                         <div class="volumne">
                             <span class="vlm_txt">
                                 <div class="vlm_slider">
-                                    <input type="range" min="1" max="5" value="1" class="slider" id="myvolume">
+                                    <input type="range" min="1" max="5" value="1" class="slider" id="myrange">
                                 </div>
                             </span>
                         </div>
@@ -3525,7 +3527,7 @@
         </footer>
   </div>
   <script>
-  var slider = document.getElementById("myvolume");
+  var slider = document.getElementById("myrange");
   var output = document.getElementById("myvolume_range");
   output.innerHTML = slider.value;
 
