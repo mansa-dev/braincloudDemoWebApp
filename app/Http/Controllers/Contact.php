@@ -15,7 +15,7 @@ class Contact extends Controller
 	*/
     public function index(){
         
-        $responseData = contactModel::fetchContactsData();
+        $responseData = contactModel::fetchContactsData(0);
     	return view('contact',['data'=>$responseData]);
     
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\contactModel;
 
 class AjaxController extends Controller
 {
@@ -15,6 +16,6 @@ class AjaxController extends Controller
        
     	$responseData = contactModel::fetchContactsData($_POST['id']);
     	$response =  view('load_contact',['data'=>$responseData]);
-    	var_dump($response); die; 
+    	echo $response;  
     }
 }

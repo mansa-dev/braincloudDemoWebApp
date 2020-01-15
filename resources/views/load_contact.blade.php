@@ -1,21 +1,26 @@
-@foreach($data as $value) 
+@foreach($data as $value)
 <?php $id = $value->id; ?>
-<li class="clearfix">
-  <section class="left">
-    <img src="images/products/list-default-thumb.png" alt="default thumb" class="thumb">
-    <h3></h3>
-    <span class="meta">Product ID: 543J423</span>
-  </section>
-  
-  <section class="right">
-    <span class="price">$45.00</span>
-    <span class="darkview">
-    <a href="javascript:void(0);" class="firstbtn"><img src="images/read-more-btn.png" alt="Read More..."></a>
-    <a href="javascript:void(0);"><img src="images/add-to-cart-btn.png" alt="Add to Cart"></a>
-    </span>
-  </section>
-</li>
+  <tr>
+      <td>
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+              <label class="custom-control-label" for="customCheck"></label>
+          </div>
+      </td>
+      <td>
+          <img src="images/face8.jpg" alt="">
+      </td>
+      <td>{{$value->First_Name}}</td>
+      <td>{{$value->Name}}</td>
+      <td>{{$value->Job1_Title}}</td>
+      <td>{{$value->Job1_Company}}</td>
+      <td>{{$value->PhoneNumber1}}</td>
+      <td>{{$value->Email1}}</td>
+      <td>{{$value->Tag1}}</td>
+      <td>{{$value->Age}}</td>
+  </tr>
 @endforeach
 
-<div class="show_more_main" id="show_more_main<?php echo $id; ?>">
-<span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show more</span>
+<div class="show_more_main hello" id="show_more_main<?php echo $id; ?>" >
+      <span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show more</span>
+</div>

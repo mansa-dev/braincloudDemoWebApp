@@ -14,7 +14,7 @@
   <script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
   <script src="{{ asset('/js/popper.min.js') }}"></script>
   <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-  <script src="{{ asset('/js/custom.js') }}"></script>
+  <script src="{{ asset('/js/custom.js?v=123') }}"></script>
 
 </head>
 <body>
@@ -3461,7 +3461,7 @@
                                 </thead>
                                 <tbody>
                                   @foreach($data as $value)
-                                  <?php //var_dump($value); die; ?>
+                                  <?php $id = $value->id; ?>
                                     <tr>
                                         <td>
                                             <div class="custom-control custom-checkbox">
@@ -3482,9 +3482,15 @@
                                         <td>{{$value->Age}}</td>
                                     </tr>
                                   @endforeach
+                              <div class="show_more_main" id="show_more_main<?php echo $id; ?>">
+                              <span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show more</span>
+                            </div>
+                            <div class="contactList">
+
+                            </div>
                                 </tbody>
                             </table>
-                        </div>
+
           </div>
           <div id="companies" class="container tab-pane fade">
           </div>

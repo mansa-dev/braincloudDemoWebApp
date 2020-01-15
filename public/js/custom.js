@@ -1,3 +1,7 @@
+
+var base_url = window.location.href;
+
+
 $(document).ready(function(){
 	 $('button').click(function(){
 	 if(this.id == 'btn1'){
@@ -30,7 +34,24 @@ $(document).ready(function(){
     });
 
     
+    //Ajax to load the data on 
+	$(document).on('click','.show_more',function(){
+		
+        var id = $(this).attr('id');
+   
+        $('.show_more').hide();
+        $.ajax({
+            type:'POST',
+            url: base_url+'loadContactData',
+            data:'id='+id,
 
+            success:function(html){
+            	console.log(html); 
+                $('#show_more_main'+id).remove();
+                $('.contactList').append(html);
+            }
+        });
+    });
     
     
 });
