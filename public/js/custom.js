@@ -39,7 +39,7 @@ $(document).ready(function(){
 		
         var id = $(this).attr('id');
    
-        $('.show_more').hide();
+
         $.ajax({
             type:'POST',
             url: base_url+'loadContactData',
@@ -48,7 +48,7 @@ $(document).ready(function(){
             success:function(html){
             	console.log(html); 
                 $('#show_more_main'+id).remove();
-                $('.contactList').append(html);
+                $('#list_view_table').append(html);
             }
         });
     });

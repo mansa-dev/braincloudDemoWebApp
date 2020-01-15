@@ -12,10 +12,10 @@
       </td>
       <td>{{$value->First_Name}}</td>
       <td>{{$value->Name}}</td>
-      <td>{{$value->Job1_Title}}</td>
+      <td class="positon">{{$value->Job1_Title}}</td>
       <td>{{$value->Job1_Company}}</td>
       <td>{{$value->PhoneNumber1}}</td>
-      <td>{{$value->Email1}}</td>
+      <td class="email">{{$value->Email1}}</td>
       <td>{{$value->Tag1}}</td>
       <td>{{$value->Age}}</td>
   </tr>
