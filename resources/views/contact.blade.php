@@ -1,3 +1,22 @@
+
+
+1 of 591
+(no subject)
+Inbox
+x
+
+Lakshaya Kumar
+Attachments
+3:21 PM (0 minutes ago)
+to me
+
+
+
+--
+Thanks and Best Regards
+Lakshaya Kumar | web developer
+Attachments area
+
 <html>
 <head>
   <title></title>
@@ -3394,151 +3413,143 @@
                                   <img src="images/face8.jpg" alt="" class="rounded-circle">
                                 </div>
                                 <div class="basic_info">
-                                  <h1 class="name">Allen Moreno</h1>
-                                  <p class="little_description mb-2">Analyst at <b>Braincloud, </b>20</p>
-                                  <div class="private_info mb-3">
-                                    <span class="d-block w-100">0123456789</span>
-                                    <span class="d-block w-100">Test@gmail.com</span>
+                                  <h1 class="name">{{$value->First_Name}}</h1>
+                                  <p class="little_description mb-2">{{$value->Job1_Title}} at {{$value->Job1_Company}}<b>, </b>{{$value->Age}}/p>
+                                    <div class="private_info mb-3">
+                                      <span class="d-block w-100">{{$value->PhoneNumber1}}</span>
+                                      <span class="d-block w-100">{{$value->Email1}}</span>
+                                    </div>
+                                  </div>
+                                  <div class="proffesional_tags mb-2">
+                                    <ul>
+                                      <li class="color_name basic_tags">{{'#'.$value->Tag1}}</li>
+                                      <li class="color_name basic_tags">{{'#'.$value->Tag2}}</li>
+                                      <li class="color_name basic_tags">{{'#'.$value->Tag3}}</li>
+                                      <li class="color_name basic_tags">{{'#'.$value->Tag4}}</li>
+                                      <li class="color_name basic_tags">{{'#'.$value->Tag5}}</li>
+                                      <li class="color_name basic_tags">{{'#'.$value->Tag6}}</li>
+                                      <li class="color_name basic_tags">{{'#'.$value->Tag7}}</li>
+                                      <li class="color_name basic_tags">{{'#'.$value->Tag8}}</li>
+                                    </ul>
+                                  </div>
+                                  <div class="friend_list">
+                                    <ul>
+                                      <li>
+                                        <a href="#">
+                                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                                        </a>
+                                      </li>
+                                    </ul>
                                   </div>
                                 </div>
-                                <div class="proffesional_tags mb-2">
-                                  <ul>
-                                    <li class="color_name basic_tags">#IT</li>
-                                    <li class="color_name basic_tags">#HR</li>
-                                    <li class="color_name basic_tags">#Data</li>
-                                    <li class="color_name basic_tags">#Network</li>
-                                    <li class="color_name basic_tags">#Bussiness Line</li>
-                                    <li class="color_name basic_tags">#Function</li>
-                                    <li class="color_name basic_tags">#Network</li>
-                                    <li class="color_name basic_tags">#IT</li>
-                                  </ul>
-                                </div>
-                                <div class="friend_list">
-                                  <ul>
-                                    <li>
-                                      <a href="#">
-                                        <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#">
-                                        <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#">
-                                        <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#">
-                                        <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#">
-                                        <img src="images/face8.jpg" alt="" class="rounded-circle">
-                                      </a>
-                                    </li>
-                                  </ul>
+                                @endforeach
+                              </div>
+                              <div class="list_view" id="list_view">
+                                <table class="table table-striped" id="list_view_table">
+                                  <thead>
+                                    <tr>
+                                      <th></th>
+                                      <th>Photo</th>
+                                      <th>First Name</th>
+                                      <th>Family Name</th>
+                                      <th class="positon">Position</th>
+                                      <th>Company</th>
+                                      <th>Telephone</th>
+                                      <th class="email">Mail</th>
+                                      <th>Tag</th>
+                                      <th>Age</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    @foreach($data as $value)
+                                    <?php $id = $value->id; ?>
+                                    <tr>
+                                      <td>
+                                        <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                          <label class="custom-control-label" for="customCheck"></label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <img src="images/face8.jpg" alt="">
+                                      </td>
+                                      <td>{{$value->First_Name}}</td>
+                                      <td>{{$value->Name}}</td>
+                                      <td class="positon">{{$value->Job1_Title}}</td>
+                                      <td>{{$value->Job1_Company}}</td>
+                                      <td>{{$value->PhoneNumber1}}</td>
+                                      <td class="email">{{$value->Email1}}</td>
+                                      <td>{{$value->Tag1}}</td>
+                                      <td>{{$value->Age}}</td>
+                                    </tr>
+                                    @endforeach
+
+                                  </tbody>
+                                </table>
+                                <div class="show_more_main" id="show_more_main<?php echo $id; ?>">
+                                  <span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show more</span>
                                 </div>
                               </div>
-                              @endforeach
-                            </div>
-                            <div class="list_view" id="list_view">
-                              <table class="table table-striped" id="list_view_table">
-                                <thead>
-                                  <tr>
-                                    <th>
-                                      <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                      </div>
-
-                                    </th>
-                                    <th>Photo</th>
-                                    <th>First Name</th>
-                                    <th>Family Name</th>
-                                    <th class="positon">Position</th>
-                                    <th>Company</th>
-                                    <th>Telephone</th>
-                                    <th class="email">Mail</th>
-                                    <th>Tag</th>
-                                    <th>Age</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  @foreach($data as $value)
-                                  <?php $id = $value->id; ?>
-                                  <tr>
-                                    <td>
-                                      <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                                        <label class="custom-control-label" for="customCheck"></label>
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <img src="images/face8.jpg" alt="">
-                                    </td>
-                                    <td>{{$value->First_Name}}</td>
-                                    <td>{{$value->Name}}</td>
-                                    <td class="positon">{{$value->Job1_Title}}</td>
-                                    <td>{{$value->Job1_Company}}</td>
-                                    <td>{{$value->PhoneNumber1}}</td>
-                                    <td class="email">{{$value->Email1}}</td>
-                                    <td>{{$value->Tag1}}</td>
-                                    <td>{{$value->Age}}</td>
-                                  </tr>
-                                  
-                                  @endforeach
-                                </tbody>
-                              </table>
-
-                              <div class="show_more_main" id="show_more_main<?php echo $id; ?>">
-                                <span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show more</span>
+                              <div id="companies" class="container tab-pane fade">
                               </div>
-
-                            </div>
-                            <div id="companies" class="container tab-pane fade">
-                            </div>
-                            <div id="groups" class="container tab-pane fade">
+                              <div id="groups" class="container tab-pane fade">
+                              </div>
                             </div>
                           </div>
                         </div>
+                        <footer class="footer">
+                          <div class="footer_inner d-flex align-items-center justify-content-between">
+                            <ul class="d-flex align-items-center">
+                              <li class="li_buttons">
+                                <button type="button" class="list_btn " name="button"><i class="fa fa-list"></i></button><button type="button" class="grid_btn active" name=" button"><i class="fa fa-th-large"></i></button>
+                              </li>
+                              <li><i class="fa fa-check"></i> 0 Selected</li>
+                              <li><i class="fa fa-filter"></i> 239 Filter Result</li>
+                              <li><i class="fa fa-list"></i> 732 All Items</li>
+                            </ul>
+                            <div class="progress_line_bar w-25">
+                              <div class="buy_subscription_slider">
+                                <div class="volumne">
+                                  <span class="vlm_txt">
+                                    <div class="vlm_slider">
+                                      <input type="range" min="1" max="5" value="1" class="slider" id="myrange">
+                                    </div>
+                                  </span>
+                                </div>
+                                <!-- <p class="text-center"><span id="myvolume_range">1</span></p> -->
+                              </div>
+                            </div>
+                          </div>
+                        </footer>
                       </div>
-                      <footer class="footer">
-                        <div class="footer_inner d-flex align-items-center justify-content-between">
-                          <ul class="d-flex align-items-center">
-                            <li class="li_buttons">
-                              <button type="button" class="list_btn " name="button"><i class="fa fa-list"></i></button><button type="button" class="grid_btn active" name=" button"><i class="fa fa-th-large"></i></button>
-                            </li>
-                            <li><i class="fa fa-check"></i> 0 Selected</li>
-                            <li><i class="fa fa-filter"></i> 239 Filter Result</li>
-                            <li><i class="fa fa-list"></i> 732 All Items</li>
-                          </ul>
-                          <div class="progress_line_bar w-25">
-                            <div class="buy_subscription_slider">
-                              <div class="volumne">
-                                <span class="vlm_txt">
-                                  <div class="vlm_slider">
-                                    <input type="range" min="1" max="5" value="1" class="slider" id="myvolume">
-                                  </div>
-                                </span>
-                              </div>
-                              <!-- <p class="text-center"><span id="myvolume_range">1</span></p> -->
-                            </div>
-                          </div>
-                        </div>
-                      </footer>
-                    </div>
-                    <script>
-                      var slider = document.getElementById("myvolume");
-                      var output = document.getElementById("myvolume_range");
-                      output.innerHTML = slider.value;
+                      <script>
+                        var slider = document.getElementById("myrange");
+                        var output = document.getElementById("myvolume_range");
+                        output.innerHTML = slider.value;
 
-                      slider.oninput = function() {
-                        output.innerHTML = this.value;
-                      };
-                    </script>
-                  </body>
-                  </html>
+                        slider.oninput = function() {
+                          output.innerHTML = this.value;
+                        };
+                      </script>
+                    </body>
+                    </html>
