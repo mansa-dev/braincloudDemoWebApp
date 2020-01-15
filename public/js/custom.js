@@ -49,6 +49,12 @@ $(document).ready(function(){
         });
     });
 
+    //to keep all the values checked or unchecked on button clicked
+    $(document).on('click','#gridCustomCheck',function(){
+    
+
+    }); 
+
     //Zoom functionality on the slider
     $(document).on('click','#myrange',function(){
 		
