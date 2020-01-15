@@ -5,32 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-<!-- 
-  Need to add dynamic links on the place of direct links  -->
-<!--   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/style.css"> -->
 
-  <link rel="stylesheet" href="http://127.0.0.1/brain_cloud/resources/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://127.0.0.1/brain_cloud/resources/css/common.css">
-  <link rel="stylesheet" href="http://127.0.0.1/brain_cloud/resources/css/style.css">
-
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
-
+  <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/common.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--   <script type="text/javascript" src="{{ URL::asset('resources/js/jquery.min.js') }}"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="{{ URL::asset('resources/js/custom.js') }}"></script> -->
-  <script type="text/javascript" src="http://127.0.0.1/brain_cloud/resources/js/jquery.min.js"></script>
-  <script src="http://127.0.0.1/brain_cloud/resources/js/popper.min.js"></script>
-  <script src="http://127.0.0.1/brain_cloud/resources/js/bootstrap.min.js"></script>
-  <script src="http://127.0.0.1/brain_cloud/resources/js/custom.js"></script>
-<!--   <script src="http://127.0.0.1/brain_cloud/resources/js/prefixfree.min.js"></script> -->
+  <script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
+  <script src="{{ asset('/js/popper.min.js') }}"></script>
+  <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('/js/custom.js') }}"></script>
 
-
- 
 </head>
 <body>
 
@@ -3475,6 +3460,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                  @foreach($data as $value)
+                                  <?php //var_dump($value); die; ?>
                                     <tr>
                                         <td>
                                             <div class="custom-control custom-checkbox">
@@ -3485,15 +3472,16 @@
                                         <td>
                                             <img src="images/face8.jpg" alt="">
                                         </td>
-                                        <td>Lia</td>
-                                        <td>Castro</td>
-                                        <td>Analyst</td>
-                                        <td>Braincloud</td>
-                                        <td>0123456789</td>
-                                        <td>test@example.com</td>
-                                        <td>#datagroup</td>
-                                        <td>20</td>
+                                        <td>{{$value->First_Name}}</td>
+                                        <td>{{$value->Name}}</td>
+                                        <td>{{$value->Job1_Title}}</td>
+                                        <td>{{$value->Job1_Company}}</td>
+                                        <td>{{$value->PhoneNumber1}}</td>
+                                        <td>{{$value->Email1}}</td>
+                                        <td>{{$value->Tag1}}</td>
+                                        <td>{{$value->Age}}</td>
                                     </tr>
+                                  @endforeach
                                 </tbody>
                             </table>
                         </div>

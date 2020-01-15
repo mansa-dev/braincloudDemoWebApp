@@ -21,7 +21,7 @@ class contactModel extends Model
 
     public static function fetchContactsData(){
     
-	    $result = DB::table('contacts')->offset(0)->limit(10)->get();
+	    $result = DB::table('contacts')->offset(0)->limit(15)->get();
 	    return $result;
     
     }

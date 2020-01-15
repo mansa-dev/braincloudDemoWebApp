@@ -1,4 +1,3 @@
- @csrf
 @foreach($data as $value) 
 <?php $id = $value->id; ?>
 <li class="clearfix">
