@@ -230,6 +230,10 @@
     font-size: 13px;
     font-weight: normal;
 }
+div#grid_view {
+    display: flex;
+    flex-wrap: wrap;
+}
 .g_wrapper .list_view .table th {
   font-family: segoe_b;
 }
@@ -388,8 +392,10 @@
     padding: 0;
 }
 .g_wrapper .user_pf_area.l_zomm .proffesional_tags ul li{
-  margin-bottom: 0;
   padding: 4px 12px;
+}
+.g_wrapper .user_pf_area .basic_info .private_info span {
+    word-break: break-all;
 }
 .g_wrapper .user_pf_area.l_zomm .basic_info .name{
   font-size: 16px;
@@ -405,7 +411,7 @@
   font-size: 15px;
 }
 .g_wrapper .user_pf_area.m_zomm .basic_info .little_description{
-  font-size: 13px;
+  font-size: 12px;
 }
 .g_wrapper .user_pf_area.m_zomm{
   width: 18%;
@@ -440,8 +446,8 @@
   left: 8px;
 }
 .g_wrapper .user_pf_area .image {
-  width: 102px;
-  height: 102px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
   border: 2px solid #1b5b81;
   padding: 4px;
@@ -459,7 +465,7 @@
   background: #000;
   border-radius: 5px;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 5px;
 }
 .g_wrapper .user_pf_area .basic_info .name {
@@ -469,10 +475,10 @@
 }
 .g_wrapper .user_pf_area .basic_info .little_description {
   font-size: 14px;
-  color: #989898;
+  color: #5a5a5a;
 }
 .g_wrapper .user_pf_area .basic_info .private_info {
-  color: #000;
+  color: #424242;
   font-size: 14px;
 }
 .g_wrapper .user_pf_area .friend_list ul{
@@ -584,6 +590,7 @@
 }
 .g_wrapper footer .footer_inner ul li button i{
   margin-right: 0;
+      color: #000;
 }
 .g_wrapper footer .footer_inner ul button.not_active{
   color: #51d6e7;
@@ -591,6 +598,9 @@
 .g_wrapper footer .footer_inner ul button.active{
   background: #51d6e7;
   color: #fff;
+}
+.g_wrapper footer .footer_inner ul button.active i{
+  color:#fff;
 }
 .g_wrapper footer .footer_inner ul li i{
   color: #bbd3ea;
