@@ -132,12 +132,14 @@
 <div class="li_dropdown" id="li_dropdown">
 <div class="acending_decending d-flex mb-3">
 <div class="custom-control custom-radio">
-<input type="radio" class="custom-control-input" id="ascending" name="example1">
-<label class="custom-control-label" for="ascending">A-Z</label>
+<input type="radio" class="name_filter" name="name_filter_radio" value="1" > A-Z
+<!-- <input type="radio" class="custom-control-input name_filter" id="ascending_name" value="1"> -->
+<!-- <label class="custom-control-label name_filter" for="ascending_name">A-Z</label> -->
 </div>
 <div class="custom-control custom-radio ml-3">
-<input type="radio" class="custom-control-input" id="customRadio" name="example1">
-<label class="custom-control-label" for="customRadio">Z-A</label>
+<input type="radio" class="name_filter" name="name_filter_radio" value="2" > Z-A
+<!-- <input type="radio" class="custom-control-input name_filter" id="descending_name" value="2"> -->
+<!-- <label class="custom-control-label name_filter" for="descending_name">Z-A</label> -->
 </div>
 </div>
 <div class="form-group has-search">
@@ -165,7 +167,7 @@
 </ul>
 </div>
 <div class="apply_clear_btns mt-3">
-<button class="apply_btn">Apply</button>
+<button class="apply_btn" id="name_filters">Apply</button>
 <button class="clear_btn">Clear All</button>
 </div>
 </div>
@@ -281,7 +283,7 @@
             </div>
             <div class="basic_info">
               <h1 class="name">{{$value->First_Name}}</h1>
-              <p class="little_description mb-2">{{$value->Job1_Title}} at {{$value->Job1_Company}}<b>, </b>{{$value->Age}}/p>
+              <p class="little_description mb-2">{{$value->Job1_Title}} at {{$value->Job1_Company}}<b>, </b>{{$value->Age}}</p>
                 <div class="private_info mb-3">
                   <span class="d-block w-100">{{$value->PhoneNumber1}}</span>
                   <span class="d-block w-100">{{$value->Email1}}</span>
@@ -379,8 +381,8 @@
 
               </tbody>
             </table>
-            <div class="show_more_main" id="show_more_main<?php echo $id; ?>">
-              <span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show more</span>
+            <div class="show_more_main" id="show_more_main">
+              <span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show More</span>
             </div>
           </div>
           <div id="companies" class="container tab-pane fade">

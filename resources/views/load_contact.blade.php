@@ -21,6 +21,4 @@
   </tr>
 @endforeach
 
-<div class="show_more_main hello" id="show_more_main<?php echo $id; ?>" >
-      <span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show more</span>
-</div>
+

@@ -38,13 +38,15 @@ $(document).ready(function(){
 	$(document).on('click','.show_more',function(){
 		
         var id = $(this).attr('id');
+       
         $.ajax({
             type:'POST',
             url: base_url+'loadContactData',
+            dataType : 'html',
             data:'id='+id,
             success:function(html){
-            	console.log(html); 
-                $('#list_view_table').append(html);
+            	 $(".show_more").attr("id",parseInt(id)+parseInt(10));
+                $('#list_view_table tbody').append(html);
             }
         });
     });
@@ -59,8 +61,7 @@ $(document).ready(function(){
     $(document).on('click','#myrange',function(){
 		
         var rangeValue = $(this).val();
-        // $(".user_pf_area").addClass("l_zomm");
-        // $(".user_pf_area").removeClass("xs_zomm");
+
 		//Switch statement to add the the classes on zoom in and out.
 		switch (rangeValue) {
 		  case '1':
@@ -84,6 +85,24 @@ $(document).ready(function(){
 		    $(".user_pf_area").addClass('xl_zomm');
 		    break;
 		}
+    });
+
+    //Ajax functionality for Name filters
+    $(document).on('click','#name_filters',function(){
+
+        var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
+          
+          $.ajax({
+            type:'POST',
+            url: base_url+'loadNameFilterData',
+            dataType : 'html',
+            data:'id='+nameFilterValue,
+            success:function(html){
+            	
+            	$('#list_view_table tbody').empty();
+                $('#list_view_table tbody').html(html);
+            }
+        });
     });
     
     

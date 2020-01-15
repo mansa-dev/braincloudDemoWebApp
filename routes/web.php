@@ -15,3 +15,4 @@
 Route::get('/', 'Contact@index');
 
 Route::post('/loadContactData', 'AjaxController@index');
+Route::post('/loadNameFilterData', 'AjaxController@loadNameFilterData');

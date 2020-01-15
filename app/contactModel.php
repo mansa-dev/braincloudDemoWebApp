@@ -21,8 +21,19 @@ class contactModel extends Model
 
     public static function fetchContactsData($offset){
         
-	    $result = DB::table('contacts')->offset($offset)->limit(10)->get();
-	    return $result;
+	    return DB::table('contacts')->offset($offset)->limit(10)->get();
     
     }
+
+     /**
+     * This function will get filter data
+     * 
+     */
+
+     public static function fetchFilterData($sortingType){
+
+     	return DB::table('users')
+                ->orderBy('name', "$sortingType")
+                ->get();
+     }
 }

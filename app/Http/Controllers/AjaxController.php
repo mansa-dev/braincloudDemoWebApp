@@ -18,4 +18,16 @@ class AjaxController extends Controller
     	$response =  view('load_contact',['data'=>$responseData]);
     	echo $response;  
     }
+
+    /**
+	 * Function to load data on filter
+	 * 
+	 */
+
+    public function loadNameFilterData(){
+
+       $sortingType = ($_POST['id'] == '1')?'desc':'asc';
+       
+       $responseData = contactModel::fetchFilterData($sortingType);
+    }
 }
