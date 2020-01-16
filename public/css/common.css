@@ -51,3 +51,19 @@ h1, h2, h3, h4, h5, p, ul, a{
 ::-webkit-scrollbar-thumb:hover {
   background: #4a4a4a;
 }
+.selected_btn{
+  background-image: linear-gradient(to right, #ff7a7b, #e73105) !important;
+  color: #fff !important;
+  border-image: linear-gradient(to right, #ff7a7b, #e73105) !important;
+}
+.unselected_btn{
+  background-image: linear-gradient(to left, #44dbcf, #2de79d) !important;
+  color: #fff !important;
+  border-image: linear-gradient(to right, #44dbcf, #2de79d) !important;
+}
+.unselected_btn i{
+  color:inherit !important;
+}
+.selected_btn i{
+  color:inherit !important;
+}

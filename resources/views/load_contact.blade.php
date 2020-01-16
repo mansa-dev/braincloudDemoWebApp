@@ -3,8 +3,8 @@
   <tr>
       <td>
           <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-              <label class="custom-control-label" for="customCheck"></label>
+              <input type="checkbox" class="custom-control-input sm_ch" id="customCheck" name="example1">
+              <label class="custom-control-label sm_ch" for="customCheck"></label>
           </div>
       </td>
       <td>

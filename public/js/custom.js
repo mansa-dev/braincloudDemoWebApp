@@ -3,89 +3,118 @@ var base_url = window.location.href;
 
 
 $(document).ready(function(){
-	 $('button').click(function(){
-	 if(this.id == 'btn1'){
-	   $('#list_view').show();
-	   $('#grid_view').hide();
-	 }else{
-	   $('#list_view').hide();
-	   $('#grid_view').show();
-	 }
+	$('button').click(function(){
+		if(this.id == 'btn1'){
+			$('#list_view').show();
+			$('#grid_view').hide();
+		}else{
+			$('#list_view').hide();
+			$('#grid_view').show();
+		}
 	});
 
 
 	$('.list_btn').click(function(){
-		 $(this).addClass('active');
-		 $('.grid_btn').removeClass('active');
-		 $('#list_view').show();
-		 $('#grid_view').hide();
+		$(this).addClass('active');
+		$('.grid_btn').removeClass('active');
+		$('#list_view').show();
+		$('#grid_view').hide();
 	});
 
 	$('.grid_btn').click(function(){
-		 $(this).addClass('active');
-		 $('.list_btn').removeClass('active');
-		 $('#list_view').hide();
-		 $('#grid_view').show();
+		$(this).addClass('active');
+		$('.list_btn').removeClass('active');
+		$('#list_view').hide();
+		$('#grid_view').show();
 	});
-    
-    $(".filter_ul li span").click(function(){
-      $( this ).toggleClass('bg_white');
-      $(this).next('.li_dropdown').toggle();
-    });
 
-    
+	$(".filter_ul li span").click(function(){
+		$( this ).toggleClass('bg_white');
+		$(this).next('.li_dropdown').toggle();
+	});
+
+
     //Ajax to load the data on 
-	$(document).on('click','.show_more',function(){
-		
-        var id = $(this).attr('id');
-        $.ajax({
-            type:'POST',
-            url: base_url+'loadContactData',
-            datatype:"html",
-            data:'id='+id,
-            success:function(html){
-            	console.log(html); 
-                $('#list_view_table').append(html);
-            }
-        });
+    $(document).on('click','.show_more',function(){
+
+    	var id = $(this).attr('id');
+    	$.ajax({
+    		type:'POST',
+    		url: base_url+'loadContactData',
+    		datatype:"html",
+    		data:'id='+id,
+    		success:function(html){
+    			console.log(html); 
+    			$('#list_view_table').append(html);
+    		}
+    	});
     });
 
     //to keep all the values checked or unchecked on button clicked
-    $(document).on('click','#gridCustomCheck',function(){
-    
+    $('.selectall').click(function() {
+    	if ($(this).is(':checked')) {
+    		$('.grid_view .sm_ch').attr('checked', true);
+    		$('.list_view .sm_ch').attr('checked', true);
+    		$('.list_view .table_grid_ch').attr('checked', true);
+    		
+    	} else {
+    		$('.grid_view .sm_ch').attr('checked', false);
+    		$('.list_view .sm_ch').attr('checked', false);
+    		$('.list_view .table_grid_ch').attr('checked', false);
+    	}
+    });
 
-    }); 
+
+
+    // For selected tags in filter
+    $(".li_btns li").click(function(e) {
+    	var slectedtagclass= $(this).attr('class').split(' ').pop();
+    	var compareselectedtag = $('.select_unselect_btns').find(slectedtagclass);
+    	alert(compareselectedtag);
+    	var sel = $(this).text();
+
+    	$(".select_unselect_btns").append("<div class='same_slected_list " + slectedtagclass + " '>"+ sel +"<i class='fa fa-times-circle ml-1'></i></div>");
+    
+    });
+
+     // Remove tag filter with cross icon
+     $('.select_unselect_btns .same_slected_list i').click(function(e){
+     	$(this).parent().remove();
+     });
+
+
+
 
     //Zoom functionality on the slider
     $(document).on('click','#myrange',function(){
-		
-        var rangeValue = $(this).val();
+
+    	var rangeValue = $(this).val();
         // $(".user_pf_area").addClass("l_zomm");
         // $(".user_pf_area").removeClass("xs_zomm");
 		//Switch statement to add the the classes on zoom in and out.
 		switch (rangeValue) {
-		  case '1':
-		  	removeZoomClasses();
-		    $(".user_pf_area").addClass('xs_zomm');
-		    break;
-		  case '2':
-		    removeZoomClasses();
-		    $(".user_pf_area").addClass('s_zomm');
-		    break;
-		  case '3':
-		    removeZoomClasses();
-		    $(".user_pf_area").addClass('m_zomm');
-		    break;
-		  case '4':
-		    removeZoomClasses();
-		    $(".user_pf_area").addClass('l_zomm');
-		    break;
-		  case '5':
-		    removeZoomClasses();
-		    $(".user_pf_area").addClass('xl_zomm');
-		    break;
+			case '1':
+			removeZoomClasses();
+			$(".user_pf_area").addClass('xs_zomm');
+			break;
+			case '2':
+			removeZoomClasses();
+			$(".user_pf_area").addClass('s_zomm');
+			break;
+			case '3':
+			removeZoomClasses();
+			$(".user_pf_area").addClass('m_zomm');
+			break;
+			case '4':
+			removeZoomClasses();
+			$(".user_pf_area").addClass('l_zomm');
+			break;
+			case '5':
+			removeZoomClasses();
+			$(".user_pf_area").addClass('xl_zomm');
+			break;
 		}
-    });
+	});
     
     
 });
@@ -93,26 +122,26 @@ $(document).ready(function(){
 //Centeralised function in javscript to check the classes exist and remove 
 function removeZoomClasses(){
 
-    
+
 	if($(".xs_zomm").length > 0){
-       $(".user_pf_area").removeClass("xs_zomm");
+		$(".user_pf_area").removeClass("xs_zomm");
 	}
 
 	if($(".m_zomm").length > 0){
-       $(".user_pf_area").removeClass("m_zomm");
+		$(".user_pf_area").removeClass("m_zomm");
 	}
 	
 	if($(".s_zomm").length > 0){
-       $(".user_pf_area").removeClass("s_zomm");
+		$(".user_pf_area").removeClass("s_zomm");
 	}
 	
 	if($(".l_zomm").length > 0){
-       $(".user_pf_area").removeClass("l_zomm");
+		$(".user_pf_area").removeClass("l_zomm");
 	}
 	
 	if($(".xl_zomm").length > 0){
-       $(".user_pf_area").removeClass("xl_zomm");
+		$(".user_pf_area").removeClass("xl_zomm");
 	}
-   
-   return true;
+
+	return true;
 }

@@ -121,8 +121,8 @@
           <ul class="d-flex flex-wrap tabs_li align-items-center filter_ul">
             <div class="check_box pl-2">
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="gridCustomCheck" name="example1">
-                <label class="custom-control-label" for="gridCustomCheck"></label>
+                <input type="checkbox" class="custom-control-input selectall" id="gridCustomCheck" name="example1">
+                <label class="custom-control-label selectall" for="gridCustomCheck"></label>
               </div>
             </div>
             <li id="name_tabs">
@@ -146,22 +146,27 @@
                 </div>
                 <div class="select_unselect_btns pb-3">
                   <span class="slctd d-block mb-1">Selected</span>
-                  <button class="selected_btn">#HR <i class="fa fa-times-circle ml-1"></i></button>
-                  <button class="unselected_btn ml-2">#Business Line <i class="fa fa-times-circle ml-1"></i></button>
+                  <div class="same_slected_list selected_btn HR ">
+                    #HR 
+                    <i class="fa fa-times-circle ml-1"></i>
+                  </div>
+                  <div class="same_slected_list unselected_btn Business ">
+                    #Business Line 
+                    <i class="fa fa-times-circle ml-1"></i>
+                  </div>
                 </div>
                 <div class="li_btns mt-4">
                   <ul class="d-flex flex-wrap">
-                    <li><a href="#">#Data</a></li>
-                    <li><a href="#">#IT</a></li>
-                    <li class="li_btn_selected"><a href="#">#HR</a></li>
-                    <li><a href="#">#IT</a></li>
-                    <li><a href="#">#Function</a></li>
-                    <li><a href="#">#Network</a></li>
-                    <li><a href="#">#Network</a></li>
-                    <li><a href="#">#Business Line</a></li>
-                    <li><a href="#">#Function</a></li>
-                    <li><a href="#">#IT</a></li>
-                    <li><a href="#">#Network</a></li>
+                    <li class="tags Data"><a href="#">#Data</a></li>
+                    <li class="tags IT"><a href="#">#IT</a></li>
+                    <li class="tags HR"><a class="selected_btn" href="#">#HR</a></li>
+                    <li class="tags Function"><a href="#">#Function</a></li>
+                    <li class="tags Network"><a href="#">#Network</a></li>
+                    <li class="tags Business">
+                      <a class="unselected_btn" href="#">
+                        #Business Line
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div class="apply_clear_btns mt-3">
@@ -170,165 +175,187 @@
                 </div>
               </div>
             </li>
-            <li><span>Last Name
-              <i class="fa fa-angle-down"></i></span>
+            <li>
+              <span>
+                Last Name
+                <i class="fa fa-angle-down"></i>
+              </span>
             </li>
             <li>
-              <span>Tag
-                <i class="fa fa-angle-down"></i></span>
-              </li>
-              <li><span>Group
-                <i class="fa fa-angle-down"></i></span>
-              </li>
-              <li><span>Company
-                <i class="fa fa-angle-down"></i></span>
-              </li>
-              <li><span>Business Line
-                <i class="fa fa-angle-down"></i></span>
-              </li>
-              <li id="li_function"><span>Function
-                <i class="fa fa-angle-down"></i></span>
-                <div class="li_dropdown" id="function_li_dropdown">
-                  <div class="acending_decending d-flex mb-3">
-                    <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="asc" name="example1">
-                      <label class="custom-control-label" for="asc">A-Z</label>
-                    </div>
-                    <div class="custom-control custom-radio ml-3">
-                      <input type="radio" class="custom-control-input" id="desc" name="example1">
-                      <label class="custom-control-label" for="desc">Z-A</label>
-                    </div>
+              <span>
+                Tag
+                <i class="fa fa-angle-down"></i>
+              </span>
+            </li>
+            <li>
+              <span>
+                Group
+                <i class="fa fa-angle-down"></i>
+              </span>
+            </li>
+            <li>
+              <span>
+                Company
+                <i class="fa fa-angle-down"></i>
+              </span>
+            </li>
+            <li>
+              <span>
+                Business Line
+                <i class="fa fa-angle-down"></i>
+              </span>
+            </li>
+            <li id="li_function">
+              <span>
+                Function
+                <i class="fa fa-angle-down"></i>
+              </span>
+              <div class="li_dropdown" id="function_li_dropdown">
+                <div class="acending_decending d-flex mb-3">
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="asc" name="example1">
+                    <label class="custom-control-label" for="asc">A-Z</label>
                   </div>
-                  <div class="form-group has-search">
-                    <span class="fa fa-search form-control-feedback"></span>
-                    <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <div class="checkbox_area">
-                    <div class="custom-control custom-checkbox mb-3">
-                      <input type="checkbox" class="custom-control-input" id="check_coach" name="example1" checked>
-                      <label class="custom-control-label" for="check_coach">Coach</label>
-                    </div>
-                    <div class="custom-control custom-checkbox mb-3">
-                      <input type="checkbox" class="custom-control-input" id="check_hr" name="example1" checked>
-                      <label class="custom-control-label" for="check_hr">HR</label>
-                    </div>
-                    <div class="custom-control custom-checkbox mb-3">
-                      <input type="checkbox" class="custom-control-input" id="check_analytic" name="example1">
-                      <label class="custom-control-label" for="check_analytic">Business Analytic</label>
-                    </div>
-                    <div class="custom-control custom-checkbox mb-3">
-                      <input type="checkbox" class="custom-control-input" id="check_ceo" name="example1">
-                      <label class="custom-control-label" for="check_ceo">CEO</label>
-                    </div>
-                    <div class="custom-control custom-checkbox mb-3">
-                      <input type="checkbox" class="custom-control-input" id="check_founder" name="example1">
-                      <label class="custom-control-label" for="check_founder">Founder</label>
-                    </div>
-                    <div class="custom-control custom-checkbox mb-3">
-                      <input type="checkbox" class="custom-control-input" id="check_analyst" name="example1">
-                      <label class="custom-control-label" for="check_analyst">Analyst</label>
-                    </div>
-                    <div class="custom-control custom-checkbox mb-3">
-                      <input type="checkbox" class="custom-control-input" id="check_designer" name="example1">
-                      <label class="custom-control-label" for="check_designer">Designer</label>
-                    </div>
-                    <div class="custom-control custom-checkbox mb-3">
-                      <input type="checkbox" class="custom-control-input" id="check_developer" name="example1">
-                      <label class="custom-control-label" for="check_developer">Developer</label>
-                    </div>
-                  </div>
-
-                  <div class="apply_clear_btns mt-3">
-                    <button class="apply_btn">Apply</button>
-                    <button class="clear_btn">Clear All</button>
+                  <div class="custom-control custom-radio ml-3">
+                    <input type="radio" class="custom-control-input" id="desc" name="example1">
+                    <label class="custom-control-label" for="desc">Z-A</label>
                   </div>
                 </div>
-              </li>
-              <li><span>Network
-                <i class="fa fa-angle-down"></i></span>
-              </li>
-              <li><span>Gender
-                <i class="fa fa-angle-down"></i></span>
-              </li>
-              <li><span>Age
-                <i class="fa fa-angle-down"></i></span>
-              </li>
-              <li><span>ToDo
-                <i class="fa fa-angle-down"></i></span>
-              </li>
-            </ul>
-          </div>
-          <div class="tab-content">
-            <div id="people" class="tab-pane active">
-              <div class="grid_view" id="grid_view">
-                @foreach($data as $value)
-                  <div class="user_pf_area xs_zomm">
-                    <div class="check_box">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input gridCheckBox" id="gridCustomCheck<?php echo $value->id; ?>" name="example1">
-                        <label class="custom-control-label" for="gridCustomCheck<?php echo $value->id; ?>"></label>
-                      </div>
+                <div class="form-group has-search">
+                  <span class="fa fa-search form-control-feedback"></span>
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <div class="checkbox_area">
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="check_coach" name="example1" checked>
+                    <label class="custom-control-label" for="check_coach">Coach</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="check_hr" name="example1" checked>
+                    <label class="custom-control-label" for="check_hr">HR</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="check_analytic" name="example1">
+                    <label class="custom-control-label" for="check_analytic">Business Analytic</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="check_ceo" name="example1">
+                    <label class="custom-control-label" for="check_ceo">CEO</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="check_founder" name="example1">
+                    <label class="custom-control-label" for="check_founder">Founder</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="check_analyst" name="example1">
+                    <label class="custom-control-label" for="check_analyst">Analyst</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="check_designer" name="example1">
+                    <label class="custom-control-label" for="check_designer">Designer</label>
+                  </div>
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="check_developer" name="example1">
+                    <label class="custom-control-label" for="check_developer">Developer</label>
+                  </div>
+                </div>
+
+                <div class="apply_clear_btns mt-3">
+                  <button class="apply_btn">Apply</button>
+                  <button class="clear_btn">Clear All</button>
+                </div>
+              </div>
+            </li>
+            <li><span>Network
+              <i class="fa fa-angle-down"></i></span>
+            </li>
+            <li><span>Gender
+              <i class="fa fa-angle-down"></i></span>
+            </li>
+            <li><span>Age
+              <i class="fa fa-angle-down"></i></span>
+            </li>
+            <li><span>ToDo
+              <i class="fa fa-angle-down"></i></span>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <div id="people" class="tab-pane active">
+            <div class="grid_view" id="grid_view">
+              @foreach($data as $value)
+              <div class="user_pf_area xs_zomm">
+                <div class="check_box">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input gridCheckBox sm_ch" id="gridCustomCheck<?php echo $value->id; ?>" name="example1">
+                    <label class="custom-control-label sm_ch" for="gridCustomCheck<?php echo $value->id; ?>"></label>
+                  </div>
+                </div>
+                <div class="image">
+                  <img src="images/face8.jpg" alt="" class="rounded-circle">
+                </div>
+                <div class="basic_info">
+                  <h1 class="name">{{$value->First_Name}}</h1>
+                  <p class="little_description mb-2">{{$value->Job1_Title}} at {{$value->Job1_Company}}<b>, </b>{{$value->Age}}/p>
+                    <div class="private_info mb-3">
+                      <span class="d-block w-100">{{$value->PhoneNumber1}}</span>
+                      <span class="d-block w-100">{{$value->Email1}}</span>
                     </div>
-                    <div class="image">
-                      <img src="images/face8.jpg" alt="" class="rounded-circle">
-                    </div>
-                    <div class="basic_info">
-                      <h1 class="name">{{$value->First_Name}}</h1>
-                      <p class="little_description mb-2">{{$value->Job1_Title}} at {{$value->Job1_Company}}<b>, </b>{{$value->Age}}/p>
-                        <div class="private_info mb-3">
-                          <span class="d-block w-100">{{$value->PhoneNumber1}}</span>
-                          <span class="d-block w-100">{{$value->Email1}}</span>
-                        </div>
-                      </div>
-                      <div class="proffesional_tags mb-2">
-                        <ul>
-                          <li class="color_name basic_tags">{{'#'.$value->Tag1}}</li>
-                          <li class="color_name basic_tags">{{'#'.$value->Tag2}}</li>
-                          <li class="color_name basic_tags">{{'#'.$value->Tag3}}</li>
-                          <li class="color_name basic_tags">{{'#'.$value->Tag4}}</li>
-                          <li class="color_name basic_tags">{{'#'.$value->Tag5}}</li>
-                          <li class="color_name basic_tags">{{'#'.$value->Tag6}}</li>
-                          <li class="color_name basic_tags">{{'#'.$value->Tag7}}</li>
-                          <li class="color_name basic_tags">{{'#'.$value->Tag8}}</li>
-                        </ul>
-                      </div>
-                      <div class="friend_list">
-                        <ul>
-                          <li>
-                            <a href="#">
-                              <img src="images/face8.jpg" alt="" class="rounded-circle">
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <img src="images/face8.jpg" alt="" class="rounded-circle">
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <img src="images/face8.jpg" alt="" class="rounded-circle">
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <img src="images/face8.jpg" alt="" class="rounded-circle">
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <img src="images/face8.jpg" alt="" class="rounded-circle">
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  @endforeach
+                  </div>
+                  <div class="proffesional_tags mb-2">
+                    <ul>
+                      <li class="color_name basic_tags">{{'#'.$value->Tag1}}</li>
+                      <li class="color_name basic_tags">{{'#'.$value->Tag2}}</li>
+                      <li class="color_name basic_tags">{{'#'.$value->Tag3}}</li>
+                      <li class="color_name basic_tags">{{'#'.$value->Tag4}}</li>
+                      <li class="color_name basic_tags">{{'#'.$value->Tag5}}</li>
+                      <li class="color_name basic_tags">{{'#'.$value->Tag6}}</li>
+                      <li class="color_name basic_tags">{{'#'.$value->Tag7}}</li>
+                      <li class="color_name basic_tags">{{'#'.$value->Tag8}}</li>
+                    </ul>
+                  </div>
+                  <div class="friend_list">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img src="images/face8.jpg" alt="" class="rounded-circle">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                @endforeach
               </div>
               <div class="list_view" id="list_view">
                 <table class="table table-striped" id="list_view_table">
                   <thead>
                     <tr>
-                      <th></th>
+                      <th>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input table_grid_ch" id="table_grid_ch" name="example1">
+                          <label class="custom-control-label table_grid_ch" for="table_grid_ch"></label>
+                        </div>                          
+                      </th>
                       <th>Photo</th>
                       <th>First Name</th>
                       <th>Family Name</th>
@@ -346,8 +373,8 @@
                     <tr>
                       <td>
                         <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="listcustomCheck<?php echo $id; ?>" name="example1">
-                          <label class="custom-control-label" for="listcustomCheck<?php echo $id; ?>"></label>
+                          <input type="checkbox" class="custom-control-input sm_ch" id="listcustomCheck<?php echo $id; ?>" name="example1">
+                          <label class="custom-control-label sm_ch" for="listcustomCheck<?php echo $id; ?>"></label>
                         </div>
                       </td>
                       <td>
