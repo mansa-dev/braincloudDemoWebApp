@@ -53,6 +53,26 @@ class AjaxController extends Controller
       }
     }
 
+    /**
+   * Function to load data on filter
+   * 
+   */
+
+    public function loadNameFilterGrid(){
+      
+
+      if(isset($_GET['offsetValue'])){
+      
+           $sortingType = $this->checkIfSortingTypeEmpty($_GET['id']);
+           $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
+           $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse);
+           $response = view('load_contact_grid',['data'=>$responseData]);
+           echo $response;
+      }
+      else{
+           echo false;  
+      }
+    }
 
     /**
    * Function to check if search is empty or not

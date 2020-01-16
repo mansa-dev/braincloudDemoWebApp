@@ -3,18 +3,21 @@ var base_url = window.location.href;
 
 
 $(document).ready(function(){
+	
+	// getElementById('grid_view_show_more').removeAttribute("style")
+
 	 $('button').click(function(){
 	 if(this.id == 'btn1'){
+	 	alert(this.id);
 	   $('#list_view').show();
 	   $('#grid_view').hide();
-	  // $(".grid_view_show_more").show();
+	  $(".grid_view_show_more").show();
 	 }else{
 	   $('#list_view').hide();
 	   $('#grid_view').show();
-	 //  $(".grid_view_show_more").hide();
+	  $(".grid_view_show_more").hide();
 	 }
 	});
-	
 	
 
 
@@ -57,7 +60,7 @@ $(document).ready(function(){
 
 
     //show more grid data
-     $(document).on('click','.show_more_grid',function(){
+    $(document).on('click','.show_more_grid',function(){
 		
         var id = $(this).attr('id');
        
@@ -69,7 +72,7 @@ $(document).ready(function(){
             success:function(html){
             	// console.log(html);
             	$(".show_more_grid").attr("id",parseInt(id)+parseInt(10));
-                $('#grid_view').append(html);
+                $('#grid_view .for_embed').append(html);
             }
         });
     });
@@ -86,17 +89,13 @@ $(document).ready(function(){
             data:'id='+id,
             success:function(html){
             	 $(".show_more_filter").attr("id",parseInt(id)+parseInt(10));
-                $('#list_view_table tbody').append(html);
+                 $('#list_view_table tbody').append(html);
+
             }
         });
     });
     
-    if($("#list_view_table").length > 0){
-       $(".grid_view_show_more").hide();
-	}
-	else{
-	   $(".grid_view_show_more").show();
-	}
+
 
     //to keep all the values checked or unchecked on button clicked
     $(document).on('click','#gridCustomCheck',function(){
@@ -155,6 +154,7 @@ $(document).ready(function(){
         var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
         var searchData_ = $("#name_filter_search").val();
 
+
             if(!nameFilterValue){
             	nameFilterValue = '';
             }
@@ -166,17 +166,35 @@ $(document).ready(function(){
         	$(".load_more_button").removeClass("show_more");        
             $(".load_more_button").addClass("show_more_filter");
 
+            $(".load_more_button_grid").removeClass("show_more_grid");        
+            $(".load_more_button_grid").addClass("show_more_grid_filter");
+           
+
             $.ajax({
             type:'GET',
-            url: base_url+'loadNameFilterData',
+            url: base_url+'loadNameFilter',
             data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
             dataType : 'html',
             success:function(html){
             
-            	$('#list_view_table_body').empty();
-                $('#list_view_table_body').append(html);
-            }
-        });
+            	$('#grid_view').empty();
+                $('#grid_view').append(html);
+	            $.ajax({
+			        type:'GET',
+			        url: base_url+'loadNameFilterData',
+			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
+			        dataType : 'html',
+			        success:function(html){
+			        
+			        	$('#list_view_table_body').empty();
+			            $('#list_view_table_body').append(html);
+
+			        }
+			    });
+            	}
+        	});
+
+
     });
 
        // For selected tags in filter
