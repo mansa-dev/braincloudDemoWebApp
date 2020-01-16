@@ -6,15 +6,15 @@
   <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 
-  <link rel="stylesheet" href="{{ asset('/public/css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('/public/css/common.css') }}">
-  <link rel="stylesheet" href="{{ asset('/public/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/common.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="{{ asset('/public/js/jquery.min.js') }}"></script>
-  <script src="{{ asset('/public/js/popper.min.js') }}"></script>
-  <script src="{{ asset('/public/js/bootstrap.min.js') }}"></script>
-  <script src="{{ asset('/public/js/custom.js?v=123') }}"></script>
+  <script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
+  <script src="{{ asset('/js/popper.min.js') }}"></script>
+  <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('/js/custom.js?v=123') }}"></script>
 
 </head>
 <body>
@@ -22,7 +22,7 @@
   <div class="g_wrapper">
     <div class="navbar_coustom_area d-flex align-items-center">
       <div class="site_navbar_logo">
-        <img src="{{ asset('/public/images/logo.png') }}" alt="">
+        <img src="{{ asset('/images/logo.png') }}" alt="">
       </div>
       <div class="navbar_ct d-flex align-items-center">
         <div class="top_tabs_area">
@@ -56,14 +56,14 @@
                   <option value="">Select 5</option>
                 </select>
               </li>
-              <li class="file"><a href="#"><span class="text">To Do</span> <span class="circle_text">12</span> <i class="fa fa-file"></i></a></li>
-              <li class="document"><a href="#">Documents <i class="fa fa-clipboard"></i></a></li>
+              <li class="file"><a href="javascript:void(0);"><span class="text">To Do</span> <span class="circle_text">12</span> <i class="fa fa-file"></i></a></li>
+              <li class="document"><a href="javascript:void(0);">Documents <i class="fa fa-clipboard"></i></a></li>
             </ul>
             <ul class="navbar-nav d-flex justify-content-end align-items-center pl-3">
               <li><span class="date_text">28 Nov</span></li>
               <li class="nav-item dropdown d-flex justify-content-end">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                  <img src="{{ asset('/public/images/face8.jpg') }}" alt="">
+                  <img src="{{ asset('/images/face8.jpg') }}" alt="">
                 </a>
                 <div class="dropdown-menu">
                   <ul>
@@ -293,7 +293,7 @@
                   </div>
                 </div>
                 <div class="image">
-                  <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                  <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                 </div>
                 <div class="basic_info">
                   <h1 class="name">{{$value->First_Name}}</h1>
@@ -319,27 +319,27 @@
                     <ul>
                       <li>
                         <a href="#">
-                          <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                          <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                          <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                          <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                          <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                          <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                         </a>
                       </li>
                     </ul>
@@ -383,7 +383,7 @@
                         </div>
                       </td>
                       <td>
-                        <img src="{{ asset('/public/images/face8.jpg') }}" alt="">
+                        <img src="{{ asset('/images/face8.jpg') }}" alt="">
                       </td>
                       <td>{{$value->First_Name}}</td>
                       <td>{{$value->Name}}</td>
