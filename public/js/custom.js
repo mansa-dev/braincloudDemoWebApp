@@ -41,6 +41,7 @@ $(document).ready(function(){
         $.ajax({
             type:'POST',
             url: base_url+'loadContactData',
+            datatype:"html",
             data:'id='+id,
             success:function(html){
             	console.log(html); 
@@ -48,6 +49,12 @@ $(document).ready(function(){
             }
         });
     });
+
+    //to keep all the values checked or unchecked on button clicked
+    $(document).on('click','#gridCustomCheck',function(){
+    
+
+    }); 
 
     //Zoom functionality on the slider
     $(document).on('click','#myrange',function(){
@@ -100,7 +107,7 @@ function removeZoomClasses(){
 	}
 	
 	if($(".l_zomm").length > 0){
-       $(".l_zomm").removeClass("l_zomm");
+       $(".user_pf_area").removeClass("l_zomm");
 	}
 	
 	if($(".xl_zomm").length > 0){

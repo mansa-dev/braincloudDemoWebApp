@@ -230,10 +230,6 @@
     font-size: 13px;
     font-weight: normal;
 }
-div#grid_view {
-    display: flex;
-    flex-wrap: wrap;
-}
 .g_wrapper .list_view .table th {
   font-family: segoe_b;
 }
@@ -387,6 +383,7 @@ div#grid_view {
   padding: 35px 10px 15px 10px;
   background: #fff;
   margin: 0 10px 10px 0;
+  vertical-align: top;
 }
 .g_wrapper .main_content_inner_area .tab-content .tab-pane {
     padding: 0;
@@ -401,7 +398,7 @@ div#grid_view {
   font-size: 16px;
 }
 .g_wrapper .user_pf_area.l_zomm{
-  width: 22%;
+  width: 23%;
 }
 .g_wrapper .user_pf_area.l_zomm .image {
   width: 95px;
