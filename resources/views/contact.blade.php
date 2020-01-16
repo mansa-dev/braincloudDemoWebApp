@@ -144,7 +144,7 @@
 </div>
 <div class="form-group has-search">
 <span class="fa fa-search form-control-feedback"></span>
-<input type="text" class="form-control" placeholder="Search">
+<input type="text" class="form-control" placeholder="Search" id="name_filter_search">
 </div>
 <div class="select_unselect_btns pb-3">
 <span class="slctd d-block mb-1">Selected</span>
@@ -355,7 +355,7 @@
                   <th>Age</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="list_view_table_body">
                 @foreach($data as $value)
                 <?php $id = $value->id; ?>
                 <tr>
@@ -382,7 +382,7 @@
               </tbody>
             </table>
             <div class="show_more_main" id="show_more_main">
-              <span id="<?php echo $id; ?>" class="show_more" title="Load more posts">Show More</span>
+              <span id="<?php echo $id; ?>" class="load_more_button show_more" title="Load more posts">Show More</span>
             </div>
           </div>
           <div id="companies" class="container tab-pane fade">

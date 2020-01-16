@@ -30,10 +30,17 @@ class contactModel extends Model
      * 
      */
 
-     public static function fetchFilterData($sortingType){
+     public static function fetchFilterData($sortingType, $offsetValue, $searchedData){
 
-     	return DB::table('users')
-                ->orderBy('name', "$sortingType")
-                ->get();
+	       if(!empty($searchedData) || !empty($offsetValue)){
+	       	  $where = "where";
+	       }
+	       else{
+	       	  $where = "";
+	       }
+       
+		$sqlQuery = "SELECT * FROM contacts $where $searchedData $sortingType LIMIT 10 OFFSET $offsetValue";
+		return DB::select(DB::raw($sqlQuery));
+     	 
      }
 }

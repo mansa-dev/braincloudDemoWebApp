@@ -51,6 +51,23 @@ $(document).ready(function(){
         });
     });
 
+    //Load more data on Name filters 
+	$(document).on('click','.show_more_filter',function(){
+		
+        var id = $(this).attr('id');
+       
+        $.ajax({
+            type:'POST',
+            url: base_url+'loadNameFilterData',
+            dataType : 'html',
+            data:'id='+id,
+            success:function(html){
+            	 $(".show_more_filter").attr("id",parseInt(id)+parseInt(10));
+                $('#list_view_table tbody').append(html);
+            }
+        });
+    });
+
     //to keep all the values checked or unchecked on button clicked
     $(document).on('click','#gridCustomCheck',function(){
     
@@ -89,18 +106,30 @@ $(document).ready(function(){
 
     //Ajax functionality for Name filters
     $(document).on('click','#name_filters',function(){
-
+    
         var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
-          
-          $.ajax({
+        var searchData_ = $("#name_filter_search").val();
+
+            if(!nameFilterValue){
+            	nameFilterValue = '';
+            }
+
+            if(!searchData_){
+            	searchData_ = '';
+            }
+
+        	$(".load_more_button").removeClass("show_more");        
+            $(".load_more_button").addClass("show_more_filter");
+
+            $.ajax({
             type:'POST',
             url: base_url+'loadNameFilterData',
+            data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
             dataType : 'html',
-            data:'id='+nameFilterValue,
             success:function(html){
-            	
-            	$('#list_view_table tbody').empty();
-                $('#list_view_table tbody').html(html);
+            	alert(html);
+            	$('#list_view_table_body').empty();
+                $('#list_view_table_body').append(html);
             }
         });
     });

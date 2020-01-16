@@ -25,9 +25,71 @@ class AjaxController extends Controller
 	 */
 
     public function loadNameFilterData(){
+      
 
-       $sortingType = ($_POST['id'] == '1')?'desc':'asc';
-       
-       $responseData = contactModel::fetchFilterData($sortingType);
+      if(isset($_POST['offsetValue'])){
+      
+           $sortingType = $this->checkIfSortingTypeEmpty($_POST['id']);
+           $searchResponse = $this->checkIfSearchEmpty($_POST['search']);
+           $responseData = contactModel::fetchFilterData($sortingType, $_POST['offsetValue'], $searchResponse);
+           $response = view('load_contact',['data'=>$responseData]);
+           echo $response;
+      }
+      else{
+           echo false;  
+      }
     }
+
+
+    /**
+   * Function to check if search is empty or not
+   * 
+   */
+
+    public function checkIfSearchEmpty($searchData){
+     
+      if(!empty($searchData)){
+
+          return "(First_Name like '{$searchData}%'  or Tag1 like '{$searchData}%' or Tag2 like '{$searchData}%' or Tag3 like '{$searchData}%' or Tag4 like '{$searchData}%' or Tag5 like '{$searchData}%'or Tag6 like '{$searchData}%' or Tag7 like '{$searchData}%' or Tag8 like '{$searchData}%' or Job1_Company like '{$searchData}%')";
+
+      }
+      else{
+          return false;
+      }   
+   
+    }
+
+  /**
+   * Function to check if search is empty or not
+   * 
+   */
+      public function checkIfSortingTypeEmpty($sortingType){
+
+          if(!empty($sortingType)){
+              
+              if($sortingType == '1'){
+                  
+                  $sorting = 'ASC';
+              
+              }
+              elseif ($sortingType == '2' ) {
+                
+                  $sorting = 'DESC';
+
+              }
+              else{
+                  
+                  $sorting = '';
+              }
+
+              return "First_Name order by First_Name $sorting";
+
+          }
+          else{
+              return false;
+          }   
+
+      }
+   
+
 }
