@@ -14,5 +14,6 @@
 
 Route::get('/', 'Contact@index');
 
-Route::post('/loadContactData', 'AjaxController@index');
-Route::post('/loadNameFilterData', 'AjaxController@loadNameFilterData');
+Route::get('/loadContactData', 'AjaxController@index');
+Route::get('/loadNameFilterData', 'AjaxController@loadNameFilterData');
+Route::get('/loadGrid', 'AjaxController@loadGridData');

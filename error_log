@@ -1,0 +1,1 @@
+[16-Jan-2020 12:46:44 UTC] PHP Fatal error:  Method Illuminate\View\View::__toString() must not throw an exception, caught Facade\Ignition\Exceptions\ViewException: Undefined variable: value in /home/cdmvsjg0facq/public_html/brain_cloud/app/Http/Controllers/AjaxController.php on line 0

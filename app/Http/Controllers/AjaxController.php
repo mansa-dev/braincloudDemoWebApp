@@ -14,9 +14,22 @@ class AjaxController extends Controller
 
     public function index(){
        
-    	$responseData = contactModel::fetchContactsData($_POST['id']);
+    	$responseData = contactModel::fetchContactsData($_GET['id']);
     	$response =  view('load_contact',['data'=>$responseData]);
     	echo $response;  
+    }
+    
+      /**
+   * Function to load Grid data
+   * 
+   */
+
+    public function loadGridData(){
+       // var_dump('fsdfsdf'); die; 
+      $responseData = contactModel::fetchContactsData($_GET['id']);
+      $response =  view('load_contact_grid',['data'=>$responseData]);
+
+      echo $response;  
     }
 
     /**
@@ -27,11 +40,11 @@ class AjaxController extends Controller
     public function loadNameFilterData(){
       
 
-      if(isset($_POST['offsetValue'])){
+      if(isset($_GET['offsetValue'])){
       
-           $sortingType = $this->checkIfSortingTypeEmpty($_POST['id']);
-           $searchResponse = $this->checkIfSearchEmpty($_POST['search']);
-           $responseData = contactModel::fetchFilterData($sortingType, $_POST['offsetValue'], $searchResponse);
+           $sortingType = $this->checkIfSortingTypeEmpty($_GET['id']);
+           $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
+           $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse);
            $response = view('load_contact',['data'=>$responseData]);
            echo $response;
       }

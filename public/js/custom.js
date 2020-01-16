@@ -7,11 +7,15 @@ $(document).ready(function(){
 	 if(this.id == 'btn1'){
 	   $('#list_view').show();
 	   $('#grid_view').hide();
+	  // $(".grid_view_show_more").show();
 	 }else{
 	   $('#list_view').hide();
 	   $('#grid_view').show();
+	 //  $(".grid_view_show_more").hide();
 	 }
 	});
+	
+	
 
 
 	$('.list_btn').click(function(){
@@ -40,7 +44,7 @@ $(document).ready(function(){
         var id = $(this).attr('id');
        
         $.ajax({
-            type:'POST',
+            type:'GET',
             url: base_url+'loadContactData',
             dataType : 'html',
             data:'id='+id,
@@ -51,13 +55,32 @@ $(document).ready(function(){
         });
     });
 
+
+    //show more grid data
+     $(document).on('click','.show_more_grid',function(){
+		
+        var id = $(this).attr('id');
+       
+        $.ajax({
+            type:'GET',
+            url: base_url+'loadGrid',
+            dataType : 'html',
+            data:'id='+id,
+            success:function(html){
+            	// console.log(html);
+            	$(".show_more_grid").attr("id",parseInt(id)+parseInt(10));
+                $('#grid_view').append(html);
+            }
+        });
+    });
+    
     //Load more data on Name filters 
 	$(document).on('click','.show_more_filter',function(){
 		
         var id = $(this).attr('id');
        
         $.ajax({
-            type:'POST',
+            type:'GET',
             url: base_url+'loadNameFilterData',
             dataType : 'html',
             data:'id='+id,
@@ -67,6 +90,13 @@ $(document).ready(function(){
             }
         });
     });
+    
+    if($("#list_view_table").length > 0){
+       $(".grid_view_show_more").hide();
+	}
+	else{
+	   $(".grid_view_show_more").show();
+	}
 
     //to keep all the values checked or unchecked on button clicked
     $(document).on('click','#gridCustomCheck',function(){
@@ -104,6 +134,21 @@ $(document).ready(function(){
 		}
     });
 
+
+   //to keep all the values checked or unchecked on button clicked
+ $('.selectall').click(function() {
+    if ($(this).is(':checked')) {
+    $('.grid_view .sm_ch').attr('checked', true);
+    $('.list_view .sm_ch').attr('checked', true);
+    $('.list_view .table_grid_ch').attr('checked', true);
+   
+    } else {
+    $('.grid_view .sm_ch').attr('checked', false);
+    $('.list_view .sm_ch').attr('checked', false);
+    $('.list_view .table_grid_ch').attr('checked', false);
+    }
+ });
+   
     //Ajax functionality for Name filters
     $(document).on('click','#name_filters',function(){
     
@@ -122,16 +167,32 @@ $(document).ready(function(){
             $(".load_more_button").addClass("show_more_filter");
 
             $.ajax({
-            type:'POST',
+            type:'GET',
             url: base_url+'loadNameFilterData',
             data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
             dataType : 'html',
             success:function(html){
-            	alert(html);
+            
             	$('#list_view_table_body').empty();
                 $('#list_view_table_body').append(html);
             }
         });
+    });
+
+       // For selected tags in filter
+   $(".li_btns li").click(function(e) {
+		var slectedtagclass= $(this).attr('class').split(' ').pop();
+		var compareselectedtag = $('.select_unselect_btns').find(slectedtagclass);
+	
+		var sel = $(this).text();
+
+		$(".select_unselect_btns").append("<div class='same_slected_list " + slectedtagclass + " '>"+ sel +"<i class='fa fa-times-circle ml-1'></i></div>");
+   
+   });
+
+    // Remove tag filter with cross icon
+    $('.select_unselect_btns .same_slected_list i').click(function(e){
+   		 $(this).parent().remove();
     });
     
     

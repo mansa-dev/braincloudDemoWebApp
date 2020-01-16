@@ -8,7 +8,7 @@
           </div>
       </td>
       <td>
-          <img src="images/face8.jpg" alt="">
+          <img src="{{ asset('/public/images/face8.jpg') }} " alt="">
       </td>
       <td>{{$value->First_Name}}</td>
       <td>{{$value->Name}}</td>
