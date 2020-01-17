@@ -213,7 +213,7 @@ $(document).ready(function(){
    });
 
     // Remove tag filter with cross icon
-    $('.select_unselect_btns .same_slected_list i').click(function(e){
+     $(document).on("click",".select_unselect_btns .same_slected_list i",function() {
    		 $(this).parent().remove();
     });
     

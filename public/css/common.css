@@ -16,8 +16,8 @@ html, body {
   src: url(fonts/Segoe_UI.woff);
 }
 .g_wrapper .for_embed {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 body {
   font-family: segoe_r;
@@ -34,7 +34,18 @@ h1, h2, h3, h4, h5, p, ul, a{
   margin: 0;
   list-style: none;
 }
-
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+select{
+  background: #fff url(/images/selection_arrow.png) no-repeat scroll 93%!important;
+  background-size: 13px 7px!important;
+  padding-right: 35px !important;
+}
 
 /* width */
 ::-webkit-scrollbar {
