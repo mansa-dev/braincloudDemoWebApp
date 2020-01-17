@@ -27,7 +27,8 @@ class AjaxController extends Controller
     public function loadGridData(){
        // var_dump('fsdfsdf'); die; 
       $responseData = contactModel::fetchContactsData($_GET['id']);
-      $response =  view('load_contact_grid',['data'=>$responseData]);
+      $zoomLevel = !empty($_GET['zoomLevel'])?$_GET['zoomLevel']:false;
+      $response =  view('load_contact_grid',['data'=>$responseData, 'zoomLevel'=>$zoomLevel]);
 
       echo $response;  
     }
@@ -66,7 +67,8 @@ class AjaxController extends Controller
            $sortingType = $this->checkIfSortingTypeEmpty($_GET['id']);
            $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
            $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse);
-           $response = view('load_contact_grid',['data'=>$responseData]);
+           $zoomLevel = !empty($_GET['zoomLevel'])?$_GET['zoomLevel']:false;
+           $response = view('load_contact_grid',['data'=>$responseData, 'zoomLevel'=>$zoomLevel]);
            echo $response;
       }
       else{

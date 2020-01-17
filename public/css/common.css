@@ -15,6 +15,10 @@ html, body {
   font-family: segoe_r;
   src: url(fonts/Segoe_UI.woff);
 }
+.g_wrapper .for_embed {
+    display: flex;
+    flex-wrap: wrap;
+}
 body {
   font-family: segoe_r;
   font-size: .8125rem;
