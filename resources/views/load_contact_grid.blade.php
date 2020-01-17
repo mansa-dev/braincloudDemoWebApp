@@ -47,14 +47,14 @@ $class='xs_zomm';
     </div>
     <div class="proffesional_tags mb-2">
       <ul>
-        <li class="color_name basic_tags">{{'#'.$value->Tag1}}</li>
-        <li class="color_name basic_tags">{{'#'.$value->Tag2}}</li>
-        <li class="color_name basic_tags">{{'#'.$value->Tag3}}</li>
-        <li class="color_name basic_tags">{{'#'.$value->Tag4}}</li>
-        <li class="color_name basic_tags">{{'#'.$value->Tag5}}</li>
-        <li class="color_name basic_tags">{{'#'.$value->Tag6}}</li>
-        <li class="color_name basic_tags">{{'#'.$value->Tag7}}</li>
-        <li class="color_name basic_tags">{{'#'.$value->Tag8}}</li>
+        <li class="color_name basic_tags gradient_sky">{{'#'.$value->Tag1}}</li>
+        <li class="color_name basic_tags gradient_yellow">{{'#'.$value->Tag2}}</li>
+        <li class="color_name basic_tags gradient_red">{{'#'.$value->Tag3}}</li>
+        <li class="color_name basic_tags gradient_sky">{{'#'.$value->Tag4}}</li>
+        <li class="color_name basic_tags gradient_yellow">{{'#'.$value->Tag5}}</li>
+        <li class="color_name basic_tags gradient_red">{{'#'.$value->Tag6}}</li>
+        <li class="color_name basic_tags gradient_sky">{{'#'.$value->Tag7}}</li>
+        <li class="color_name basic_tags gradient_sky">{{'#'.$value->Tag8}}</li>
       </ul>
     </div>
     <div class="friend_list">

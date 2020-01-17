@@ -165,13 +165,15 @@
                                 <div class="li_btns mt-4">
                                     <ul class="d-flex flex-wrap">
 
-                                        <li class="tags Data"><a href="javascript:void(0);">#Somnolent</a></li>
-                                        <li class="tags IT"><a href="javascript:void(0);">#Critique</a></li>
-                                        <li class="tags HR"><a class="selected_btn" href="javascript:void(0);">#Content</a></li>
-                                        <li class="tags Function"><a href="javascript:void(0);">#Optimiste</a></li>
-                                        <li class="tags Network"><a href="javascript:void(0);">#Fons</a></li>
-                                        <li class="tags Business">
-                                            <a class="unselected_btn" href="javascript:void(0);">
+                                        <li class="tags Data "><a class="border_gradient_red" href="javascript:void(0);">#Somnolent</a></li>
+                                        <li class="tags IT "><a class="border_gradient_yellow" href="javascript:void(0);">#Critique</a></li>
+                                        <li class="tags HR border_gradient_sky"><a class="selected_btn" href="javascript:void(0);">#Content</a></li>
+                                        <li class="tags Function "><a 
+                                           class="border_gradient_red" href="javascript:void(0);">#Optimiste</a></li>
+                                        <li class="tags Network"><a  class="border_gradient_yellow"
+                                            href="javascript:void(0);">#Fons</a></li>
+                                        <li class="tags Business ">
+                                            <a class="unselected_btn border_gradient_sky" href="javascript:void(0);">
                                                 #Genergies
 <!-- =======
                                         <li class="tags Data"><a href="javascript:void(0);">#Data</a></li>
@@ -369,14 +371,14 @@
                                     </div>
                                     <div class="proffesional_tags mb-2">
                                         <ul>
-                                            <li class="color_name basic_tags">{{'#'.$value->Tag1}}</li>
-                                            <li class="color_name basic_tags">{{'#'.$value->Tag2}}</li>
-                                            <li class="color_name basic_tags">{{'#'.$value->Tag3}}</li>
-                                            <li class="color_name basic_tags">{{'#'.$value->Tag4}}</li>
-                                            <li class="color_name basic_tags">{{'#'.$value->Tag5}}</li>
-                                            <li class="color_name basic_tags">{{'#'.$value->Tag6}}</li>
-                                            <li class="color_name basic_tags">{{'#'.$value->Tag7}}</li>
-                                            <li class="color_name basic_tags">{{'#'.$value->Tag8}}</li>
+                                            <li class="color_name  gradient_sky">{{'#'.$value->Tag1}}</li>
+                                            <li class="color_name basic_tags gradient_red">{{'#'.$value->Tag2}}</li> 
+                                            <li class="color_name basic_tags gradient_yellow">{{'#'.$value->Tag3}}</li>
+                                            <li class="color_name basic_tags gradient_red">{{'#'.$value->Tag4}}</li>
+                                            <li class="color_name basic_tags gradient_sky">{{'#'.$value->Tag5}}</li>
+                                            <li class="color_name basic_tags gradient_yellow">{{'#'.$value->Tag6}}</li>
+                                            <li class="color_name basic_tags gradient_red">{{'#'.$value->Tag7}}</li>
+                                            <li class="color_name basic_tags gradient_sky">{{'#'.$value->Tag8}}</li>
                                         </ul>
                                     </div>
                                     <div class="friend_list">
