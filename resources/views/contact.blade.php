@@ -147,14 +147,14 @@
                                 </div>
                                 <div class="select_unselect_btns pb-3">
                                     <span class="slctd d-block mb-1">Selected</span>
-                                    <div class="same_slected_list selected_btn HR " id="Triste">
+      <!--                               <div class="same_slected_list selected_btn HR " id="Triste">
                                         #Triste
                                         <i class="fa fa-times-circle ml-1"></i>
                                     </div>
                                     <div class="same_slected_list unselected_btn Business " id="Fier">
                                         #Fier
                                         <i class="fa fa-times-circle ml-1"></i>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="li_btns mt-4">
                                     <ul class="d-flex flex-wrap">
@@ -171,7 +171,7 @@
                                     </ul>
                                 </div>
                                 <div class="apply_clear_btns mt-3">
-                                    <button class="apply_btn" id="name_filters">Apply</button>
+                                    <button class="apply_btn filters_apply" id="name_filters">Apply</button>
                                     <button class="clear_btn">Clear All</button>
                                 </div>
                             </div>
@@ -214,55 +214,43 @@
                             <div class="li_dropdown" id="function_li_dropdown">
                                 <div class="acending_decending d-flex mb-3">
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" class="custom-control-input" id="asc" name="example1">
+                                        <input type="radio" class="custom-control-input" id="asc" value="1" name="function_">
                                         <label class="custom-control-label" for="asc">A-Z</label>
                                     </div>
                                     <div class="custom-control custom-radio ml-3">
-                                        <input type="radio" class="custom-control-input" id="desc" name="example1">
+                                        <input type="radio" class="custom-control-input" id="desc" value="2" name="function_">
                                         <label class="custom-control-label" for="desc">Z-A</label>
                                     </div>
                                 </div>
                                 <div class="form-group has-search">
                                     <span class="fa fa-search form-control-feedback"></span>
-                                    <input type="text" class="form-control" placeholder="Search">
+                                    <input type="text" class="form-control" id="function_filter_search" placeholder="Search">
                                 </div>
                                 <div class="checkbox_area">
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_coach" name="example1" checked>
-                                        <label class="custom-control-label" for="check_coach">Coach</label>
+                                        <input type="checkbox" class="custom-control-input filter_check_box" id="CMA-CGM" value="CMA-CGM" name="example1">
+                                        <label class="custom-control-label" for="CMA-CGM">CMA-CGM</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_hr" name="example1" checked>
-                                        <label class="custom-control-label" for="check_hr">HR</label>
+                                        <input type="checkbox" class="custom-control-input filter_check_box" id="CDC" value="CDC" name="example1">
+                                        <label class="custom-control-label" for="CDC">CDC</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_analytic" name="example1">
-                                        <label class="custom-control-label" for="check_analytic">Business Analytic</label>
+                                        <input type="checkbox" class="custom-control-input filter_check_box" id="CDHP" value="CDHP" name="example1">
+                                        <label class="custom-control-label" for="CDHP">CDHP</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_ceo" name="example1">
-                                        <label class="custom-control-label" for="check_ceo">CEO</label>
+                                        <input type="checkbox" class="custom-control-input filter_check_box" id="Qualiblue" value="Qualiblue" name="example1">
+                                        <label class="custom-control-label" for="Qualiblue">Qualiblue</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_founder" name="example1">
-                                        <label class="custom-control-label" for="check_founder">Founder</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_analyst" name="example1">
-                                        <label class="custom-control-label" for="check_analyst">Analyst</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_designer" name="example1">
-                                        <label class="custom-control-label" for="check_designer">Designer</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_developer" name="example1">
-                                        <label class="custom-control-label" for="check_developer">Developer</label>
+                                        <input type="checkbox" class="custom-control-input filter_check_box" id="BRED" value="BRED" name="example1">
+                                        <label class="custom-control-label" for="BRED">BRED</label>
                                     </div>
                                 </div>
 
                                 <div class="apply_clear_btns mt-3">
-                                    <button class="apply_btn">Apply</button>
+                                    <button class="apply_btn filters_apply" id="function_filter">Apply</button>
                                     <button class="clear_btn">Clear All</button>
                                 </div>
                             </div>

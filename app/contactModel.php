@@ -30,23 +30,27 @@ class contactModel extends Model
      * 
      */
 
-     public static function fetchFilterData($sortingType, $offsetValue, $searchedData, $tagSearch){
+     public static function fetchFilterData($sortingType, $offsetValue, $searchedData, $tagSearch, $filterSearchData, $jobResponse){
 
-	       if(!empty($searchedData) || !empty($tagSearch)){
-	       	  $where = "where";
+        
+
+
+	       if(!empty($searchedData) || !empty($tagSearch) || !empty($filterSearchData) || !empty($jobResponse)){
+	       	  $where = "where 1=1";
 	       }
 	       else{
 	       	  $where = "";
 	       }
 
-           if(empty($sortingType)){
-               $sortingType = '';
-           }
+
 
        
-		$sqlQuery = "SELECT * FROM contacts $where $tagSearch $searchedData $sortingType LIMIT 10 OFFSET $offsetValue";
-        // var_dump($sqlQuery); die; 
+		$sqlQuery = "SELECT * FROM contacts $where $tagSearch $jobResponse $filterSearchData $searchedData $sortingType LIMIT 10 OFFSET $offsetValue";
+
 		return DB::select(DB::raw($sqlQuery));
      	 
      }
+
+
+
 }

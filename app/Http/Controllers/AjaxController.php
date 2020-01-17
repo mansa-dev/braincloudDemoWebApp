@@ -43,9 +43,19 @@ class AjaxController extends Controller
 
       if(isset($_GET['offsetValue'])){
       
-           $sortingType = $this->checkIfSortingTypeEmpty($_GET['id']);
+           $id = isset($_GET['id'])?$_GET['id']:'';
+           $sortingType = $this->checkIfSortingTypeEmpty($id);
+           $functionSearch = isset($_GET['functionsearchData'])?$_GET['functionsearchData']:'';
+
+           $filterSearchData = $this->checkIfSearchEmpty($functionSearch);
            $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
-           $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse);
+           $gridData = isset($_GET['gridSelectedData'])?$_GET['gridSelectedData']:'';
+           $jobResponse = $this->checkIfJobTitleEmpty($gridData);
+           $selectData = isset($_GET['selectedData'])?$_GET['selectedData']:'';
+           $tagSearch = $this->checkIfTitleEmpty($selectData);
+
+       
+           $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse,$tagSearch,$filterSearchData,$jobResponse);
            $response = view('load_contact',['data'=>$responseData]);
 
            echo "$response";
@@ -63,12 +73,18 @@ class AjaxController extends Controller
     public function loadNameFilterGrid(){
       
 
+
       if(isset($_GET['offsetValue'])){
-      
-           $sortingType = $this->checkIfSortingTypeEmpty($_GET['id']);
+           $id = isset($_GET['id'])?$_GET['id']:'';
+           $sortingType = $this->checkIfSortingTypeEmpty($id);
+           $functionSearch = isset($_GET['functionsearchData'])?$_GET['functionsearchData']:'';
+           $filterSearchData = $this->checkIfSearchEmpty($functionSearch);
+           $gridData = isset($_GET['gridSelectedData'])?$_GET['gridSelectedData']:'';
+           $jobResponse = $this->checkIfJobTitleEmpty($gridData);
            $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
-           $tagSearch = $this->chechIfJobTitleEmpty($_GET['selectedData']);
-           $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse,$tagSearch);
+           $selectData = isset($_GET['selectedData'])?$_GET['selectedData']:'';
+           $tagSearch = $this->checkIfTitleEmpty($selectData);
+           $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse,$tagSearch,$filterSearchData,$jobResponse);
 
            $zoomLevel = !empty($_GET['zoomLevel'])?$_GET['zoomLevel']:false;
            $response = view('load_contact_grid',['data'=>$responseData, 'zoomLevel'=>$zoomLevel]);
@@ -89,7 +105,7 @@ class AjaxController extends Controller
      
       if(!empty($searchData)){
 
-          return "(First_Name like '{$searchData}%'  or Tag1 like '{$searchData}%' or Tag2 like '{$searchData}%' or Tag3 like '{$searchData}%' or Tag4 like '{$searchData}%' or Tag5 like '{$searchData}%'or Tag6 like '{$searchData}%' or Tag7 like '{$searchData}%' or Tag8 like '{$searchData}%' or Job1_Company like '{$searchData}%')";
+          return "OR (First_Name like '{$searchData}%'  or Tag1 like '{$searchData}%' or Tag2 like '{$searchData}%' or Tag3 like '{$searchData}%' or Tag4 like '{$searchData}%' or Tag5 like '{$searchData}%'or Tag6 like '{$searchData}%' or Tag7 like '{$searchData}%' or Tag8 like '{$searchData}%' or Job1_Company like '{$searchData}%')";
 
       }
       else{
@@ -121,7 +137,15 @@ class AjaxController extends Controller
                   $sorting = '';
               }
 
-              return "First_Name order by First_Name $sorting";
+              if(!empty($sorting)){
+             
+                   return "order by First_Name $sorting";
+             
+              }
+              else{
+                
+                   return false; 
+              }
 
           }
           else{
@@ -129,17 +153,18 @@ class AjaxController extends Controller
           }   
 
       }
+    
     /**
    * Function to check if tags are empt or not
    * 
    */
 
-    public function chechIfJobTitleEmpty($titileArray){
+    public function checkIfTitleEmpty($titileArray){
  
       if(!empty($titileArray)){
        
-         $titleValue = implode(",",$titileArray);
-         
+
+         $titleValue = "'" . implode( "','", $titileArray ) . "'";
          if(!empty($titleValue)){
          
             return "Tag1 IN ($titleValue) or Tag2 IN ($titleValue) or Tag3 IN ($titleValue) or Tag4 IN ($titleValue) or Tag5 IN ($titleValue) or Tag6 IN ($titleValue) or Tag7 IN ($titleValue) or Tag8 IN ($titleValue)";
@@ -158,6 +183,39 @@ class AjaxController extends Controller
       }
 
     }
+
+   /**
+   * Function to check get the jobtitle
+   * 
+   */
+
+    public function checkIfJobTitleEmpty($jobTitleArray){
+ // var_dump($jobTitleArray); die; 
+      if(!empty($jobTitleArray)){
+       
+
+         $jobValue = "'" . implode( "','", $jobTitleArray ) . "'";
+         if(!empty($jobValue)){
+         
+            return "OR (Job1_Title IN ($jobValue))";
+         
+         }
+         else{
+
+             return false; 
+
+         }
+      
+      }else{
+      
+        return false;
+      
+      }
+
+    }
+
+
+
    
 
 }

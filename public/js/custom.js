@@ -165,17 +165,51 @@ $(document).ready(function(){
  });
    
     //Ajax functionality for Name filters
-    $(document).on('click','#name_filters',function(){
+    $(document).on('click','.filters_apply',function(){
     
         var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
         var searchData_ = $("#name_filter_search").val();
         var zoomLevel = $("#myrange").val();
+
+
+        var functionFilterValue = $('input[name="function_"]:checked').val();
+        var functionsearchData_ = $("#function_filter_search").val();
+        // var zoomLevel = $("#myrange").val();
+       
+
+	    var gridSelectedData = [];
+        $('.filter_check_box:checked').each(function(i){
+        	  gridSelectedData[i] = $(this).val();
+        });
+		
+
+
+        if(nameFilterValue){
+            nameFilterValue = nameFilterValue;
+            
+            if(nameFilterValue == '1'){
+                $("#asc").attr( 'checked', true );
+       
+	        }
+	         if(nameFilterValue == '2'){
+	                $("#desc").attr( 'checked', true );
+	        }
+        }
+
+        if(functionFilterValue){
+             nameFilterValue = functionFilterValue;
+        }
+
+
    
 		var selectedData = [];
 			$('.same_slected_list').each(function () {
 			    selectedData.push(this.id);
 			});
-			console.log(selectedData);
+			
+			if(!selectedData){
+				selectedData = '';
+			}
 
             if(!nameFilterValue){
             	nameFilterValue = '';
@@ -193,10 +227,10 @@ $(document).ready(function(){
             $.ajax({
             type:'GET',
             url: base_url+'loadNameFilter',
-            data:{ id: nameFilterValue, offsetValue: 0, search: searchData_,selectedData:selectedData},
+            data:{ id: nameFilterValue, offsetValue: 0, search: searchData_,selectedData:selectedData,functionsearchData:functionsearchData_,gridSelectedData:gridSelectedData},
             dataType : 'html',
             success:function(html){
-  
+
              $(".load_more_button").removeClass("show_more");        
              $(".load_more_button").addClass("show_more_filter");
   
@@ -205,7 +239,7 @@ $(document).ready(function(){
 	            $.ajax({
 			        type:'GET',
 			        url: base_url+'loadNameFilterData',
-			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_, zoomLevel: zoomLevel,selectedData:selectedData},
+			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_, zoomLevel: zoomLevel,selectedData:selectedData,functionsearchData:functionsearchData_,selectData:gridSelectedData},
 			        dataType : 'html',
 			        success:function(html){
 			        
@@ -217,6 +251,8 @@ $(document).ready(function(){
             	}
         	});
     });
+
+
 
        // For selected tags in filter
    $(".li_btns li").click(function(e) {
