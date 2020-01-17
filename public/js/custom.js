@@ -154,6 +154,7 @@ $(document).ready(function(){
     
         var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
         var searchData_ = $("#name_filter_search").val();
+        var zoomLevel = $("#myrange").val();
 
 
             if(!nameFilterValue){
@@ -183,7 +184,7 @@ $(document).ready(function(){
 	            $.ajax({
 			        type:'GET',
 			        url: base_url+'loadNameFilterData',
-			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
+			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_, zoomLevel: zoomLevel},
 			        dataType : 'html',
 			        success:function(html){
 			        

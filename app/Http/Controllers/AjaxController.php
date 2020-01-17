@@ -125,6 +125,21 @@ class AjaxController extends Controller
           }   
 
       }
+
+      function functionFilter(){
+        if(isset($_GET['offsetValue'])){
+      
+           $sortingType = $this->checkIfSortingTypeEmpty($_GET['id']);
+           $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
+           $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse);
+           $zoomLevel = !empty($_GET['zoomLevel'])?$_GET['zoomLevel']:false;
+           $response = view('load_contact_grid',['data'=>$responseData, 'zoomLevel'=>$zoomLevel]);
+           echo $response;
+      }
+      else{
+           echo false;  
+      }
+      }
    
 
 }
