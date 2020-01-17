@@ -147,25 +147,25 @@
                                 </div>
                                 <div class="select_unselect_btns pb-3">
                                     <span class="slctd d-block mb-1">Selected</span>
-                                    <div class="same_slected_list selected_btn HR ">
-                                        #HR
+                                    <div class="same_slected_list selected_btn HR " id="Triste">
+                                        #Triste
                                         <i class="fa fa-times-circle ml-1"></i>
                                     </div>
-                                    <div class="same_slected_list unselected_btn Business ">
-                                        #Business Line
+                                    <div class="same_slected_list unselected_btn Business " id="Fier">
+                                        #Fier
                                         <i class="fa fa-times-circle ml-1"></i>
                                     </div>
                                 </div>
                                 <div class="li_btns mt-4">
                                     <ul class="d-flex flex-wrap">
-                                        <li class="tags Data"><a href="#">#Data</a></li>
-                                        <li class="tags IT"><a href="#">#IT</a></li>
-                                        <li class="tags HR"><a class="selected_btn" href="#">#HR</a></li>
-                                        <li class="tags Function"><a href="#">#Function</a></li>
-                                        <li class="tags Network"><a href="#">#Network</a></li>
+                                        <li class="tags Data"><a href="#">#Somnolent</a></li>
+                                        <li class="tags IT"><a href="#">#Critique</a></li>
+                                        <li class="tags HR"><a class="selected_btn" href="#">#Content</a></li>
+                                        <li class="tags Function"><a href="#">#Optimiste</a></li>
+                                        <li class="tags Network"><a href="#">#Fons</a></li>
                                         <li class="tags Business">
                                             <a class="unselected_btn" href="#">
-                                                #Business Line
+                                                #Genergies
                                             </a>
                                         </li>
                                     </ul>
@@ -284,7 +284,7 @@
                 <div class="tab-content">
                     <div id="people" class="tab-pane active">
                         <div class="grid_view" id="grid_view">
-                            <div class="for_embed">
+                            <div class="for_embed" id="append_grid_view">
                                 @foreach($data as $value)
                                 <?php $id = $value->id; ?>
                                 <div class="user_pf_area xs_zomm">

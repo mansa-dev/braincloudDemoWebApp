@@ -11,11 +11,11 @@ $(document).ready(function(){
 	 	alert(this.id);
 	   $('#list_view').show();
 	   $('#grid_view').hide();
-	  $(".grid_view_show_more").show();
+	  // $(".grid_view_show_more").show();
 	 }else{
 	   $('#list_view').hide();
 	   $('#grid_view').show();
-	  $(".grid_view_show_more").hide();
+	  // $(".grid_view_show_more").hide();
 	 }
 	});
 	
@@ -63,7 +63,7 @@ $(document).ready(function(){
     $(document).on('click','.show_more_grid',function(){
 		
         var id = $(this).attr('id'),
-        zoomLevel = $("#myrange").val();
+       zoomLevel = $("#myrange").val();
        
         $.ajax({
             type:'GET',
@@ -71,7 +71,7 @@ $(document).ready(function(){
             dataType : 'html',
             data:{id:id,zoomLevel:zoomLevel},
             success:function(html){
-            	
+            	// console.log(html);
             	$(".show_more_grid").attr("id",parseInt(id)+parseInt(10));
                 $('#grid_view .for_embed').append(html);
             }
@@ -84,17 +84,29 @@ $(document).ready(function(){
         var id = $('input[name="name_filter_radio"]:checked').val(); 
         var offsetValue = $(this).attr('id');
         var searchData_ = $("#name_filter_search").val();
-        // alert(id); alert(offsetValue); alert(searchData_);
+         var zoomLevel = $("#myrange").val();
      
         $.ajax({
 	        type:'GET',
 	        url: base_url+'loadNameFilterData',
-	        data:{ id: id, offsetValue: 0, search: searchData_},
+	        data:{ id: id, offsetValue: offsetValue, search: searchData_, zoomLevel: zoomLevel},
 	        dataType : 'html',
 	        success:function(html){
 	      
             	$(".show_more_filter").attr("id",parseInt(offsetValue)+parseInt(10));
                 $('#list_view_table tbody').append(html);
+
+			    $.ajax({
+			        type:'GET',
+			        url: base_url+'loadNameFilter',
+			        dataType : 'html',
+			        data:{id:id, offsetValue: offsetValue, search: searchData_, zoomLevel: zoomLevel},
+			        success:function(html){
+			          // console.log(html);
+			          $(".show_more_grid").attr("id",parseInt(id)+parseInt(10));
+			          $('#grid_view .for_embed').append(html);
+			        }
+			    });
 	        }
 	    });
     });
@@ -157,7 +169,13 @@ $(document).ready(function(){
     
         var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
         var searchData_ = $("#name_filter_search").val();
-
+        var zoomLevel = $("#myrange").val();
+   
+		var selectedData = [];
+			$('.same_slected_list').each(function () {
+			    selectedData.push(this.id);
+			});
+			console.log(selectedData);
 
             if(!nameFilterValue){
             	nameFilterValue = '';
@@ -167,26 +185,27 @@ $(document).ready(function(){
             	searchData_ = '';
             }
 
-        	$(".load_more_button").removeClass("show_more");        
-            $(".load_more_button").addClass("show_more_filter");
 
             $(".load_more_button_grid").removeClass("show_more_grid");        
-            $(".load_more_button_grid").addClass("show_more_grid_filter");
+            $(".load_more_button_grid").addClass("show_more_filter");
            
 
             $.ajax({
             type:'GET',
             url: base_url+'loadNameFilter',
-            data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
+            data:{ id: nameFilterValue, offsetValue: 0, search: searchData_,selectedData:selectedData},
             dataType : 'html',
             success:function(html){
-            
-            	$('#grid_view').empty();
-                $('#grid_view').append(html);
+  
+             $(".load_more_button").removeClass("show_more");        
+             $(".load_more_button").addClass("show_more_filter");
+  
+            	$('#append_grid_view').empty();
+                $('#append_grid_view').append(html);
 	            $.ajax({
 			        type:'GET',
 			        url: base_url+'loadNameFilterData',
-			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
+			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_, zoomLevel: zoomLevel,selectedData:selectedData},
 			        dataType : 'html',
 			        success:function(html){
 			        
@@ -197,8 +216,6 @@ $(document).ready(function(){
 			    });
             	}
         	});
-
-
     });
 
        // For selected tags in filter
@@ -208,7 +225,7 @@ $(document).ready(function(){
 	
 		var sel = $(this).text();
 
-		$(".select_unselect_btns").append("<div class='same_slected_list " + slectedtagclass + " '>"+ sel +"<i class='fa fa-times-circle ml-1'></i></div>");
+		$(".select_unselect_btns").append("<div class='same_slected_list " + slectedtagclass + " ' id=" + slectedtagclass +">"+ sel +"<i class='fa fa-times-circle ml-1'></i></div>");
    
    });
 

@@ -67,7 +67,8 @@ class AjaxController extends Controller
       
            $sortingType = $this->checkIfSortingTypeEmpty($_GET['id']);
            $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
-           $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse);
+           $tagSearch = $this->chechIfJobTitleEmpty($_GET['selectedData']);
+           $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse,$tagSearch);
 
            $zoomLevel = !empty($_GET['zoomLevel'])?$_GET['zoomLevel']:false;
            $response = view('load_contact_grid',['data'=>$responseData, 'zoomLevel'=>$zoomLevel]);
@@ -128,6 +129,35 @@ class AjaxController extends Controller
           }   
 
       }
+    /**
+   * Function to check if tags are empt or not
+   * 
+   */
+
+    public function chechIfJobTitleEmpty($titileArray){
+ 
+      if(!empty($titileArray)){
+       
+         $titleValue = implode(",",$titileArray);
+         
+         if(!empty($titleValue)){
+         
+            return "Tag1 IN ($titleValue) or Tag2 IN ($titleValue) or Tag3 IN ($titleValue) or Tag4 IN ($titleValue) or Tag5 IN ($titleValue) or Tag6 IN ($titleValue) or Tag7 IN ($titleValue) or Tag8 IN ($titleValue)";
+         
+         }
+         else{
+
+             return false; 
+
+         }
+      
+      }else{
+      
+        return false;
+      
+      }
+
+    }
    
 
 }
