@@ -35,7 +35,7 @@ $(document).ready(function(){
 		 $('#grid_view').show();
 	});
     
-    $(".filter_ul li span").click(function(){
+    $(".white").click(function(){
       $( this ).toggleClass('bg_white');
       $(this).next('.li_dropdown').toggle();
     });
@@ -113,11 +113,7 @@ $(document).ready(function(){
     
 
 
-    //to keep all the values checked or unchecked on button clicked
-    $(document).on('click','#gridCustomCheck',function(){
-    
 
-    }); 
 
     //Zoom functionality on the slider
     $(document).on('click','#myrange',function(){
@@ -170,7 +166,10 @@ $(document).ready(function(){
         var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
         var searchData_ = $("#name_filter_search").val();
         var zoomLevel = $("#myrange").val();
-
+       
+        let nameFillter = $('input[name="name_filter_radio"]:checked');
+        
+          
 
         var functionFilterValue = $('input[name="function_"]:checked').val();
         var functionsearchData_ = $("#function_filter_search").val();
@@ -222,7 +221,71 @@ $(document).ready(function(){
 
             $(".load_more_button_grid").removeClass("show_more_grid");        
             $(".load_more_button_grid").addClass("show_more_filter");
+
+            // $(".load_more_button_grid").addClass("show_more_grid_filter");
+ 
+            //valdiation for nameFilter and search value//
+
            
+                
+                $.ajax({
+                type:'GET',
+                url: base_url+'loadNameFilter',
+                data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
+                dataType : 'html',
+                success:function(html){
+                
+                	$('#grid_view').empty();
+                    $('#grid_view').append(html);
+    	            $.ajax({
+    			        type:'GET',
+    			        url: base_url+'loadNameFilterData',
+    			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
+    			        dataType : 'html',
+    			        success:function(html){
+    			        
+    			        	$('#list_view_table_body').empty();
+    			            $('#list_view_table_body').append(html);
+                            $('li_dropdown').hide();
+
+    			        }
+    			    });
+                	}
+            	});
+              
+          
+    });
+
+    /* for name dropdown clear functionlity*/
+    $('#clearBtn_name').click(function(){
+
+        $('#name_filter_search').val('');
+        $('input[name="name_filter_radio"]').each(function(){
+            this.checked = false;
+        });      
+    });
+ 
+   /* for function dropdown clear functionlity */
+
+    $('#clearBtn_function').click(function() {
+        var designation = $('input[name="designation"]').each(function(){
+              this.checked = false;
+        });
+        var filter = $('input[name="function_filter_radio"]').each(function(){
+                this.checked = false;
+        });
+        var search = $('#functionSearch').val('');
+
+    });
+
+   /*for Function dropdown functionality*/
+   
+    $(document).on('click','#function_filter',function(){
+ 
+        var designation = $('input[name="designation"]:checked');
+        var filter = $('input[name="function_filter_radio"]:checked');
+        var search = $('#functionSearch').val();
+
 
             $.ajax({
             type:'GET',
@@ -251,6 +314,7 @@ $(document).ready(function(){
             	}
         	});
     });
+
 
 
 
@@ -299,3 +363,8 @@ function removeZoomClasses(){
    
    return true;
 }
+
+
+
+
+

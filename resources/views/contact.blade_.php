@@ -17,6 +17,119 @@
     <script src="{{ asset('/js/custom.js?v=123') }}"></script>
 
 </head>
+<<<<<<< HEAD
+=======
+<body>
+
+<div class="g_wrapper">
+<div class="navbar_coustom_area d-flex align-items-center">
+<div class="site_navbar_logo">
+<img src="http://localhost/brain_cloud/resources/images/logo.png" alt="">
+</div>
+<div class="navbar_ct d-flex align-items-center">
+<div class="top_tabs_area">
+<ul class="nav nav-tabs">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#people">People</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#companies">Companies</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#groups">Groups</a>
+</li>
+</ul>
+</div>
+<div class="user_profie_area d-flex justify-content-end">
+<nav class="navbar navbar-expand-sm d-flex">
+<ul class="d-flex align-items-center top_all_btns">
+<li class="search_btn">
+<button type="button" name="button"><i class="fa fa-search"></i></button>
+</li>
+<li class="new_content">
+<a href="javascript:void(0);">New Contact</a>
+</li>
+<li>
+<select class="" name="">
+<option value="">Select 1</option>
+<option value="">Select 2</option>
+<option value="">Select 3</option>
+<option value="">Select 4</option>
+<option value="">Select 5</option>
+</select>
+</li>
+<li class="file"><a href="#"><span class="text">To Do</span> <span class="circle_text">12</span> <i class="fa fa-file"></i></a></li>
+<li class="document"><a href="#">Documents <i class="fa fa-clipboard"></i></a></li>
+</ul>
+<ul class="navbar-nav d-flex justify-content-end align-items-center pl-3">
+<li><span class="date_text">28 Nov</span></li>
+<li class="nav-item dropdown d-flex justify-content-end">
+<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+<img src="images/face8.jpg" alt="">
+</a>
+<div class="dropdown-menu">
+<ul>
+<li class="text-center"><b class="dropdown-item">Allen Moreno</b> <a class="dropdown-item" href="#">allenmoreno@gmail.com</a></li>
+<li><a class="dropdown-item" href="#">View Profile</a></li>
+<li><a class="dropdown-item" href="#">Settings</a></li>
+<li><a class="dropdown-item" href="#">Log Out</a></b></li>
+</ul>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="sidebar_area">
+<aside id="sidebar_wrapper">
+<div class="sideba_menu">
+<ul class="public_groups">
+<div class="public_text d-flex align-items-center">
+<h4>Public Groups</h4>
+<span>271</span>
+</div>
+<li class="d-flex align-items-center justify-content-between">Group 1 <span>12</span></li>
+<li class="d-flex align-items-center justify-content-between">Group 2 <span>23</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_sky">Group 3 <span>53</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_sky">Travel <span>42</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_red">Musical <span>12</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_sky">Garage Band <span>16</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_red">Tennis <span>53</span></li>
+<li class="create_new"><a href="#"><i class="fa fa-plus"></i> Create New</a></li>
+</ul>
+<button type="button" class="add_more_btn d-inline-block" name="button"><i class="fa fa-angle-down"></i> Add More</button>
+<ul class="public_groups private_groups mt-5">
+<div class="public_text private_text d-flex align-items-center">
+<h4>Private Groups</h4>
+<span>12</span>
+</div>
+<li class="d-flex align-items-center justify-content-between gradient_sky">Group 1 <span>12</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_red">Group 2 <span>23</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_red">Group 3 <span>53</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_sky">Travel <span>42</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_sky">Musical <span>12</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_sky">Garage Band <span>13</span></li>
+<li class="d-flex align-items-center justify-content-between gradient_sky">Tennis <span>43</span></li>
+<li class="create_new"><a href="#"><i class="fa fa-plus"></i> Create New</a></li>
+</ul>
+<button type="button" class="add_more_btn d-inline-block" name="button"><i class="fa fa-angle-down"></i> Add More</button>
+</div>
+</aside>
+</div>
+<div class="main_content_area">
+<div class="main_content_inner_area">
+<div class="select_tabs_area mb-3">
+<ul class="d-flex flex-wrap tabs_li align-items-center filter_ul">
+<div class="check_box pl-2">
+<div class="custom-control custom-checkbox">
+<input type="checkbox" class="custom-control-input" id="gridCustomCheck" name="example1">
+<label class="custom-control-label" for="gridCustomCheck"></label>
+</div>
+</div>
+<li id="name_tabs">
+<span class="b_s">Name <i class="fa fa-angle-down"></i></span>
+>>>>>>> pardeep_kumar
 
 <body>
 
