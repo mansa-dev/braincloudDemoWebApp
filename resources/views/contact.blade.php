@@ -165,14 +165,14 @@
                                 <div class="li_btns mt-4">
                                     <ul class="d-flex flex-wrap">
 
-                                        <li class="tags Data "><a class="border_gradient_red" href="javascript:void(0);">#Somnolent</a></li>
-                                        <li class="tags IT "><a class="border_gradient_yellow" href="javascript:void(0);">#Critique</a></li>
+                                        <li class="tags Data"><a class="border_gradient_red" href="javascript:void(0);">#Somnolent</a></li>
+                                        <li class="tags IT"><a class="border_gradient_yellow" href="javascript:void(0);">#Critique</a></li>
                                         <li class="tags HR border_gradient_sky"><a class="selected_btn" href="javascript:void(0);">#Content</a></li>
-                                        <li class="tags Function "><a 
+                                        <li class="tags Function"><a 
                                            class="border_gradient_red" href="javascript:void(0);">#Optimiste</a></li>
                                         <li class="tags Network"><a  class="border_gradient_yellow"
                                             href="javascript:void(0);">#Fons</a></li>
-                                        <li class="tags Business ">
+                                        <li class="tags Business">
                                             <a class="unselected_btn border_gradient_sky" href="javascript:void(0);">
                                                 #Genergies
 <!-- =======

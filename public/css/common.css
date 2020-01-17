@@ -112,3 +112,26 @@ select{
 .border_gradient_sky{
    border-color:#52d4ea !important;
 }
+.same_slected_list.border_gradient_red{
+  background-image: linear-gradient(to right, #ff7a7b, #e73105) !important; 
+  color:#fff !important;;
+}
+
+.same_slected_list.border_gradient_yellow{
+  background-image: linear-gradient(to right, #ff8206, #f6bc84)!important;
+    color:#fff !important;;
+}
+.same_slected_list.border_gradient_sky{
+   background-image: linear-gradient(to right, #52d4ea, #868ef9) !important;
+     color:#fff !important;; 
+}
+.same_slected_list.border_gradient_red i{
+  color:inherit !important;
+}
+
+.same_slected_list.border_gradient_yellow i{
+  color:inherit !important;
+}
+.same_slected_list.border_gradient_sky i{
+  color:inherit !important;
+}

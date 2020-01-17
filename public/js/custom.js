@@ -320,7 +320,7 @@ $(document).ready(function(){
 
        // For selected tags in filter
    $(".li_btns li").click(function(e) {
-		var slectedtagclass= $(this).attr('class').split(' ').pop();
+		var slectedtagclass= $(this).children().attr('class').split(' ').pop();
 		var compareselectedtag = $('.select_unselect_btns').find(slectedtagclass);
 	
 		var sel = $(this).text();
