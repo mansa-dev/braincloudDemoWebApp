@@ -46,6 +46,8 @@ $(document).ready(function(){
 		
         var id = $(this).attr('id');
        
+        $("#myrange").empty();
+
         $.ajax({
             type:'GET',
             url: base_url+'loadContactData',
@@ -61,9 +63,12 @@ $(document).ready(function(){
 
     //show more grid data
     $(document).on('click','.show_more_grid',function(){
-		
+		// $("#myrange").empty();
+		$("#myrange").slider("option", "values", [1, 5]);
+
         var id = $(this).attr('id'),
        zoomLevel = $("#myrange").val();
+
        
         $.ajax({
             type:'GET',
@@ -81,11 +86,14 @@ $(document).ready(function(){
     //Load more data on Name filters 
 	$(document).on('click','.show_more_filter',function(){
 		
+		$("#myrange").empty();
         var id = $('input[name="name_filter_radio"]:checked').val(); 
         var offsetValue = $(this).attr('id');
         var searchData_ = $("#name_filter_search").val();
          var zoomLevel = $("#myrange").val();
-     
+       
+       // $("#myrange").empty();
+       
         $.ajax({
 	        type:'GET',
 	        url: base_url+'loadNameFilterData',
@@ -163,6 +171,7 @@ $(document).ready(function(){
     //Ajax functionality for Name filters
     $(document).on('click','.filters_apply',function(){
     
+
         var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
         var searchData_ = $("#name_filter_search").val();
         var zoomLevel = $("#myrange").val();
@@ -170,6 +179,7 @@ $(document).ready(function(){
         let nameFillter = $('input[name="name_filter_radio"]:checked');
         
           
+        $("#myrange").empty();
 
         var functionFilterValue = $('input[name="function_"]:checked').val();
         var functionsearchData_ = $("#function_filter_search").val();
@@ -197,6 +207,13 @@ $(document).ready(function(){
 
         if(functionFilterValue){
              nameFilterValue = functionFilterValue;
+            if(nameFilterValue == '1'){
+                $("#ascending").attr( 'checked', true );
+       
+	        }
+	         if(nameFilterValue == '2'){
+	                $("#customRadio").attr( 'checked', true );
+	        }
         }
 
 
@@ -226,7 +243,7 @@ $(document).ready(function(){
  
             //valdiation for nameFilter and search value//
 
-           
+              $("#li_dropdown").hide();
                 
                 $.ajax({
                 type:'GET',
@@ -235,8 +252,8 @@ $(document).ready(function(){
                 dataType : 'html',
                 success:function(html){
                 
-                	$('#grid_view').empty();
-                    $('#grid_view').append(html);
+                	$('#append_grid_view').empty();
+                    $('#append_grid_view').append(html);
     	            $.ajax({
     			        type:'GET',
     			        url: base_url+'loadNameFilterData',

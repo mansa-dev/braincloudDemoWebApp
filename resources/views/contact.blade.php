@@ -153,14 +153,7 @@
                                 <!-- for showing error of search dropdown -->
                                 <div class="select_unselect_btns pb-3">
                                     <span class="slctd d-block mb-1">Selected</span>
-      <!--                               <div class="same_slected_list selected_btn HR " id="Triste">
-                                        #Triste
-                                        <i class="fa fa-times-circle ml-1"></i>
-                                    </div>
-                                    <div class="same_slected_list unselected_btn Business " id="Fier">
-                                        #Fier
-                                        <i class="fa fa-times-circle ml-1"></i>
-                                    </div> -->
+
                                 </div>
                                 <div class="li_btns mt-4">
                                     <ul class="d-flex flex-wrap">
@@ -173,26 +166,13 @@
                                         <li class="tags Business">
                                             <a class="unselected_btn" href="javascript:void(0);">
                                                 #Genergies
-<!-- =======
-                                        <li class="tags Data"><a href="javascript:void(0);">#Data</a></li>
-                                        <li class="tags IT"><a href="javascript:void(0);">#IT</a></li>
-                                        <li class="tags HR"><a class="selected_btn" href="javascript:void(0);">#HR</a></li>
-                                        <li class="tags Function"><a href="javascript:void(0);">#Function</a></li>
-                                        <li class="tags Network"><a href="javascript:void(0);">#Network</a></li>
-                                        <li class="tags Business">
-                                            <a class="unselected_btn" href="javascript:void(0);">
-                                                #Business Line
->>>>>>> pardeep_kumar -->
+
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="apply_clear_btns mt-3">
-<!-- <<<<<<< HEAD
                                     <button class="apply_btn filters_apply" id="name_filters">Apply</button>
-                                    <button class="clear_btn">Clear All</button>
-======= -->
-                                    <button class="apply_btn" id="name_filters">Apply</button>
                                     <button class="clear_btn" id="clearBtn_name">Clear All</button>
 
                                 </div>
@@ -243,14 +223,13 @@
                                     <div class="custom-control custom-radio ml-3">
                                         <input type="radio" class="custom-control-input" id="desc" value="2" name="function_">
                                         <label class="custom-control-label" for="desc">Z-A</label>
-                                        <!-- <input type="radio" class="custom-control-input" id="asc" name="function_filter_radio"> -->
-                                       <!--  <label class="custom-control-label" for="asc">A-Z</label> -->
+                                     
                                     </div>
                                  
                                 </div>
                                 <div class="form-group has-search">
                                     <span class="fa fa-search form-control-feedback"></span>
-<!-- <<<<<<< HEAD -->
+
                                     <input type="text" class="form-control" id="function_filter_search" placeholder="Search">
                                 </div>
                                 <div class="checkbox_area">
@@ -274,43 +253,8 @@
                                         <input type="checkbox" class="custom-control-input filter_check_box" name="designation" id="BRED" value="BRED" name="example1">
                                         <label class="custom-control-label" for="BRED">BRED</label>
 
-                                    <input type="text" class="form-control" placeholder="Search" id="functionSearch">
+                                    <!-- <input type="text" class="form-control" placeholder="Search" id="functionSearch"> -->
                                 </div>
-                               <!--  <div class="checkbox_area">
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_coach" name="designation" checked>
-                                        <label class="custom-control-label" for="check_coach">Coach</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_hr" name="designation" checked>
-                                        <label class="custom-control-label" for="check_hr">HR</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_analytic" name="designation">
-                                        <label class="custom-control-label" for="check_analytic">Business Analytic</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_ceo" name="designation">
-                                        <label class="custom-control-label" for="check_ceo">CEO</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_founder" name="designation">
-                                        <label class="custom-control-label" for="check_founder">Founder</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_analyst" name="designation">
-                                        <label class="custom-control-label" for="check_analyst">Analyst</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_designer" name="designation">
-                                        <label class="custom-control-label" for="check_designer">Designer</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_developer" name="designation">
-                                        <label class="custom-control-label" for="check_developer">Developer</label>
-
-                                    </div>
-                                </div> -->
 
                                 <!-- for showing error of search dropdown -->
                                   <div id="errorFunction"></div>

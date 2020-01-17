@@ -7,7 +7,8 @@ use App\contactModel;
 
 class AjaxController extends Controller
 {
-    /**
+  
+  /**
 	 * Function to load the html data on ajax call
 	 * 
 	 */
@@ -19,7 +20,7 @@ class AjaxController extends Controller
     	echo $response;  
     }
     
-      /**
+  /**
    * Function to load Grid data
    * 
    */
@@ -190,7 +191,7 @@ class AjaxController extends Controller
    */
 
     public function checkIfJobTitleEmpty($jobTitleArray){
- // var_dump($jobTitleArray); die; 
+
       if(!empty($jobTitleArray)){
        
 
