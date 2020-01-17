@@ -62,13 +62,14 @@ $(document).ready(function(){
     //show more grid data
     $(document).on('click','.show_more_grid',function(){
 		
-        var id = $(this).attr('id');
+        var id = $(this).attr('id'),
+        zoomLevel = $("#myrange").val();
        
         $.ajax({
             type:'GET',
             url: base_url+'loadGrid',
             dataType : 'html',
-            data:'id='+id,
+            data:{id:id,zoomLevel:zoomLevel},
             success:function(html){
             	
             	$(".show_more_grid").attr("id",parseInt(id)+parseInt(10));

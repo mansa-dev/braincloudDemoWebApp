@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
@@ -47,7 +46,7 @@
                                 <button type="button" name="button"><i class="fa fa-search"></i></button>
                             </li>
                             <li class="new_content">
-                                <a href="#">New Contact</a>
+                                <a href="javascript:void(0);">New Contact</a>
                             </li>
                             <li>
                                 <select class="" name="">
@@ -58,8 +57,8 @@
                                     <option value="">Select 5</option>
                                 </select>
                             </li>
-                            <li class="file"><a href="#"><span class="text">To Do</span> <span class="circle_text">12</span> <i class="fa fa-file"></i></a></li>
-                            <li class="document"><a href="#">Documents <i class="fa fa-clipboard"></i></a></li>
+                            <li class="file"><a href="javascript:void(0);"><span class="text">To Do</span> <span class="circle_text">12</span> <i class="fa fa-file"></i></a></li>
+                            <li class="document"><a href="javascript:void(0);">Documents <i class="fa fa-clipboard"></i></a></li>
                         </ul>
                         <ul class="navbar-nav d-flex justify-content-end align-items-center pl-3">
                             <li><span class="date_text">28 Nov</span></li>
@@ -69,10 +68,10 @@
                                 </a>
                                 <div class="dropdown-menu">
                                     <ul>
-                                        <li class="text-center"><b class="dropdown-item">Allen Moreno</b> <a class="dropdown-item" href="#">allenmoreno@gmail.com</a></li>
-                                        <li><a class="dropdown-item" href="#">View Profile</a></li>
-                                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                                        <li><a class="dropdown-item" href="#">Log Out</a></b></li>
+                                        <li class="text-center"><b class="dropdown-item">Allen Moreno</b> <a class="dropdown-item" href="javascript:void(0);">allenmoreno@gmail.com</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">View Profile</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Settings</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Log Out</a></b></li>
                                     </ul>
                                 </div>
                             </li>
@@ -96,7 +95,7 @@
                         <li class="d-flex align-items-center justify-content-between gradient_red">Musical <span>12</span></li>
                         <li class="d-flex align-items-center justify-content-between gradient_sky">Garage Band <span>16</span></li>
                         <li class="d-flex align-items-center justify-content-between gradient_red">Tennis <span>53</span></li>
-                        <li class="create_new"><a href="#"><i class="fa fa-plus"></i> Create New</a></li>
+                        <li class="create_new"><a href="javascript:void(0);"><i class="fa fa-plus"></i> Create New</a></li>
                     </ul>
                     <button type="button" class="add_more_btn d-inline-block" name="button"><i class="fa fa-angle-down"></i> Add More</button>
                     <ul class="public_groups private_groups mt-5">
@@ -111,7 +110,7 @@
                         <li class="d-flex align-items-center justify-content-between gradient_sky">Musical <span>12</span></li>
                         <li class="d-flex align-items-center justify-content-between gradient_sky">Garage Band <span>13</span></li>
                         <li class="d-flex align-items-center justify-content-between gradient_sky">Tennis <span>43</span></li>
-                        <li class="create_new"><a href="#"><i class="fa fa-plus"></i> Create New</a></li>
+                        <li class="create_new"><a href="javascript:void(0);"><i class="fa fa-plus"></i> Create New</a></li>
                     </ul>
                     <button type="button" class="add_more_btn d-inline-block" name="button"><i class="fa fa-angle-down"></i> Add More</button>
                 </div>
