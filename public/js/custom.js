@@ -70,7 +70,7 @@ $(document).ready(function(){
             dataType : 'html',
             data:'id='+id,
             success:function(html){
-            	// console.log(html);
+            	
             	$(".show_more_grid").attr("id",parseInt(id)+parseInt(10));
                 $('#grid_view .for_embed').append(html);
             }
@@ -92,7 +92,7 @@ $(document).ready(function(){
 	        dataType : 'html',
 	        success:function(html){
 	      
-            	$(".show_more_filter").attr("id",parseInt(id)+parseInt(10));
+            	$(".show_more_filter").attr("id",parseInt(offsetValue)+parseInt(10));
                 $('#list_view_table tbody').append(html);
 	        }
 	    });
