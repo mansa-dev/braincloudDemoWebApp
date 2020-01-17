@@ -213,6 +213,28 @@ $(document).ready(function(){
 
     });
 
+    /* for name dropdown clear functionlity*/
+    $('#clearBtn_name').click(function(){
+
+        $('#name_filter_search').val('');
+        $('input[name="name_filter_radio"]').each(function(){
+            this.checked = false;
+        });      
+    });
+ 
+   /* for function dropdown clear functionlity */
+
+    $('#clearBtn_function').click(function() {
+        var designation = $('input[name="designation"]').each(function(){
+              this.checked = false;
+        });
+        var filter = $('input[name="function_filter_radio"]').each(function(){
+                this.checked = false;
+        });
+        var search = $('#functionSearch').val('');
+
+    });
+
    /*for Function dropdown functionality*/
    
     $(document).on('click','#function_filter',function(){

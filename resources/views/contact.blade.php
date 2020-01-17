@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="apply_clear_btns mt-3">
                                     <button class="apply_btn" id="name_filters">Apply</button>
-                                    <button class="clear_btn">Clear All</button>
+                                    <button class="clear_btn" id="clearBtn_name">Clear All</button>
                                 </div>
                             </div>
                         </li>
@@ -273,7 +273,7 @@
 
                                 <div class="apply_clear_btns mt-3">
                                     <button class="apply_btn" id="function_filter">Apply</button>
-                                    <button class="clear_btn">Clear All</button>
+                                    <button class="clear_btn" id="clearBtn_function">Clear All</button>
                                 </div>
                             </div>
                         </li>
