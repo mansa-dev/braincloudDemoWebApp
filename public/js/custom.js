@@ -80,19 +80,22 @@ $(document).ready(function(){
     //Load more data on Name filters 
 	$(document).on('click','.show_more_filter',function(){
 		
-        var id = $(this).attr('id');
-       
+        var id = $('input[name="name_filter_radio"]:checked').val(); 
+        var offsetValue = $(this).attr('id');
+        var searchData_ = $("#name_filter_search").val();
+        // alert(id); alert(offsetValue); alert(searchData_);
+     
         $.ajax({
-            type:'GET',
-            url: base_url+'loadNameFilterData',
-            dataType : 'html',
-            data:'id='+id,
-            success:function(html){
-            	 $(".show_more_filter").attr("id",parseInt(id)+parseInt(10));
-                 $('#list_view_table tbody').append(html);
-
-            }
-        });
+	        type:'GET',
+	        url: base_url+'loadNameFilterData',
+	        data:{ id: id, offsetValue: 0, search: searchData_},
+	        dataType : 'html',
+	        success:function(html){
+	      
+            	$(".show_more_filter").attr("id",parseInt(id)+parseInt(10));
+                $('#list_view_table tbody').append(html);
+	        }
+	    });
     });
     
 

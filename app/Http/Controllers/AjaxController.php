@@ -46,7 +46,8 @@ class AjaxController extends Controller
            $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
            $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse);
            $response = view('load_contact',['data'=>$responseData]);
-           echo $response;
+
+           echo "$response";
       }
       else{
            echo false;  
@@ -67,6 +68,7 @@ class AjaxController extends Controller
            $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
            $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse);
            $response = view('load_contact_grid',['data'=>$responseData]);
+
            echo $response;
       }
       else{
