@@ -64,8 +64,9 @@ $(document).ready(function(){
     //show more grid data
     $(document).on('click','.show_more_grid',function(){
 		// $("#myrange").empty();
-		$("#myrange").slider("option", "values", [1, 5]);
-
+		// $("#myrange").slider("option", "values", [1, 5]);
+ 
+        
         var id = $(this).attr('id'),
        zoomLevel = $("#myrange").val();
 
@@ -297,40 +298,40 @@ $(document).ready(function(){
 
    /*for Function dropdown functionality*/
    
-    $(document).on('click','#function_filter',function(){
+    // $(document).on('click','#function_filter',function(){
  
-        var designation = $('input[name="designation"]:checked');
-        var filter = $('input[name="function_filter_radio"]:checked');
-        var search = $('#functionSearch').val();
+    //     var designation = $('input[name="designation"]:checked');
+    //     var filter = $('input[name="function_filter_radio"]:checked');
+    //     var search = $('#functionSearch').val();
 
 
-            $.ajax({
-            type:'GET',
-            url: base_url+'loadNameFilter',
-            data:{ id: nameFilterValue, offsetValue: 0, search: searchData_,selectedData:selectedData,functionsearchData:functionsearchData_,gridSelectedData:gridSelectedData},
-            dataType : 'html',
-            success:function(html){
+    //         $.ajax({
+    //         type:'GET',
+    //         url: base_url+'loadNameFilter',
+    //         data:{ id: nameFilterValue, offsetValue: 0, search: searchData_,selectedData:selectedData,functionsearchData:functionsearchData_,gridSelectedData:gridSelectedData},
+    //         dataType : 'html',
+    //         success:function(html){
 
-             $(".load_more_button").removeClass("show_more");        
-             $(".load_more_button").addClass("show_more_filter");
+    //          $(".load_more_button").removeClass("show_more");        
+    //          $(".load_more_button").addClass("show_more_filter");
   
-            	$('#append_grid_view').empty();
-                $('#append_grid_view').append(html);
-	            $.ajax({
-			        type:'GET',
-			        url: base_url+'loadNameFilterData',
-			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_, zoomLevel: zoomLevel,selectedData:selectedData,functionsearchData:functionsearchData_,selectData:gridSelectedData},
-			        dataType : 'html',
-			        success:function(html){
+    //         	$('#append_grid_view').empty();
+    //             $('#append_grid_view').append(html);
+	   //          $.ajax({
+			 //        type:'GET',
+			 //        url: base_url+'loadNameFilterData',
+			 //        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_, zoomLevel: zoomLevel,selectedData:selectedData,functionsearchData:functionsearchData_,selectData:gridSelectedData},
+			 //        dataType : 'html',
+			 //        success:function(html){
 			        
-			        	$('#list_view_table_body').empty();
-			            $('#list_view_table_body').append(html);
+			 //        	$('#list_view_table_body').empty();
+			 //            $('#list_view_table_body').append(html);
 
-			        }
-			    });
-            	}
-        	});
-    });
+			 //        }
+			 //    });
+    //         	}
+    //     	});
+    // });
 
 
 
