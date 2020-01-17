@@ -179,7 +179,8 @@ $(document).ready(function(){
        
         let nameFillter = $('input[name="name_filter_radio"]:checked');
         
-          
+        // alert(searchData_);
+        
         $("#myrange").empty();
 
         var functionFilterValue = $('input[name="function_"]:checked').val();
