@@ -45,7 +45,7 @@
 <button type="button" name="button"><i class="fa fa-search"></i></button>
 </li>
 <li class="new_content">
-<a href="#">New Contact</a>
+<a href="javascript:void(0);">New Contact</a>
 </li>
 <li>
 <select class="" name="">

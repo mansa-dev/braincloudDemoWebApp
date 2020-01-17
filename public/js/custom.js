@@ -35,7 +35,7 @@ $(document).ready(function(){
 		 $('#grid_view').show();
 	});
     
-    $(".filter_ul li span").click(function(){
+    $(".white").click(function(){
       $( this ).toggleClass('bg_white');
       $(this).next('.li_dropdown').toggle();
     });
@@ -157,7 +157,10 @@ $(document).ready(function(){
     
         var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
         var searchData_ = $("#name_filter_search").val();
-
+       
+        let nameFillter = $('input[name="name_filter_radio"]:checked');
+        
+          
 
             if(!nameFilterValue){
             	nameFilterValue = '';
@@ -172,31 +175,52 @@ $(document).ready(function(){
 
             $(".load_more_button_grid").removeClass("show_more_grid");        
             $(".load_more_button_grid").addClass("show_more_grid_filter");
+ 
+            //valdiation for nameFilter and search value//
+
            
+                
+                $.ajax({
+                type:'GET',
+                url: base_url+'loadNameFilter',
+                data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
+                dataType : 'html',
+                success:function(html){
+                
+                	$('#grid_view').empty();
+                    $('#grid_view').append(html);
+    	            $.ajax({
+    			        type:'GET',
+    			        url: base_url+'loadNameFilterData',
+    			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
+    			        dataType : 'html',
+    			        success:function(html){
+    			        
+    			        	$('#list_view_table_body').empty();
+    			            $('#list_view_table_body').append(html);
+                            $('li_dropdown').hide();
 
-            $.ajax({
-            type:'GET',
-            url: base_url+'loadNameFilter',
-            data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
-            dataType : 'html',
-            success:function(html){
-            
-            	$('#grid_view').empty();
-                $('#grid_view').append(html);
-	            $.ajax({
-			        type:'GET',
-			        url: base_url+'loadNameFilterData',
-			        data:{ id: nameFilterValue, offsetValue: 0, search: searchData_},
-			        dataType : 'html',
-			        success:function(html){
-			        
-			        	$('#list_view_table_body').empty();
-			            $('#list_view_table_body').append(html);
+    			        }
+    			    });
+                	}
+            	});
+              
+          
+           
+          
 
-			        }
-			    });
-            	}
-        	});
+
+
+    });
+
+   /*for Function dropdown functionality*/
+   
+    $(document).on('click','#function_filter',function(){
+ 
+        var designation = $('input[name="designation"]:checked');
+        var filter = $('input[name="function_filter_radio"]:checked');
+        var search = $('#functionSearch').val();
+
 
 
     });
@@ -246,3 +270,8 @@ function removeZoomClasses(){
    
    return true;
 }
+
+
+
+
+

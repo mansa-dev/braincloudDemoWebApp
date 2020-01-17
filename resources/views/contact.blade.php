@@ -118,6 +118,9 @@
         </div>
         <div class="main_content_area">
             <div class="main_content_inner_area">
+
+
+
                 <div class="select_tabs_area mb-3">
                     <ul class="d-flex flex-wrap tabs_li align-items-center filter_ul">
                         <div class="check_box pl-2">
@@ -127,7 +130,7 @@
                             </div>
                         </div>
                         <li id="name_tabs">
-                            <span class="b_s">Name <i class="fa fa-angle-down"></i></span>
+                            <span class="b_s white">Name <i class="fa fa-angle-down"></i></span>
 
 
                             <div class="li_dropdown" id="li_dropdown">
@@ -145,6 +148,9 @@
                                     <span class="fa fa-search form-control-feedback"></span>
                                     <input type="text" class="form-control" id="name_filter_search" placeholder="Search">
                                 </div>
+                                <!-- for showing error of search dropdown -->
+                                <div id="errorName"></div>
+                                <!-- for showing error of search dropdown -->
                                 <div class="select_unselect_btns pb-3">
                                     <span class="slctd d-block mb-1">Selected</span>
                                     <div class="same_slected_list selected_btn HR ">
@@ -158,13 +164,13 @@
                                 </div>
                                 <div class="li_btns mt-4">
                                     <ul class="d-flex flex-wrap">
-                                        <li class="tags Data"><a href="#">#Data</a></li>
-                                        <li class="tags IT"><a href="#">#IT</a></li>
-                                        <li class="tags HR"><a class="selected_btn" href="#">#HR</a></li>
-                                        <li class="tags Function"><a href="#">#Function</a></li>
-                                        <li class="tags Network"><a href="#">#Network</a></li>
+                                        <li class="tags Data"><a href="javascript:void(0);">#Data</a></li>
+                                        <li class="tags IT"><a href="javascript:void(0);">#IT</a></li>
+                                        <li class="tags HR"><a class="selected_btn" href="javascript:void(0);">#HR</a></li>
+                                        <li class="tags Function"><a href="javascript:void(0);">#Function</a></li>
+                                        <li class="tags Network"><a href="javascript:void(0);">#Network</a></li>
                                         <li class="tags Business">
-                                            <a class="unselected_btn" href="#">
+                                            <a class="unselected_btn" href="javascript:void(0);">
                                                 #Business Line
                                             </a>
                                         </li>
@@ -207,77 +213,81 @@
                             </span>
                         </li>
                         <li id="li_function">
-                            <span>
+                            <span class="white">
                                 Function
                                 <i class="fa fa-angle-down"></i>
                             </span>
                             <div class="li_dropdown" id="function_li_dropdown">
                                 <div class="acending_decending d-flex mb-3">
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" class="custom-control-input" id="asc" name="example1">
+                                        <input type="radio" class="custom-control-input" id="asc" name="function_filter_radio">
                                         <label class="custom-control-label" for="asc">A-Z</label>
                                     </div>
                                     <div class="custom-control custom-radio ml-3">
-                                        <input type="radio" class="custom-control-input" id="desc" name="example1">
+                                        <input type="radio" class="custom-control-input" id="desc" name="function_filter_radio">
                                         <label class="custom-control-label" for="desc">Z-A</label>
                                     </div>
                                 </div>
                                 <div class="form-group has-search">
                                     <span class="fa fa-search form-control-feedback"></span>
-                                    <input type="text" class="form-control" placeholder="Search">
+                                    <input type="text" class="form-control" placeholder="Search" id="functionSearch">
                                 </div>
                                 <div class="checkbox_area">
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_coach" name="example1" checked>
+                                        <input type="checkbox" class="custom-control-input" id="check_coach" name="designation" checked>
                                         <label class="custom-control-label" for="check_coach">Coach</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_hr" name="example1" checked>
+                                        <input type="checkbox" class="custom-control-input" id="check_hr" name="designation" checked>
                                         <label class="custom-control-label" for="check_hr">HR</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_analytic" name="example1">
+                                        <input type="checkbox" class="custom-control-input" id="check_analytic" name="designation">
                                         <label class="custom-control-label" for="check_analytic">Business Analytic</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_ceo" name="example1">
+                                        <input type="checkbox" class="custom-control-input" id="check_ceo" name="designation">
                                         <label class="custom-control-label" for="check_ceo">CEO</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_founder" name="example1">
+                                        <input type="checkbox" class="custom-control-input" id="check_founder" name="designation">
                                         <label class="custom-control-label" for="check_founder">Founder</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_analyst" name="example1">
+                                        <input type="checkbox" class="custom-control-input" id="check_analyst" name="designation">
                                         <label class="custom-control-label" for="check_analyst">Analyst</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_designer" name="example1">
+                                        <input type="checkbox" class="custom-control-input" id="check_designer" name="designation">
                                         <label class="custom-control-label" for="check_designer">Designer</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="check_developer" name="example1">
+                                        <input type="checkbox" class="custom-control-input" id="check_developer" name="designation">
                                         <label class="custom-control-label" for="check_developer">Developer</label>
                                     </div>
                                 </div>
 
+                                <!-- for showing error of search dropdown -->
+                                  <div id="errorFunction"></div>
+                                <!-- for showing error of search dropdown -->
+
                                 <div class="apply_clear_btns mt-3">
-                                    <button class="apply_btn">Apply</button>
+                                    <button class="apply_btn" id="function_filter">Apply</button>
                                     <button class="clear_btn">Clear All</button>
                                 </div>
                             </div>
                         </li>
                         <li><span>Network
-                                <i class="fa fa-angle-down"></i></span>
+                            <i class="fa fa-angle-down"></i></span>
                         </li>
                         <li><span>Gender
-                                <i class="fa fa-angle-down"></i></span>
+                            <i class="fa fa-angle-down"></i></span>
                         </li>
                         <li><span>Age
-                                <i class="fa fa-angle-down"></i></span>
+                            <i class="fa fa-angle-down"></i></span>
                         </li>
                         <li><span>ToDo
-                                <i class="fa fa-angle-down"></i></span>
+                            <i class="fa fa-angle-down"></i></span>
                         </li>
                     </ul>
                 </div>
@@ -285,7 +295,8 @@
                     <div id="people" class="tab-pane active">
                         <div class="grid_view" id="grid_view">
                             <div class="for_embed">
-                                @foreach($data as $value)
+                              @if(!empty($data))
+                              @foreach($data as $value)
                                 <?php $id = $value->id; ?>
                                 <div class="user_pf_area xs_zomm">
                                     <div class="check_box">
@@ -320,27 +331,27 @@
                                     <div class="friend_list">
                                         <ul>
                                             <li>
-                                                <a href="#">
+                                                <a href="javascript:void(0);">
                                                     <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="javascript:void(0);">
                                                     <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="javascript:void(0);">
                                                     <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="javascript:void(0);">
                                                     <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="javascript:void(0);">
                                                     <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
                                                 </a>
                                             </li>
@@ -349,10 +360,12 @@
                                 </div>
 
                                 @endforeach
+
                             </div>
                             <div class="show_more_main grid_view_show_more mt-3" id="show_more_main">
-                                <span id="<?php echo $id; ?>" class="load_more_button_grid show_more_grid" title="Load more posts">Show more</span>
+                                <span id="<?php echo $id; ?>" class="load_more_button_grid show_more_grid" title="Load more posts">Show More</span>
                             </div>
+
 
                         </div>
                         <div class="list_view" id="list_view">
@@ -403,10 +416,18 @@
                                 </tbody>
                             </table>
                             <div class="show_more_main" id="show_more_main">
-                                <span id="<?php echo $id; ?>" class="load_more_button show_more" title="Load more posts">Show more</span>
+                                <span id="<?php echo $id; ?>" class="load_more_button show_more" title="Load more posts">Show More</span>
                             </div>
                         </div>
                     </div>
+                    
+                    @else
+                     <div class="show_more_main grid_view_show_more mt-3" id="show_more_main">
+                      <span  class="load_more_button_grid show_more_grid" title="Load more posts">
+                         No data found
+                     </span>
+                     </div>
+                     @endif 
 
                     <div id="companies" class="tab-pane fade">
                     </div>

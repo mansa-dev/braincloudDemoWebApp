@@ -1,3 +1,5 @@
+@if(!empty($data))
+
 @foreach($data as $value)
 <?php $id = $value->id; ?>
 <div class="user_pf_area xs_zomm">
@@ -61,3 +63,13 @@
   </div>
 </div>
 @endforeach
+
+@else 
+ 
+ <div class="show_more_main grid_view_show_more mt-3" id="show_more_main">
+    <span  class="load_more_button_grid  show_more_grid" title="Load more posts">
+      No data found
+    </span>
+  </div>
+ 
+@endif
