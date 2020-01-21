@@ -316,7 +316,7 @@
 .g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_btns .same_slected_list {
   padding: 6px 12px;
   border: 0px;
-  border-radius: 6px;
+  border-radius: 2px;
   color: #333;
   display: inline-block;
   margin: 0 5px 5px 0;
@@ -336,7 +336,7 @@
   color: #333;
   padding: 5px 10px;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 2px;
   display: inline-block;
 }
 .g_wrapper .select_tabs_area ul li .li_dropdown .apply_clear_btns button {
@@ -463,7 +463,7 @@
   display: inline-block;
   width: auto;
   padding: 6px 15px;
-  
+  background: #000;
   border-radius: 5px;
   color: #fff;
   font-size: 12px;

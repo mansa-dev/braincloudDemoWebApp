@@ -1,3 +1,5 @@
+@if(!empty($data))
+
 @foreach($data as $value)
 <?php $id = $value->id; ?>
   <tr>
@@ -8,7 +10,7 @@
           </div>
       </td>
       <td>
-          <img src="images/face8.jpg" alt="">
+          <img src="{{ asset('/public/images/face8.jpg') }} " alt="">
       </td>
       <td>{{$value->First_Name}}</td>
       <td>{{$value->Name}}</td>
@@ -21,4 +23,5 @@
   </tr>
 @endforeach
 
+@endif
 

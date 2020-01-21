@@ -15,32 +15,44 @@ class contactModel extends Model
     protected $primaryKey = 'id';
 
      /**
-     * This function will get all the data from table contact
+     * This function will get all the data from table contact. Firstly only 50 recods will be Fetched.
      * 
      */
 
     public static function fetchContactsData($offset){
         
-	    return DB::table('contacts')->offset($offset)->limit(10)->get();
+	    return DB::table('dataset_contacts_3_Feuil1')->offset($offset)->limit(50)->get();
     
     }
 
      /**
-     * This function will get filter data
+     * This function will get the data from filters.
      * 
      */
 
-     public static function fetchFilterData($sortingType, $offsetValue, $searchedData){
+     public static function fetchFilterData($sortingType, $offsetValue, $searchedData, $tagSearch, $filterSearchData, $jobResponse){
 
-	       if(!empty($searchedData) || !empty($offsetValue)){
-	       	  $where = "where";
+        
+
+
+	       if(!empty($searchedData) || !empty($tagSearch) || !empty($filterSearchData) || !empty($jobResponse)){
+	       	  $where = "where ";
 	       }
 	       else{
 	       	  $where = "";
 	       }
+        
+        $subQuery =  "$tagSearch $jobResponse $filterSearchData $searchedData $sortingType";
+
+        $filteredSubQuery  = ltrim(trim($subQuery),"OR");
        
-		$sqlQuery = "SELECT * FROM contacts $where $searchedData $sortingType LIMIT 10 OFFSET $offsetValue";
+		$sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $where $filteredSubQuery LIMIT 50 OFFSET $offsetValue";
+
+       
 		return DB::select(DB::raw($sqlQuery));
      	 
-     }
+    }
+
+
+
 }
