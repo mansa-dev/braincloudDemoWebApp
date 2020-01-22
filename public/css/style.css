@@ -970,3 +970,45 @@ border: 1px solid #ddd;
 .overlay button:hover {
  background: #bbb;
 }
+.g_wrapper .navbar_coustom_area .user_profie_area #smartSearch {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    height: 33px;
+    padding: 10px 5px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #777;
+    width: 120px;
+    border-right: 0px;
+    outline: none;
+    position: relative;
+    left: 1px;
+}
+.g_wrapper .navbar_coustom_area .top_all_btns li.search_btn{
+  padding-left: 0;
+}
+.g_wrapper .navbar_coustom_area .top_all_btns li.search_btn button {
+    border-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.g_wrapper .navbar_coustom_area .user_profie_area ul#result {
+    top: 50px;
+    left: 15px;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+    border-radius: 10px;
+    min-width: 200px;
+}
+.g_wrapper .navbar_coustom_area .user_profie_area ul#result li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+}
+.g_wrapper .navbar_coustom_area .user_profie_area ul#result li:hover{
+  background: #f0f0f0;
+}
+

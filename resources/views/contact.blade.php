@@ -51,12 +51,16 @@
                              </form>
                            </div>
                          </div>
+                            <input type="text" name="search" id="smartSearch">
                             <li class="search_btn">
-                                <button type="button" name="button" onclick="openSearch()"><i class="fa fa-search"></i></button>
+                                <button type="button" name="button"  id="smartSearchBtn"><i class="fa fa-search"></i></button>
                             </li>
+
+                            <ul id="result"></ul>
                             <li class="new_content">
                                 <a href="javascript:void(0);">New Contact</a>
                             </li>
+
                             <li>
                                 <select class="" name="">
                                     <option value="">Select 1</option>

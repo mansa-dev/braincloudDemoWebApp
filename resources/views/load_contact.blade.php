@@ -1,7 +1,6 @@
 @if(!empty($data))
-
 @foreach($data as $value)
-<?php $id = $value->id; ?>
+<?php  $id = $value->id; ?>
   <tr>
       <td>
           <div class="custom-control custom-checkbox">

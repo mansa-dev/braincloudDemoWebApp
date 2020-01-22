@@ -343,7 +343,8 @@ $(document).ready(function(){
    		 $(this).parent().remove();
     });
     
-    
+     
+  
 });
 
 //Centeralised function in javscript to check the classes exist and remove 
