@@ -401,13 +401,13 @@
                                   children[9].style.left=value+'%';children[13].style.left=value+'%';
                                   children[13].childNodes[1].innerHTML=this.value;" />
                               </div> -->
-                          </div>
+                          <!-- </div>
 
                           <div class="apply_clear_btns mt-3">
                             <button class="apply_btn" id="name_filters">Apply</button>
                             <button class="clear_btn">Clear All</button>
                         </div>
-                    </div>
+                    </div> -->
                 </li>
                         <li><span>ToDo
                             <i class="fa fa-angle-down"></i></span>
