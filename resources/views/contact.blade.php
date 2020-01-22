@@ -325,9 +325,67 @@
                         <li><span>Gender
                             <i class="fa fa-angle-down"></i></span>
                         </li>
-                        <li><span>Age
+                        <li><span class="b_s white">Age
                             <i class="fa fa-angle-down"></i></span>
-                        </li>
+
+                            <div class="li_dropdown right-dropdowns" id="li_dropdown">
+                                <div class="acending_decending d-flex mb-3">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="age" name="name_filter_radio" value="1">
+                                        <label class="custom-control-label" for="age">123...</label>
+                                    </div>
+                                    <div class="custom-control custom-radio ml-3">
+                                        <input type="radio" class="custom-control-input" id="radio" name="name_filter_radio" value="2">
+                                        <label class="custom-control-label" for="radio">...321</label>
+                                    </div>
+                                </div>
+                                <div class="form-group information-text">
+                                    <ul>
+                                        <li class="mr-2">  <input type="text" class="form-control" id="name_filter_search" placeholder="22"></li>
+                                        <li>  <input type="text" class="form-control" id="name_filter_search" placeholder="22"></li>
+                                    </ul>
+                                </div>
+                                <div class="range-slider-1">
+                                    <div slider id="slider-distance">
+                                      <div>
+                                        <div inverse-left style="width:70%;"></div>
+                                        <div inverse-right style="width:70%;"></div>
+                                        <div range style="left:30%;right:40%;"></div>
+                                        <span thumb style="left:30%;"></span>
+                                        <span thumb style="left:60%;"></span>
+                                        <div sign style="left:30%;">
+                                          <span id="value">30</span>
+                                      </div>
+                                      <div sign style="left:60%;">
+                                          <span id="value">60</span>
+                                      </div>
+                                  </div>
+                                  <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+                                  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                                  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                  var children = this.parentNode.childNodes[1].childNodes;
+                                  children[1].style.width=value+'%';
+                                  children[5].style.left=value+'%';
+                                  children[7].style.left=value+'%';children[11].style.left=value+'%';
+                                  children[11].childNodes[1].innerHTML=this.value;" />
+
+                                  <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+                                  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                                  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                  var children = this.parentNode.childNodes[1].childNodes;
+                                  children[3].style.width=(100-value)+'%';
+                                  children[5].style.right=(100-value)+'%';
+                                  children[9].style.left=value+'%';children[13].style.left=value+'%';
+                                  children[13].childNodes[1].innerHTML=this.value;" />
+                              </div>
+                          </div>
+
+                          <div class="apply_clear_btns mt-3">
+                            <button class="apply_btn" id="name_filters">Apply</button>
+                            <button class="clear_btn">Clear All</button>
+                        </div>
+                    </div>
+                </li>
                         <li><span>ToDo
                             <i class="fa fa-angle-down"></i></span>
                         </li>
