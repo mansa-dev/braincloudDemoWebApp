@@ -546,8 +546,76 @@ $(document).ready(function () {
 	$(document).on("click", ".select_unselect_btns_tag .same_slected_list i", function () {
 		$(this).parent().remove();
 	});
+  
+   /*smart search functionlity*/
+    $('#smartSearch').keyup(function(){
+        var search = $('#smartSearch').val();
+         $.ajax({
+             url: '/smart',
+             data:{search:search},
+             success:function(response)
+             { 
+                 result = JSON.parse(response)
+                             	      
+                    html = '';
+             	  $.each(result,function(key,val){
+                       html+= '<li class="result-value" data-id="'+val.id+'" data-name="'+val.Name+'">';
+                       html+= val.Name;
+                       html+= '</li>';
+             	  
+             	  })
 
+             	   $('#result').html(html);
+              }
+         });
+    });
 
+    $(document).on("click",'.result-value',function(){
+
+         var id =$(this).data('id');
+         var name =  $(this).data('name');
+         // var view = 'load_contact';
+         $('#smartSearch').val(name);
+         var zoomLevel =  $("#myrange").val()
+
+        $.ajax({
+	      type:'GET',
+	      url: 'gettingresult',
+	      data:{ id: id,view:'load_contact'},
+		beforeSend: function(){
+			$("#result").html('');
+		},     
+	     success: function (html) {
+				$('#list_view_table_body').empty();
+				$('#list_view_table_body').append(html);
+				
+			        $.ajax({
+				      type:'GET',
+				      url: 'gettingresult',
+				      data:{ id: id,view:'load_contact_grid', zoomLevel: zoomLevel},
+				     
+				     success: function (html) {
+							$('#append_grid_view').empty();
+							$('#append_grid_view').append(html);
+
+						 }
+				  });
+			 }
+	  });
+	      
+    });
+
+    // $(document).on('click','#smartSearchBtn',function(){
+    // 	 var search = $('#smartSearch').val();
+    //      $.ajax({
+    //          url: '/smart',
+    //          data:{search:search},
+    //          success:function(data)
+    //          {
+    //          	 console.log(data);
+    //          }
+    //      });
+    // });  
 });
 
 //Centeralised function in javscript to check the classes exist and remove 

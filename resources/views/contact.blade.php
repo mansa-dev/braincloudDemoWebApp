@@ -4,14 +4,14 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="csrf-token" content="{{ csrf_token() }}" />
-      <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('/css/common.css') }}">
-      <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+      <link rel="stylesheet" href="{{ asset('/public/css/bootstrap.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('/public/css/common.css') }}">
+      <link rel="stylesheet" href="{{ asset('/public/css/style.css') }}">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
-      <script src="{{ asset('/js/popper.min.js') }}"></script>
-      <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-      <script src="{{ asset('/js/custom.js?v=123') }}"></script>
+      <script src="{{ asset('/public/js/popper.min.js') }}"></script>
+      <script src="{{ asset('/public/js/bootstrap.min.js') }}"></script>
+      <script src="{{ asset('/public/js/custom.js?v=123') }}"></script>
    </head>
    <body>
       <div class="g_wrapper">
@@ -45,9 +45,11 @@
                            </form>
                         </div>
                      </div>
+                     <input type="text" name="search" id="smartSearch">
                      <li class="search_btn">
-                        <button type="button" name="button" onclick="openSearch()"><i class="fa fa-search"></i></button>
+                        <button type="button" name="button"  id="smartSearchBtn"><i class="fa fa-search"></i></button>
                      </li>
+                     <ul id="result"></ul>
                      <li class="new_content">
                         <a href="javascript:void(0);">New Contact</a>
                      </li>
@@ -153,7 +155,6 @@
                            <span class="slctd d-block mb-1">Selected</span>
                         </div>
                         <div class="li_btns mt-4">
-
                         </div>
                         <div class="apply_clear_btns mt-3">
                            <button class="apply_btn filters_apply" id="name_filters">Apply</button>
@@ -294,7 +295,6 @@
                            <div id="errorFunction"></div>
                            <!-- for showing error of search dropdown -->
                            <div class="apply_clear_btns mt-3">
-
                               <button class="apply_btn filters_apply" id="function_filter">Apply</button>
                               <button class="clear_btn" id="clearBtn_function">Clear All</button>
                            </div>

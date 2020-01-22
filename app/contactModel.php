@@ -10,8 +10,8 @@ class contactModel extends Model
     /**
      * The primary key associated with the table.
      *
-     * @var string
-     */
+     * @var string*/
+    protected $table = 'dataset_contacts_3_Feuil1';
     protected $primaryKey = 'id';
 
      /**
@@ -59,6 +59,29 @@ class contactModel extends Model
      	 
     }
 
+     /**
+     * This function will get the data from filters.
+     * 
+     */
 
+   public static function smartSearch($search)
+   {
+      $sql = "SELECT * FROM dataset_contacts_3_Feuil1 WHERE Name LIKE '%".$search."%' OR 
+       First_Name LIKE  '%".$search."%' OR Tag1 LIKE  '%".$search."%' OR Tag2 LIKE '%".$search."%' OR `Group` LIKE '%".$search."%' LIMIT 0, 10";
+       return DB::select(DB::raw($sql)); 
+   }
+
+    /**
+     * This function will get the data on the basis of ID.
+     * 
+     */
+    public static function fetchDataOnID($id){
+
+       $sql = "SELECT * FROM dataset_contacts_3_Feuil1 WHERE id=".$id;
+       return DB::select(DB::raw($sql)); 
+    
+      // return DB::table('dataset_contacts_3_Feuil1')->where('id',$id)->get();
+      // return DB::select(DB::raw($sql)); 
+    }
 
 }

@@ -18,4 +18,6 @@ Route::get('/loadContactData', 'AjaxController@index');
 Route::get('/loadNameFilterData', 'AjaxController@loadNameFilterData');
 Route::get('/loadGrid', 'AjaxController@loadGridData');
 Route::get('/loadNameFilter', 'AjaxController@loadNameFilterGrid');
+Route::get('/smart','AjaxController@smartSearch');
+Route::get('/gettingresult','AjaxController@gettingResult');
 

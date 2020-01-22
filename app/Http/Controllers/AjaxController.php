@@ -76,7 +76,6 @@ class AjaxController extends Controller
             $sortingType = $this->checkIfSortingTypeEmpty($id, $lastNameFilter, $tagOrder, $networkOrder, $ageOrderFilter);
 
             $tagOrder = isset($_GET['tagOrderFilter']) ? $_GET['tagOrderFilter'] : '';
-
             $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse, $tagSearch, $jobResponse, $selectData);
 
             $zoomLevel = !empty($_GET['zoomLevel']) ? $_GET['zoomLevel'] : false;
@@ -370,6 +369,34 @@ class AjaxController extends Controller
         return $this->arrayToStringConversion($finalArray);
 
     }
+
+    /**
+     * Function  get data and show suggestion list
+     *
+     */
+    function smartSearch(Request $request)
+    {
+         
+         $data = contactModel::smartSearch($request->search);
+           
+          $result = json_encode($data);
+          echo $result;  
+         
+    }
+
+    /**
+     * Function  get data and show result on smart search
+     *
+     */
+
+    function gettingResult(Request $request)
+    {
+        $responseData = contactModel::fetchDataOnID($request->id);
+        $zoomLevel = !empty($_GET['zoomLevel']) ? $_GET['zoomLevel'] : false;
+        $response = view($request->view, ['data' => $responseData, 'zoomLevel'=> $zoomLevel]);
+        echo $response;
+    }
+
 
 
 }
