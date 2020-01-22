@@ -46,7 +46,7 @@ class contactModel extends Model
         $filteredSubQuery  = ltrim(trim($subQuery),"OR");
 		$sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $where $filteredSubQuery LIMIT 50 OFFSET $offsetValue";
       
-       // var_dump($sqlQuery); die; 
+     
 		return DB::select(DB::raw($sqlQuery));
      	 
     }

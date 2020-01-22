@@ -26,8 +26,8 @@ var App_ = App_ || {
 	// 	selectedData.push(this.id);
 	// });
 
-	init: function () {
-		//alert(this.name_filter_radio);
+	init: function() {
+		// alert(this.nameFilterValue);
 		Filters.FunctionFilter();
 	}
 };
@@ -39,49 +39,70 @@ var Filters = {
 	},
 	FunctionFilter: function () {
 		var this_ = this;
-		//alert(App_.name_filter_radio);
+		
 		//Ajax functionality for Name filters
 		$(document).on('click', '.filters_apply', function () {
-			// var nameFilterValue = $('input[name="name_filter_radio"]:checked').val(),
-			// searchData_ = $("#name_filter_search").val(),
-			// zoomLevel = $("#myrange").val(),
-			// functionFilterValue = $('input[name="function_"]:checked').val(),
-			// functionsearchData_ = $("#function_filter_search").val(),
-			// lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
-			// lastNameSearchFilter = $('#last_name_filter_search').val(),
-			this__ = $(this)
+ 
+            // alert(this.id);
+
+			var nameFilterValue = $('input[name="name_filter_radio"]:checked').val(),
+			searchData_ = $("#name_filter_search").val(),
+			zoomLevel = $("#myrange").val(),
+			functionFilterValue = $('input[name="function_"]:checked').val(),
+			functionsearchData_ = $("#function_filter_search").val(),
+			lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
+			lastNameSearchFilter = $('#last_name_filter_search').val(),
+			clickedId = $(".li_dropdown").attr('id'),
+			tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
+			tag_filter_search = $('#tag_filter_search').val(),
+			groupNameSearch = $("#group_name_filter_search").val()
+           	selectedData = [];
+
+		   $('.same_slected_list').each(function () {
+		        selectedData.push(this.id);
+	        });
+
+
+			gridSelectedData = [];
+
+			this__ = $(this);
+
+			// var name_filter_search = $("#name_filter_search").val();
 
 			// var zoomLevel = $("#myrange").val();
+            $('#'+clickedId).hide();
 
-
-			if (App_.nameFilterValue) {
-				App_.nameFilterValue = nameFilterValue;
-				if (App_.nameFilterValue == '1') {
+			if (nameFilterValue) {
+				nameFilterValue = nameFilterValue;
+				if (nameFilterValue == '1') {
 					$("#asc").attr('checked', true);
 				}
-				if (App_.nameFilterValue == '2') {
+				if (nameFilterValue == '2') {
 					$("#desc").attr('checked', true);
 				}
 			}
 
-			if (App_.functionFilterValue) {
-				App_.nameFilterValue = App_.functionFilterValue;
+			if (functionFilterValue) {
+				nameFilterValue = functionFilterValue;
 			}
             
-            if(App_.lastNameSearchFilter){      
-                $(".select_unselect_last_name").append("<div class='same_slected_list " + App_.lastNameSearchFilter + " ' id=" + App_.lastNameSearchFilter + ">" + App_.lastNameSearchFilter + "<i class='fa fa-times-circle ml-1'></i></div>");
+            if(lastNameSearchFilter){      
+                $(".select_unselect_last_name").append("<div class='same_slected_list " + lastNameSearchFilter + " ' id=" + lastNameSearchFilter + ">" + lastNameSearchFilter + "<i class='fa fa-times-circle ml-1'></i></div>");
+            }
+            if(!tag_filter_search){
+                tag_filter_search = '';
             }
 
-			if (!App_.selectedData) {
-				App_.selectedData = '';
+			if (!selectedData) {
+				selectedData = '';
 			}
-			if (!App_.nameFilterValue) {
-				App_.nameFilterValue = '';
+			if (!nameFilterValue) {
+				nameFilterValue = '';
 			}
-			if (!App_.searchData_) {
-				App_.searchData_ = '';
+			if (!searchData_) {
+				searchData_ = '';
 			} else {
-				$(".select_unselect_btns").append("<div class='same_slected_list " + App_.searchData_ + " ' id=" + App_.searchData_ + ">" + App_.searchData_ + "<i class='fa fa-times-circle ml-1'></i></div>");
+				$(".select_unselect_btns").append("<div class='same_slected_list " + searchData_ + " ' id=" + searchData_ + ">" + searchData_ + "<i class='fa fa-times-circle ml-1'></i></div>");
 			}
 			$(".load_more_button_grid").removeClass("show_more_grid");
 			$(".load_more_button_grid").addClass("show_more_filter");
@@ -91,12 +112,14 @@ var Filters = {
 
 
 			var id = 'append_grid_view',
-			requestUrl = 'loadNameFilter';
-			this_.CommonFilterAjax(App_.nameFilterValue, App_.searchData_, App_.zoomLevel, App_.selectedData, App_.functionsearchData_, App_.gridSelectedData, id, requestUrl, App_.lastNameSearchFilter);
+			requestUrl = 'loadNameFilter',
+			view = 'load_contact';
+			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter,lastNameOrderFilter,tagOrderFilter,view, tag_filter_search, groupNameSearch);
 
 			var id = 'list_view_table_body',
-			requestUrl = 'loadNameFilterData';
-			this_.CommonFilterAjax(App_.nameFilterValue, App_.searchData_, App_.zoomLevel, App_.selectedData, App_.functionsearchData_, App_.gridSelectedData, id, requestUrl,App_.lastNameSearchFilter);
+			requestUrl = 'loadNameFilterData',
+			view = 'load_contact_grid';
+			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter, lastNameOrderFilter,tagOrderFilter,view, tag_filter_search, groupNameSearch);
 
 			// $.ajax({
 			// 	type: 'GET',
@@ -144,7 +167,7 @@ var Filters = {
 		});
 
 	},
-	CommonFilterAjax: function (nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl) {
+	CommonFilterAjax: function (nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastSearch, lastNameOrderFilter, tagOrderFilter, view, tag_filter_search) {
 		$.ajax({
 			type: 'GET',
 			url: base_url + requestUrl,
@@ -155,13 +178,19 @@ var Filters = {
 				zoomLevel: zoomLevel,
 				selectedData: selectedData,
 				functionsearchData: functionsearchData_,
-				selectData: gridSelectedData
+				selectData: gridSelectedData,
+				lastSearch:lastSearch,
+				lastNameOrderFilter: lastNameOrderFilter,
+				tagOrderFilter: tagOrderFilter,
+				view: view,
+				groupNameSearch: groupNameSearch,
+				tagFilterSearch : tag_filter_search
 			},
 			dataType: 'html',
 			success: function (html) {
 
 				$('#' + id).empty();
-				$('#' + id).append(html);
+				$('#'+id).append(html);
 			}
 		});
 	}
@@ -498,16 +527,21 @@ $(document).ready(function () {
 
 	$(".li_btns li").click(function (e) {
 		var slectedtagclass = $(this).attr('class').split(' ').pop();
-		var compareselectedtag = $('.select_unselect_btns').find(slectedtagclass);
-
+		var compareselectedtag = $('.select_unselect_btns_tag').find(slectedtagclass);
+        
 		var sel = $(this).text();
 
-		$(".select_unselect_btns").append("<div class='same_slected_list " + slectedtagclass + " '>" + sel + "<i class='fa fa-times-circle ml-1'></i></div>");
+		$(".select_unselect_btns_tag").append("<div class='same_slected_list " + slectedtagclass + " ' id="+sel+">" + sel + "<i class='fa fa-times-circle ml-1'></i></div>");
 
 	});
 
 	// Remove tag filter with cross icon
 	$(document).on("click", ".select_unselect_btns .same_slected_list i", function () {
+		$(this).parent().remove();
+	});
+
+		// Remove tag filter with cross icon
+	$(document).on("click", ".select_unselect_btns_tag .same_slected_list i", function () {
 		$(this).parent().remove();
 	});
 

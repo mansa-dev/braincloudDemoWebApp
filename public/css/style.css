@@ -895,3 +895,9 @@ div#show_more_main {
   background-color: #52d6e7;
   box-shadow: none;
 }
+.g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_last_name {
+    border-bottom: 1px solid #ddd;
+}
+.g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_btns_tag {
+    border-bottom: 1px solid #ddd;
+}

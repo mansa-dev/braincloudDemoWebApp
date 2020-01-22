@@ -204,7 +204,7 @@
                                 <div id="errorName"></div>
                                 <!-- for showing error of search dropdown -->
                                 <div class="select_unselect_last_name pb-3">
-                                    <span class="slctd d-block mb-1">Selected</span>
+                                    <span class="slctd d-block mb-1"></span>
 
                                 </div>
                                 <div class="li_btns mt-4">
@@ -233,16 +233,76 @@
                             </div>
                         </li>
                         <li>
-                            <span>
+                            <span class="b_s white">
                                 Tag
-                                <i class="fa fa-angle-down"></i>
+                                <i class="fa fa-angle-down"></i>                                
                             </span>
+                            <div class="li_dropdown" id="tag_li_dropdown">
+                                <div class="acending_decending d-flex mb-3">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="ascending_tag" name="name_filter_order" value="1">
+                                        <label class="custom-control-label" for="ascending_tag">A-Z</label>
+                                    </div>
+                                    <div class="custom-control custom-radio ml-3">
+                                        <input type="radio" class="custom-control-input" id="tagcustomRadio" name="name_filter_order" value="2">
+                                        <label class="custom-control-label" for="tagcustomRadio">Z-A</label>
+                                    </div>
+                                </div>
+                                <div class="form-group has-search">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" id="tag_filter_search" placeholder="Search">
+                                </div>
+                                <!-- for showing error of search dropdown -->
+                                <div id="errorName"></div>
+                                <!-- for showing error of search dropdown -->
+                                <div class="select_unselect_btns_tag pb-3">
+                                    <span class="slctd d-block mb-1"></span>
+
+                                </div>
+                                <div class="li_btns mt-4">
+                                    <ul class="d-flex flex-wrap">
+
+                                        <li class="tags Data tag_value"  id="Somnolent"><a class="border_gradient_red" id="Somnolent" href="javascript:void(0);">#Somnolent</a></li>
+                                        <li class="tags IT tag_value"  id="Critique"><a class="border_gradient_yellow" id="Critique" href="javascript:void(0);">#Critique</a></li>
+                                        <li class="tags HR border_gradient_sky tag_value"  id="Content"><a class="selected_btn" href="javascript:void(0);">#Content</a></li>
+                                        <li class="tags Function tag_value"  id="Optimiste"><a 
+                                           class="border_gradient_red" href="javascript:void(0);">#Optimiste</a></li>
+                                        <li class="tags Network tag_value"  id="Fons"><a  class="border_gradient_yellow"
+                                            href="javascript:void(0);">#Fons</a></li>
+                                        <li class="tags Business tag_value" id="Genergies">
+                                            <a class="unselected_btn border_gradient_sky" href="javascript:void(0);">
+                                                #Genergies
+
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="apply_clear_btns mt-3">
+                                    <button class="apply_btn filters_apply" id="name_filters">Apply</button>
+                                    <button class="clear_btn" id="clearBtn_name">Clear All</button>
+
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <span>
+                            <span class="b_s white">
                                 Group
                                 <i class="fa fa-angle-down"></i>
                             </span>
+                            <div class="li_dropdown" id="group_li_dropdown">
+                                <div class="form-group has-search">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" id="group_name_filter_search" placeholder="Search">
+                                </div>
+                                <!-- for showing error of search dropdown -->
+                                <div id="errorName"></div>
+                                <!-- for showing error of search dropdown -->
+                                <div class="apply_clear_btns mt-3">
+                                    <button class="apply_btn filters_apply" id="name_filters">Apply</button>
+                                    <button class="clear_btn" id="clearBtn_name">Clear All</button>
+
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <span>
@@ -325,7 +385,7 @@
                         <li><span>Gender
                             <i class="fa fa-angle-down"></i></span>
                         </li>
-                        <li><span class="b_s white">Age
+<!--                         <li><span class="b_s white">Age
                             <i class="fa fa-angle-down"></i></span>
 
                             <div class="li_dropdown right-dropdowns" id="li_dropdown">
@@ -341,8 +401,8 @@
                                 </div>
                                 <div class="form-group information-text">
                                     <ul>
-                                        <li class="mr-2">  <input type="text" class="form-control" id="name_filter_search" placeholder="22"></li>
-                                        <li>  <input type="text" class="form-control" id="name_filter_search" placeholder="22"></li>
+                                        <li class="mr-2">  <input type="text" class="form-control" id="name_filter_search__" placeholder="22"></li>
+                                        <li>  <input type="text" class="form-control" id="name_filter_search_" placeholder="22"></li>
                                     </ul>
                                 </div>
                                 <div class="range-slider-1">
@@ -385,7 +445,7 @@
                             <button class="clear_btn">Clear All</button>
                         </div>
                     </div>
-                </li>
+                </li> -->
                         <li><span>ToDo
                             <i class="fa fa-angle-down"></i></span>
                         </li>
