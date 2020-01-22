@@ -32,8 +32,6 @@ class contactModel extends Model
 
      public static function fetchFilterData($sortingType, $offsetValue, $searchedData, $filterSearchData, $jobResponse){
 
-        
-
 
 	       if(!empty($searchedData) || !empty($filterSearchData) || !empty($jobResponse)){
 	       	  $where = "where ";
@@ -41,10 +39,20 @@ class contactModel extends Model
 	       else{
 	       	  $where = "";
 	       }
+
+
         
         $subQuery =  "$jobResponse $filterSearchData $searchedData $sortingType";
         $filteredSubQuery  = ltrim(trim($subQuery),"OR");
-		$sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $where $filteredSubQuery LIMIT 50 OFFSET $offsetValue";
+        
+        if(empty($sortingType) || empty($offsetValue) || empty($searchedData) || empty($filterSearchData) || empty($jobResponse)){
+            $finalQueryValue = '';
+        }
+        else{
+            $finalQueryValue = $where.$filteredSubQuery;
+        }
+		
+        $sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $finalQueryValue LIMIT 50 OFFSET $offsetValue";
       
      
 		return DB::select(DB::raw($sqlQuery));
