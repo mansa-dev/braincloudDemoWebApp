@@ -55,13 +55,30 @@ var Filters = {
 			clickedId = $(".li_dropdown").attr('id'),
 			tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
 			tag_filter_search = $('#tag_filter_search').val(),
-			groupNameSearch = $("#group_name_filter_search").val()
+			groupNameSearch = $("#group_name_filter_search").val(),
+			businessLine = [],
+			companyTileDetails = [],
            	selectedData = [];
 
 		   $('.same_slected_list').each(function () {
 		        selectedData.push(this.id);
 	        });
+            
+            $('.business_tile_details').each(function () {
+		        businessLine.push(this.id);
+	        });
 
+
+		   
+
+		    $('.company_tile_details').each(function () {
+		        companyTileDetails.push(this.id);
+	        });
+
+            
+            $('.list_btn').removeClass('active');
+			$('.grid_btn').addClass('active');
+			$('#myrange').val('1');
 
 			gridSelectedData = [];
 
@@ -114,12 +131,12 @@ var Filters = {
 			var id = 'append_grid_view',
 			requestUrl = 'loadNameFilter',
 			view = 'load_contact';
-			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter,lastNameOrderFilter,tagOrderFilter,view, tag_filter_search, groupNameSearch);
+			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter,lastNameOrderFilter,tagOrderFilter,view, tag_filter_search, groupNameSearch, companyTileDetails, businessLine);
 
 			var id = 'list_view_table_body',
 			requestUrl = 'loadNameFilterData',
 			view = 'load_contact_grid';
-			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter, lastNameOrderFilter,tagOrderFilter,view, tag_filter_search, groupNameSearch);
+			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter, lastNameOrderFilter,tagOrderFilter,view, tag_filter_search, groupNameSearch, companyTileDetails, businessLine);
 
 			// $.ajax({
 			// 	type: 'GET',
@@ -167,7 +184,7 @@ var Filters = {
 		});
 
 	},
-	CommonFilterAjax: function (nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastSearch, lastNameOrderFilter, tagOrderFilter, view, tag_filter_search) {
+	CommonFilterAjax: function (nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastSearch, lastNameOrderFilter, tagOrderFilter, view, tag_filter_search, groupNameSearch, companyTileDetails, businessLine) {
 		$.ajax({
 			type: 'GET',
 			url: base_url + requestUrl,
@@ -184,7 +201,9 @@ var Filters = {
 				tagOrderFilter: tagOrderFilter,
 				view: view,
 				groupNameSearch: groupNameSearch,
-				tagFilterSearch : tag_filter_search
+				tagFilterSearch : tag_filter_search,
+				companyTileDetails: companyTileDetails,
+				businessLine: businessLine
 			},
 			dataType: 'html',
 			success: function (html) {
@@ -535,6 +554,15 @@ $(document).ready(function () {
 
 	});
 
+		/*for clear gender radio button*/
+	$(document).on('click','#clearBtn_gender',function(){
+
+	$('input[name="gender"]').each(function(){
+	             this.checked = false;
+	});
+
+	});   
+
 	// Remove tag filter with cross icon
 	$(document).on("click", ".select_unselect_btns .same_slected_list i", function () {
 		$(this).parent().remove();
@@ -575,27 +603,10 @@ function removeZoomClasses() {
 	return true;
 }
 
-//Ajax centeralised function
-// function ajaxCall(url,$infoArray){
+ function openSearch() {
+   document.getElementById("myOverlay").style.display = "block";
+ }
 
-// 	$.ajax({
-// 	type: 'GET',
-// 	url: base_url + url,
-// 	data: {
-// 		id: nameFilterValue,
-// 		offsetValue: 0,
-// 		search: searchData_,
-// 		zoomLevel: zoomLevel,
-// 		selectedData: selectedData,
-// 		functionsearchData: functionsearchData_,
-// 		selectData: gridSelectedData
-// 	},
-// 	dataType: 'html',
-// 	success: function (html) {
-
-// 		$('#list_view_table_body').empty();
-// 		$('#list_view_table_body').append(html);
-// 	}
-//   });
-
-// }
+ function closeSearch() {
+   document.getElementById("myOverlay").style.display = "none";
+ }

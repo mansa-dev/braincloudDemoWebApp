@@ -322,7 +322,7 @@
   margin: 0 5px 5px 0;
   border: 1px solid #ddd;
 }
-.g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_btns .slctd{
+.g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_btns .slctd, .g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_btns_tag .slctd, .g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_last_name .slctd{
   color: #888;
   font-size: 14px;
 }
@@ -900,4 +900,73 @@ div#show_more_main {
 }
 .g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_btns_tag {
     border-bottom: 1px solid #ddd;
+}
+.g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_btns_tag .same_slected_list {
+padding: 6px 12px;
+border: 0px;
+border-radius: 6px;
+color: #333;
+display: inline-block;
+margin: 0 5px 5px 0;
+border: 1px solid #ddd;
+}
+.overlay {
+ height: 100%;
+ width: 100%;
+ display: none;
+ position: fixed;
+ z-index: 1;
+ top: 0;
+ left: 0;
+ background-color: rgb(0,0,0);
+ background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+ position: relative;
+ top: 46%;
+ width: 80%;
+ text-align: center;
+ margin-top: 30px;
+ margin: auto;
+}
+
+.overlay .closebtn {
+ position: absolute;
+ top: 20px;
+ right: 45px;
+ font-size: 60px;
+ cursor: pointer;
+ color: white;
+}
+
+.overlay .closebtn:hover {
+ color: #ccc;
+}
+
+.overlay input[type=text] {
+ padding: 15px;
+ font-size: 17px;
+ border: none;
+ float: left;
+ width: 80%;
+ background: white;
+}
+
+.overlay input[type=text]:hover {
+ background: #f1f1f1;
+}
+
+.overlay button {
+ float: left;
+ width: 20%;
+ padding: 15px;
+ background: #ddd;
+ font-size: 17px;
+ border: none;
+ cursor: pointer;
+}
+
+.overlay button:hover {
+ background: #bbb;
 }

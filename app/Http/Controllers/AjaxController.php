@@ -53,24 +53,31 @@ class AjaxController extends Controller
             $gridData = isset($_GET['gridSelectedData']) ? $_GET['gridSelectedData'] : '';
             $jobResponse = $this->checkIfJobTitleEmpty($gridData);
             $lastNameSearch = isset($_GET['lastSearch']) ? $_GET['lastSearch'] : '';
-            $selectData = $this->mergedSearchData($_GET['selectedData'],$_GET['tagFilterSearch']);
-            $searchResponse = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search'], $selectData);
+            $selectBoxFilter = isset($_GET['selectedData'])?$_GET['selectedData']:'';
+            $selectData = $this->mergedSearchData($selectBoxFilter,$_GET['tagFilterSearch']);
+            $groupNameSearch = isset($_GET['groupNameSearch'])?$_GET['groupNameSearch']:'';
+            $companyTitle = isset($_GET['companyTileDetails'])?$_GET['companyTileDetails']:'';
+            $filteredCompanyValue = $this->arrayToStringConversion($companyTitle);
+
+
+
+            $searchResponse = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search'], $selectData, $groupNameSearch, $filteredCompanyValue);
             $selectData = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
-            $tagSearch = $this->checkIfNameEmpty($selectData);
-            $tagOrder = isset($_POST['tagOrderFilter'])?$_POST['tagOrderFilter']:'';
-
-
+            $tagSearch = $this->checkIfNameEmpty($_GET['search']);
+            $tagOrder = isset($_GET['tagOrderFilter'])?$_GET['tagOrderFilter']:'';
+            $groupNameSearch = isset($_GET['groupNameSearch'])?$_GET['groupNameSearch']:'';
 
             $lastNameFilter = isset($_GET['lastNameOrderFilter']) ? $_GET['lastNameOrderFilter'] : '';
             $sortingType = $this->checkIfSortingTypeEmpty($id, $lastNameFilter, $tagOrder);
-            
 
-            $tagOrder = isset($_POST['tagOrderFilter'])?$_POST['tagOrderFilter']:'';
+            businessLine
+                  
+            $tagOrder = isset($_GET['tagOrderFilter'])?$_GET['tagOrderFilter']:'';
 
             $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse, $tagSearch, $jobResponse, $selectData);
 
             $zoomLevel = !empty($_GET['zoomLevel']) ? $_GET['zoomLevel'] : false;
-            
+
             $response = view('load_contact', ['data' => $responseData]);
 
             echo "$response";
@@ -98,11 +105,16 @@ class AjaxController extends Controller
             $gridData = isset($_GET['gridSelectedData']) ? $_GET['gridSelectedData'] : '';
             $jobResponse = $this->checkIfJobTitleEmpty($gridData);
             $lastNameSearch = isset($_GET['lastSearch']) ? $_GET['lastSearch'] : '';
-            $selectData = $this->mergedSearchData($_GET['selectedData'],$_GET['tagFilterSearch']);
-            $searchResponse = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search'], $selectData);
+            $groupNameSearch = isset($_GET['groupNameSearch'])?$_GET['groupNameSearch']:'';
+            $selectBoxFilter = isset($_GET['selectedData'])?$_GET['selectedData']:'';
+            $selectData = $this->mergedSearchData($selectBoxFilter,$_GET['tagFilterSearch']);
+            $companyTitle = isset($_GET['companyTileDetails'])?$_GET['companyTileDetails']:'';
+            $filteredCompanyValue = $this->arrayToStringConversion($companyTitle);
+
+            $searchResponse = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search'], $selectData, $groupNameSearch, $filteredCompanyValue);
             $selectData = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
-            $tagSearch = $this->checkIfNameEmpty($selectData);
-            $tagOrder = isset($_POST['tagOrderFilter'])?$_POST['tagOrderFilter']:'';
+            $tagSearch = $this->checkIfNameEmpty($_GET['search']);
+            $tagOrder = isset($_GET['tagOrderFilter'])?$_GET['tagOrderFilter']:'';
 
 
 
@@ -110,7 +122,7 @@ class AjaxController extends Controller
             $sortingType = $this->checkIfSortingTypeEmpty($id, $lastNameFilter, $tagOrder);
             
 
-            $tagOrder = isset($_POST['tagOrderFilter'])?$_POST['tagOrderFilter']:'';
+            $tagOrder = isset($_GET['tagOrderFilter'])?$_GET['tagOrderFilter']:'';
 
             $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse, $tagSearch, $jobResponse, $selectData);
 
@@ -130,13 +142,13 @@ class AjaxController extends Controller
      *
      */
 
-    public function checkIfSearchEmpty($functionData, $lastSearch, $searchName, $tagData)
+    public function checkIfSearchEmpty($functionData, $lastSearch, $searchName, $tagData, $groupNameSearch, $company)
     {
 
-        if (!empty($functionData) || !empty($lastSearch) || !empty($tagData))
+        if (!empty($functionData) || !empty($lastSearch) || !empty($tagData) || !empty($searchName) || !empty($groupNameSearch) || !empty($company))
         {
 
-            return "OR First_Name like '$searchName' or Name like '$lastSearch' or Tag1 IN ($tagData) or Tag2 IN ($tagData) or Tag3 IN ($tagData) or Tag4 IN ($tagData) or Tag5 IN ($tagData) or Tag6 IN ($tagData) or Tag7 IN ($tagData) or Tag6 IN ($tagData)";
+            return "OR First_Name like '$searchName' or Name like '$lastSearch' or Tag1 IN ($tagData) or Tag2 IN ($tagData) or Tag3 IN ($tagData) or Tag4 IN ($tagData) or Tag5 IN ($tagData) or Tag6 IN ($tagData) or Tag7 IN ($tagData) or Tag6 IN ($tagData) or `Group` like '$groupNameSearch' or Job1_Company IN ($company)";
 
         }
         else

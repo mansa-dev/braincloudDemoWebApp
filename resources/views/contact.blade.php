@@ -42,8 +42,17 @@
                 <div class="user_profie_area d-flex justify-content-end">
                     <nav class="navbar navbar-expand-sm d-flex">
                         <ul class="d-flex align-items-center top_all_btns">
+                        <div id="myOverlay" class="overlay">
+                           <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                           <div class="overlay-content">
+                             <form action="/action_page.php">
+                               <input type="text" placeholder="Search.." name="search">
+                               <button type="submit"><i class="fa fa-search"></i></button>
+                             </form>
+                           </div>
+                         </div>
                             <li class="search_btn">
-                                <button type="button" name="button"><i class="fa fa-search"></i></button>
+                                <button type="button" name="button" onclick="openSearch()"><i class="fa fa-search"></i></button>
                             </li>
                             <li class="new_content">
                                 <a href="javascript:void(0);">New Contact</a>
@@ -204,7 +213,7 @@
                                 <div id="errorName"></div>
                                 <!-- for showing error of search dropdown -->
                                 <div class="select_unselect_last_name pb-3">
-                                    <span class="slctd d-block mb-1"></span>
+                                    <span class="slctd d-block mb-1">Selected</span>
 
                                 </div>
                                 <div class="li_btns mt-4">
@@ -256,7 +265,7 @@
                                 <div id="errorName"></div>
                                 <!-- for showing error of search dropdown -->
                                 <div class="select_unselect_btns_tag pb-3">
-                                    <span class="slctd d-block mb-1"></span>
+                                    <span class="slctd d-block mb-1">Selected</span>
 
                                 </div>
                                 <div class="li_btns mt-4">
@@ -305,16 +314,92 @@
                             </div>
                         </li>
                         <li>
-                            <span>
+                            <span class="b_s white">
                                 Company
                                 <i class="fa fa-angle-down"></i>
                             </span>
+
+                            <div class="li_dropdown" id="company_li_dropdown">
+                                <div class="checkbox_area">
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input company_tile_details" name="company_tile_details" id="Genergies" value="Genergies" name="example1">
+                                        <label class="custom-control-label" for="Genergies">Genergies</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input company_tile_details" name="company_tile_details" id="BRED" value="BRED" name="example1">
+                                        <label class="custom-control-label" for="BRED">BRED</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input company_tile_details" name="company_tile_details" id="Odyssée" value="Odyssée" name="example1">
+                                        <label class="custom-control-label" for="Odyssée">Odyssée</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input company_tile_details" name="company_tile_details" id="Pharmapetit" value="Pharmapetit" name="example1">
+                                        <label class="custom-control-label" for="Pharmapetit">Pharmapetit</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input company_tile_details" name="company_tile_details" id="Heineken" value="Heineken" name="example1">
+                                        <label class="custom-control-label" for="Heineken">Heineken</label>
+
+                                    <!-- <input type="text" class="form-control" placeholder="Search" id="functionSearch"> -->
+                                </div>
+
+                                <!-- for showing error of search dropdown -->
+                                  <div id="errorFunction"></div>
+                                <!-- for showing error of search dropdown -->
+
+                                <div class="apply_clear_btns mt-3">
+
+                                <!--     <button class="apply_btn filters_apply" id="function_filter">Apply</button>
+                                    <button class="clear_btn">Clear All</button> -->
+
+                                    <button class="apply_btn filters_apply" id="function_filter">Apply</button>
+                                    <button class="clear_btn" id="clearBtn_function">Clear All</button>
+
+                                </div>
+                            </div>
+                            </div>
                         </li>
                         <li>
-                            <span>
+                            <span class="b_s white">
                                 Business Line
                                 <i class="fa fa-angle-down"></i>
                             </span>
+
+                            <div class="li_dropdown" id="business_li_dropdown">
+                                <div class="checkbox_area">
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input business_tile_details" name="company_tile_details" id="Achats" value="Achats" name="example1">
+                                        <label class="custom-control-label" for="Achats">Achats</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input business_tile_details" name="company_tile_details" id="Magasin" value="Magasin" name="example1">
+                                        <label class="custom-control-label" for="Magasin">Magasin</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input business_tile_details" name="company_tile_details" id="IT" value="IT" name="example1">
+                                        <label class="custom-control-label" for="IT">IT</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input business_tile_details" name="company_tile_details" id="Marketing" value="Marketing" name="example1">
+                                        <label class="custom-control-label" for="Marketing">Marketing</label>
+                                    </div>
+
+                                <!-- for showing error of search dropdown -->
+                                  <div id="errorFunction"></div>
+                                <!-- for showing error of search dropdown -->
+
+                                <div class="apply_clear_btns mt-3">
+
+                                <!--     <button class="apply_btn filters_apply" id="function_filter">Apply</button>
+                                    <button class="clear_btn">Clear All</button> -->
+
+                                    <button class="apply_btn filters_apply" id="function_filter">Apply</button>
+                                    <button class="clear_btn" id="clearBtn_function">Clear All</button>
+
+                                </div>
+                            </div>
+                            </div>
                         </li>
                         <li id="li_function">
                             <span class="white">
@@ -382,10 +467,33 @@
                         <li><span>Network
                             <i class="fa fa-angle-down"></i></span>
                         </li>
-                        <li><span>Gender
-                            <i class="fa fa-angle-down"></i></span>
-                        </li>
-<!--                         <li><span class="b_s white">Age
+                        <li><span class="b_s white">Gender
+                           <i class="fa fa-angle-down"></i></span>
+                            <div class="li_dropdown" id="function_li_dropdown">
+                                <div class="acending_decending d-flex mb-3">
+
+                                   <div class="custom-control custom-radio">
+
+                                       <input type="radio" class="custom-control-input" id="male" value="1" name="gender">
+                                       <label class="custom-control-label" for="male">Male</label>
+                                   </div>
+
+                                   <div class="custom-control custom-radio ml-3">
+                                       <input type="radio" class="custom-control-input" id="female" value="2" name="gender">
+                                       <label class="custom-control-label" for="female">Female</label>
+                                   
+                                   </div>
+                               
+                               </div>
+
+                               <div class="apply_clear_btns mt-3">
+                                     <button class="apply_btn filters_apply" id="gender_filter">Apply</button>
+                                   <button class="clear_btn" id="clearBtn_gender">Clear All</button>
+                               </div>
+       
+                            </div>
+                       </li>
+                        <li><span class="b_s white">Age
                             <i class="fa fa-angle-down"></i></span>
 
                             <div class="li_dropdown right-dropdowns" id="li_dropdown">
@@ -445,7 +553,7 @@
                             <button class="clear_btn">Clear All</button>
                         </div>
                     </div>
-                </li> -->
+                </li>
                         <li><span>ToDo
                             <i class="fa fa-angle-down"></i></span>
                         </li>
