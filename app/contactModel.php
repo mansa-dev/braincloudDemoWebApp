@@ -30,25 +30,23 @@ class contactModel extends Model
      * 
      */
 
-     public static function fetchFilterData($sortingType, $offsetValue, $searchedData, $tagSearch, $filterSearchData, $jobResponse){
+     public static function fetchFilterData($sortingType, $offsetValue, $searchedData, $filterSearchData, $jobResponse){
 
         
 
 
-	       if(!empty($searchedData) || !empty($tagSearch) || !empty($filterSearchData) || !empty($jobResponse)){
+	       if(!empty($searchedData) || !empty($filterSearchData) || !empty($jobResponse)){
 	       	  $where = "where ";
 	       }
 	       else{
 	       	  $where = "";
 	       }
         
-        $subQuery =  "$tagSearch $jobResponse $filterSearchData $searchedData $sortingType";
-
+        $subQuery =  "$jobResponse $filterSearchData $searchedData $sortingType";
         $filteredSubQuery  = ltrim(trim($subQuery),"OR");
-       
 		$sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $where $filteredSubQuery LIMIT 50 OFFSET $offsetValue";
-
-       
+      
+       // var_dump($sqlQuery); die; 
 		return DB::select(DB::raw($sqlQuery));
      	 
     }

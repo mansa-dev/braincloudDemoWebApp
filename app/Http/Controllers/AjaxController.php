@@ -48,15 +48,19 @@ class AjaxController extends Controller
             $id = isset($_GET['id']) ? $_GET['id'] : '';
             $sortingType = $this->checkIfSortingTypeEmpty($id);
             $functionSearch = isset($_GET['functionsearchData']) ? $_GET['functionsearchData'] : '';
+            $lastNameSearch = isset($_GET['lastNameSearchFilter']) ? $_GET['lastNameSearchFilter'] : '';
 
-            $filterSearchData = $this->checkIfSearchEmpty($functionSearch);
-            $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
+            // $filterSearchData = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search']);
+            $searchResponse = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search']);
             $gridData = isset($_GET['gridSelectedData']) ? $_GET['gridSelectedData'] : '';
             $jobResponse = $this->checkIfJobTitleEmpty($gridData);
             $selectData = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
             $nameSelect = $this->checkIfNameEmpty($selectData);
 
-            $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse, $nameSelect, $filterSearchData, $jobResponse);
+
+            
+
+            $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse, $nameSelect, $jobResponse);
             $response = view('load_contact', ['data' => $responseData]);
 
             echo "$response";
@@ -78,15 +82,20 @@ class AjaxController extends Controller
         if (isset($_GET['offsetValue']))
         {
             $id = isset($_GET['id']) ? $_GET['id'] : '';
-            $sortingType = $this->checkIfSortingTypeEmpty($id);
+         
             $functionSearch = isset($_GET['functionsearchData']) ? $_GET['functionsearchData'] : '';
-            $filterSearchData = $this->checkIfSearchEmpty($functionSearch);
+            // $filterSearchData = $this->checkIfSearchEmpty($functionSearch, $lastName, $name);
             $gridData = isset($_GET['gridSelectedData']) ? $_GET['gridSelectedData'] : '';
             $jobResponse = $this->checkIfJobTitleEmpty($gridData);
-            $searchResponse = $this->checkIfSearchEmpty($_GET['search']);
+            $lastNameSearch = isset($_GET['lastNameSearchFilter']) ? $_GET['lastNameSearchFilter'] : '';
+            $searchResponse = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search']);
             $selectData = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
             $tagSearch = $this->checkIfNameEmpty($selectData);
-            $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse, $tagSearch, $filterSearchData, $jobResponse);
+
+            $lastNameFilter = isset($_GET['lastNameOrderFilter']) ? $_GET['lastNameOrderFilter'] : '';
+            $sortingType = $this->checkIfSortingTypeEmpty($id, $lastNameFilter);
+
+            $responseData = contactModel::fetchFilterData($sortingType, $_GET['offsetValue'], $searchResponse, $tagSearch, $jobResponse);
 
             $zoomLevel = !empty($_GET['zoomLevel']) ? $_GET['zoomLevel'] : false;
             $response = view('load_contact_grid', ['data' => $responseData, 'zoomLevel' => $zoomLevel]);
@@ -104,13 +113,13 @@ class AjaxController extends Controller
      *
      */
 
-    public function checkIfSearchEmpty($searchData)
+    public function checkIfSearchEmpty($functionData, $lastSearch, $searchName)
     {
 
         if (!empty($searchData))
         {
 
-            return "OR (First_Name like '{$searchData}%')";
+            return "OR (First_Name like '{$searchName}%' or Name like '{$lastSearch}%')";
 
         }
         else
@@ -126,6 +135,7 @@ class AjaxController extends Controller
      */
     public function checkIfSortingTypeEmpty($sortingType)
     {
+        
 
         if (!empty($sortingType))
         {

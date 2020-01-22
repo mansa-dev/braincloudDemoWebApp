@@ -1,5 +1,172 @@
+$(document).ready(function () {
+	App_.init();
+});
+
+
 var base_url = window.location.href;
 
+var App_ = App_ || {
+
+	nameFilterValue: $('input[name="name_filter_radio"]:checked').val(),
+	searchData_: $("#name_filter_search").val(),
+	zoomLevel: $("#myrange").val(),
+	functionFilterValue: $('input[name="function_"]:checked').val(),
+	functionsearchData_: $("#function_filter_search").val(),
+	lastNameOrderFilter: $('input[name="asc_name_filter"]:checked').val(),
+	lastNameSearchFilter: $('#last_name_filter_search').val(),
+	// zoomLevel : $("#myrange").val(),
+
+	gridSelectedData: [],
+	// $('.filter_check_box:checked').each(function () {
+	// 	gridSelectedData[i] : $(this).val();
+	// });
+
+	selectedData: [],
+	// $('.same_slected_list').each(function () {
+	// 	selectedData.push(this.id);
+	// });
+
+	init: function () {
+		//alert(this.name_filter_radio);
+		Filters.FunctionFilter();
+	}
+};
+
+var Filters = {
+
+	init: function () {
+
+	},
+	FunctionFilter: function () {
+		var this_ = this;
+		//alert(App_.name_filter_radio);
+		//Ajax functionality for Name filters
+		$(document).on('click', '.filters_apply', function () {
+			// var nameFilterValue = $('input[name="name_filter_radio"]:checked').val(),
+			// searchData_ = $("#name_filter_search").val(),
+			// zoomLevel = $("#myrange").val(),
+			// functionFilterValue = $('input[name="function_"]:checked').val(),
+			// functionsearchData_ = $("#function_filter_search").val(),
+			// lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
+			// lastNameSearchFilter = $('#last_name_filter_search').val(),
+			this__ = $(this)
+
+			// var zoomLevel = $("#myrange").val();
+
+
+			if (App_.nameFilterValue) {
+				App_.nameFilterValue = nameFilterValue;
+				if (App_.nameFilterValue == '1') {
+					$("#asc").attr('checked', true);
+				}
+				if (App_.nameFilterValue == '2') {
+					$("#desc").attr('checked', true);
+				}
+			}
+
+			if (App_.functionFilterValue) {
+				App_.nameFilterValue = App_.functionFilterValue;
+			}
+            
+            if(App_.lastNameSearchFilter){      
+                $(".select_unselect_last_name").append("<div class='same_slected_list " + App_.lastNameSearchFilter + " ' id=" + App_.lastNameSearchFilter + ">" + App_.lastNameSearchFilter + "<i class='fa fa-times-circle ml-1'></i></div>");
+            }
+
+			if (!App_.selectedData) {
+				App_.selectedData = '';
+			}
+			if (!App_.nameFilterValue) {
+				App_.nameFilterValue = '';
+			}
+			if (!App_.searchData_) {
+				App_.searchData_ = '';
+			} else {
+				$(".select_unselect_btns").append("<div class='same_slected_list " + App_.searchData_ + " ' id=" + App_.searchData_ + ">" + App_.searchData_ + "<i class='fa fa-times-circle ml-1'></i></div>");
+			}
+			$(".load_more_button_grid").removeClass("show_more_grid");
+			$(".load_more_button_grid").addClass("show_more_filter");
+
+			$(".load_more_button").removeClass("show_more");
+			$(".load_more_button").addClass("show_more_filter");
+
+
+			var id = 'append_grid_view',
+			requestUrl = 'loadNameFilter';
+			this_.CommonFilterAjax(App_.nameFilterValue, App_.searchData_, App_.zoomLevel, App_.selectedData, App_.functionsearchData_, App_.gridSelectedData, id, requestUrl, App_.lastNameSearchFilter);
+
+			var id = 'list_view_table_body',
+			requestUrl = 'loadNameFilterData';
+			this_.CommonFilterAjax(App_.nameFilterValue, App_.searchData_, App_.zoomLevel, App_.selectedData, App_.functionsearchData_, App_.gridSelectedData, id, requestUrl,App_.lastNameSearchFilter);
+
+			// $.ajax({
+			// 	type: 'GET',
+			// 	url: base_url + 'loadNameFilter',
+			// 	data: {
+			// 		id: App_.nameFilterValue,
+			// 		offsetValue: 0,
+			// 		search: App_.searchData_,
+			// 		selectedData: App_.selectedData,
+			// 		functionsearchData: App_.functionsearchData_,
+			// 		gridSelectedData: App_.gridSelectedData,
+			// 		lastNameOrderFilter: App_.lastNameOrderFilter,
+			// 		lastNameSearchFilter: App_.lastNameSearchFilter
+			// 	},
+			// 	dataType: 'html',
+			// 	success: function (html) {
+			// 		// $(".load_more_button").removeClass("show_more");
+			// 		// $(".load_more_button").addClass("show_more_filter");
+			// 		$('#append_grid_view').empty();
+			// 		$('#append_grid_view').append(html);
+			// 		var id = 'list_view_table_body',
+			// 		requestUrl = 'loadNameFilterData' ;
+			// 		this_.CommonFilterAjax(App_.nameFilterValue, App_.searchData_, App_.zoomLevel, App_.selectedData, App_.functionsearchData_, App_.gridSelectedData, id)
+			// 		/*$.ajax({
+			// 			type: 'GET',
+			// 			url: base_url + 'loadNameFilterData',
+			// 			data: {
+			// 				id: nameFilterValue,
+			// 				offsetValue: 0,
+			// 				search: searchData_,
+			// 				zoomLevel: zoomLevel,
+			// 				selectedData: selectedData,
+			// 				functionsearchData: functionsearchData_,
+			// 				selectData: gridSelectedData
+			// 			},
+			// 			dataType: 'html',
+			// 			success: function (html) {
+
+			// 				$('#list_view_table_body').empty();
+			// 				$('#list_view_table_body').append(html);
+			// 			}
+			// 		});*/
+			// 	}
+			// });
+		});
+
+	},
+	CommonFilterAjax: function (nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl) {
+		$.ajax({
+			type: 'GET',
+			url: base_url + requestUrl,
+			data: {
+				id: nameFilterValue,
+				offsetValue: 0,
+				search: searchData_,
+				zoomLevel: zoomLevel,
+				selectedData: selectedData,
+				functionsearchData: functionsearchData_,
+				selectData: gridSelectedData
+			},
+			dataType: 'html',
+			success: function (html) {
+
+				$('#' + id).empty();
+				$('#' + id).append(html);
+			}
+		});
+	}
+
+}
 
 
 $(document).ready(function () {
@@ -178,88 +345,95 @@ $(document).ready(function () {
 	});
 
 	//Ajax functionality for Name filters
-	$(document).on('click', '.filters_apply', function () {
-		var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
-		var searchData_ = $("#name_filter_search").val();
-		var zoomLevel = $("#myrange").val();
-		var functionFilterValue = $('input[name="function_"]:checked').val();
-		var functionsearchData_ = $("#function_filter_search").val();
-		// var zoomLevel = $("#myrange").val();
-		var gridSelectedData = [];
-		$('.filter_check_box:checked').each(function (i) {
-			gridSelectedData[i] = $(this).val();
-		});
+	// $(document).on('click', '.filters_apply', function () {
+	// 	var nameFilterValue = $('input[name="name_filter_radio"]:checked').val();
+	// 	var searchData_ = $("#name_filter_search").val();
+	// 	var zoomLevel = $("#myrange").val();
+	// 	var functionFilterValue = $('input[name="function_"]:checked').val();
+	// 	var functionsearchData_ = $("#function_filter_search").val();
 
-		if (nameFilterValue) {
-			nameFilterValue = nameFilterValue;
-			if (nameFilterValue == '1') {
-				$("#asc").attr('checked', true);
-			}
-			if (nameFilterValue == '2') {
-				$("#desc").attr('checked', true);
-			}
-		}
-		if (functionFilterValue) {
-			nameFilterValue = functionFilterValue;
-		}
-		var selectedData = [];
-		$('.same_slected_list').each(function () {
-			selectedData.push(this.id);
-		});
+	// 	//function for 
+	// 	var lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val();
+	// 	var lastNameSearchFilter = $('#last_name_filter_search').val();
 
-		if (!selectedData) {
-			selectedData = '';
-		}
-		if (!nameFilterValue) {
-			nameFilterValue = '';
-		}
-		if (!searchData_) {
-			searchData_ = '';
-		}
-		else{
-			$(".select_unselect_btns").append("<div class='same_slected_list " + searchData_ + " ' id=" + searchData_ + ">" + searchData_ + "<i class='fa fa-times-circle ml-1'></i></div>");
-		}
-		$(".load_more_button_grid").removeClass("show_more_grid");
-		$(".load_more_button_grid").addClass("show_more_filter");
-		$.ajax({
-			type: 'GET',
-			url: base_url + 'loadNameFilter',
-			data: {
-				id: nameFilterValue,
-				offsetValue: 0,
-				search: searchData_,
-				selectedData: selectedData,
-				functionsearchData: functionsearchData_,
-				gridSelectedData: gridSelectedData
-			},
-			dataType: 'html',
-			success: function (html) {
-				$(".load_more_button").removeClass("show_more");
-				$(".load_more_button").addClass("show_more_filter");
-				$('#append_grid_view').empty();
-				$('#append_grid_view').append(html);
-				$.ajax({
-					type: 'GET',
-					url: base_url + 'loadNameFilterData',
-					data: {
-						id: nameFilterValue,
-						offsetValue: 0,
-						search: searchData_,
-						zoomLevel: zoomLevel,
-						selectedData: selectedData,
-						functionsearchData: functionsearchData_,
-						selectData: gridSelectedData
-					},
-					dataType: 'html',
-					success: function (html) {
+	// 	// var zoomLevel = $("#myrange").val();
+	// 	var gridSelectedData = [];
+	// 	$('.filter_check_box:checked').each(function (i) {
+	// 		gridSelectedData[i] = $(this).val();
+	// 	});
 
-						$('#list_view_table_body').empty();
-						$('#list_view_table_body').append(html);
-					}
-				});
-			}
-		});
-	});
+	// 	if (nameFilterValue) {
+	// 		nameFilterValue = nameFilterValue;
+	// 		if (nameFilterValue == '1') {
+	// 			$("#asc").attr('checked', true);
+	// 		}
+	// 		if (nameFilterValue == '2') {
+	// 			$("#desc").attr('checked', true);
+	// 		}
+	// 	}
+	// 	if (functionFilterValue) {
+	// 		nameFilterValue = functionFilterValue;
+	// 	}
+	// 	var selectedData = [];
+	// 	$('.same_slected_list').each(function () {
+	// 		selectedData.push(this.id);
+	// 	});
+
+	// 	if (!selectedData) {
+	// 		selectedData = '';
+	// 	}
+	// 	if (!nameFilterValue) {
+	// 		nameFilterValue = '';
+	// 	}
+	// 	if (!searchData_) {
+	// 		searchData_ = '';
+	// 	}
+	// 	else{
+	// 		$(".select_unselect_btns").append("<div class='same_slected_list " + searchData_ + " ' id=" + searchData_ + ">" + searchData_ + "<i class='fa fa-times-circle ml-1'></i></div>");
+	// 	}
+	// 	$(".load_more_button_grid").removeClass("show_more_grid");
+	// 	$(".load_more_button_grid").addClass("show_more_filter");
+	// 	$.ajax({
+	// 		type: 'GET',
+	// 		url: base_url + 'loadNameFilter',
+	// 		data: {
+	// 			id: nameFilterValue,
+	// 			offsetValue: 0,
+	// 			search: searchData_,
+	// 			selectedData: selectedData,
+	// 			functionsearchData: functionsearchData_,
+	// 			gridSelectedData: gridSelectedData,
+	// 			lastNameOrderFilter: lastNameOrderFilter,
+	// 			lastNameSearchFilter:lastNameSearchFilter
+	// 		},
+	// 		dataType: 'html',
+	// 		success: function (html) {
+	// 			$(".load_more_button").removeClass("show_more");
+	// 			$(".load_more_button").addClass("show_more_filter");
+	// 			$('#append_grid_view').empty();
+	// 			$('#append_grid_view').append(html);
+	// 			$.ajax({
+	// 				type: 'GET',
+	// 				url: base_url + 'loadNameFilterData',
+	// 				data: {
+	// 					id: nameFilterValue,
+	// 					offsetValue: 0,
+	// 					search: searchData_,
+	// 					zoomLevel: zoomLevel,
+	// 					selectedData: selectedData,
+	// 					functionsearchData: functionsearchData_,
+	// 					selectData: gridSelectedData
+	// 				},
+	// 				dataType: 'html',
+	// 				success: function (html) {
+
+	// 					$('#list_view_table_body').empty();
+	// 					$('#list_view_table_body').append(html);
+	// 				}
+	// 			});
+	// 		}
+	// 	});
+	// });
 
 	/* for name dropdown clear functionlity*/
 	$('#clearBtn_name').click(function () {
@@ -320,17 +494,17 @@ $(document).ready(function () {
 	//     	});
 	// });
 
-     // For selected tags in filter
+	// For selected tags in filter
 
-   $(".li_btns li").click(function(e) {
-		var slectedtagclass= $(this).attr('class').split(' ').pop();
+	$(".li_btns li").click(function (e) {
+		var slectedtagclass = $(this).attr('class').split(' ').pop();
 		var compareselectedtag = $('.select_unselect_btns').find(slectedtagclass);
-	
+
 		var sel = $(this).text();
 
-		$(".select_unselect_btns").append("<div class='same_slected_list " + slectedtagclass + " '>"+ sel +"<i class='fa fa-times-circle ml-1'></i></div>");
-   
-   });
+		$(".select_unselect_btns").append("<div class='same_slected_list " + slectedtagclass + " '>" + sel + "<i class='fa fa-times-circle ml-1'></i></div>");
+
+	});
 
 	// Remove tag filter with cross icon
 	$(document).on("click", ".select_unselect_btns .same_slected_list i", function () {
@@ -366,3 +540,28 @@ function removeZoomClasses() {
 
 	return true;
 }
+
+//Ajax centeralised function
+// function ajaxCall(url,$infoArray){
+
+// 	$.ajax({
+// 	type: 'GET',
+// 	url: base_url + url,
+// 	data: {
+// 		id: nameFilterValue,
+// 		offsetValue: 0,
+// 		search: searchData_,
+// 		zoomLevel: zoomLevel,
+// 		selectedData: selectedData,
+// 		functionsearchData: functionsearchData_,
+// 		selectData: gridSelectedData
+// 	},
+// 	dataType: 'html',
+// 	success: function (html) {
+
+// 		$('#list_view_table_body').empty();
+// 		$('#list_view_table_body').append(html);
+// 	}
+//   });
+
+// }

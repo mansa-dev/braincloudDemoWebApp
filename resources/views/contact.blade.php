@@ -188,22 +188,22 @@
                             <div class="li_dropdown" id="last_li_dropdown">
                                 <div class="acending_decending d-flex mb-3">
                                     <div class="custom-control custom-radio">
-                                        <input type="radio" class="custom-control-input" id="ascending" name="name_filter_radio" value="1">
-                                        <label class="custom-control-label" for="ascending">A-Z</label>
+                                        <input type="radio" class="custom-control-input" id="lastascending" name="asc_name_filter" value="1">
+                                        <label class="custom-control-label" for="lastascending">A-Z</label>
                                     </div>
                                     <div class="custom-control custom-radio ml-3">
-                                        <input type="radio" class="custom-control-input" id="customRadio" name="name_filter_radio" value="2">
-                                        <label class="custom-control-label" for="customRadio">Z-A</label>
+                                        <input type="radio" class="custom-control-input" id="lastdesc" name="asc_name_filter" value="2">
+                                        <label class="custom-control-label" for="lastdesc">Z-A</label>
                                     </div>
                                 </div>
                                 <div class="form-group has-search">
                                     <span class="fa fa-search form-control-feedback"></span>
-                                    <input type="text" class="form-control" id="name_filter_search" placeholder="Search">
+                                    <input type="text" class="form-control" id="last_name_filter_search" placeholder="Search">
                                 </div>
                                 <!-- for showing error of search dropdown -->
                                 <div id="errorName"></div>
                                 <!-- for showing error of search dropdown -->
-                                <div class="select_unselect_btns pb-3">
+                                <div class="select_unselect_last_name pb-3">
                                     <span class="slctd d-block mb-1">Selected</span>
 
                                 </div>
