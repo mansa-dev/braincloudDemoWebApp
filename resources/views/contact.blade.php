@@ -322,13 +322,36 @@
                         <li><span>Network
                             <i class="fa fa-angle-down"></i></span>
                         </li>
-                        <li><span>Gender
+                        <li><span class="b_s white">Gender
                             <i class="fa fa-angle-down"></i></span>
+                             <div class="li_dropdown" id="function_li_dropdown">
+                                 <div class="acending_decending d-flex mb-3">
+
+                                    <div class="custom-control custom-radio">
+
+                                        <input type="radio" class="custom-control-input" id="male" value="1" name="gender">
+                                        <label class="custom-control-label" for="male">Male</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio ml-3">
+                                        <input type="radio" class="custom-control-input" id="female" value="2" name="gender">
+                                        <label class="custom-control-label" for="female">Female</label>
+                                     
+                                    </div>
+                                 
+                                </div>
+
+                                <div class="apply_clear_btns mt-3">
+                                      <button class="apply_btn filters_apply" id="gender_filter">Apply</button>
+                                    <button class="clear_btn" id="clearBtn_gender">Clear All</button>
+                                </div>
+         
+                             </div>
                         </li>
-                        <li><span class="b_s white">Age
+                        <li><span >Age
                             <i class="fa fa-angle-down"></i></span>
 
-                            <div class="li_dropdown right-dropdowns" id="li_dropdown">
+                            <!-- <div class="li_dropdown right-dropdowns" id="li_dropdown">
                                 <div class="acending_decending d-flex mb-3">
                                     <div class="custom-control custom-radio">
                                         <input type="radio" class="custom-control-input" id="age" name="name_filter_radio" value="1">
@@ -377,7 +400,7 @@
                                   children[5].style.right=(100-value)+'%';
                                   children[9].style.left=value+'%';children[13].style.left=value+'%';
                                   children[13].childNodes[1].innerHTML=this.value;" />
-                              </div>
+                              </div> -->
                           </div>
 
                           <div class="apply_clear_btns mt-3">

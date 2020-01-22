@@ -32,6 +32,8 @@ var App_ = App_ || {
 	}
 };
 
+
+
 var Filters = {
 
 	init: function () {
@@ -50,10 +52,10 @@ var Filters = {
 			// lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
 			// lastNameSearchFilter = $('#last_name_filter_search').val(),
 			this__ = $(this)
-
+            
 			// var zoomLevel = $("#myrange").val();
 
-
+            
 			if (App_.nameFilterValue) {
 				App_.nameFilterValue = nameFilterValue;
 				if (App_.nameFilterValue == '1') {
@@ -141,7 +143,12 @@ var Filters = {
 			// 		});*/
 			// 	}
 			// });
+			  $('.list_btn').removeClass('active');
+			  $('.grid_btn').addClass('active');
+			  $('#myrange').val('1');
 		});
+
+        
 
 	},
 	CommonFilterAjax: function (nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl) {
@@ -167,7 +174,18 @@ var Filters = {
 	}
 
 }
+ /* functionality for gender dropdown*/
+ 
+ $(document).on('click','#gender_filter',function(){
+ 	  let gender = $('input[name="gender"]:checked').val();
+      console.log(gender);
+ });
 
+ $(document).on('click','#clearBtn_gender',function(){
+        $('input[name="gender"]').each(function () {
+			this.checked = false;
+		});
+ });    
 
 $(document).ready(function () {
 
