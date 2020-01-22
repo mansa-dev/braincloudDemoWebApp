@@ -376,12 +376,12 @@ class AjaxController extends Controller
      */
     function smartSearch(Request $request)
     {
-         
-         $data = contactModel::smartSearch($request->search);
-           
-          $result = json_encode($data);
-          echo $result;  
-         
+
+        $data = contactModel::smartSearch($request->search);
+
+        $result = json_encode($data);
+        echo $result;
+
     }
 
     /**
@@ -391,13 +391,11 @@ class AjaxController extends Controller
 
     function gettingResult(Request $request)
     {
-        $responseData = contactModel::fetchDataOnID($request->id);
+        $responseData = contactModel::smartSearch($request->search);
         $zoomLevel = !empty($_GET['zoomLevel']) ? $_GET['zoomLevel'] : false;
-        $response = view($request->view, ['data' => $responseData, 'zoomLevel'=> $zoomLevel]);
+        $response = view($request->view, ['data' => $responseData, 'zoomLevel' => $zoomLevel]);
         echo $response;
     }
-
-
 
 }
 

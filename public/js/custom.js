@@ -135,7 +135,7 @@ var Filters = {
 		});
 
 	},
-	
+
 
 	CommonFilterAjax: function (nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastSearch, lastNameOrderFilter, tagOrderFilter, view, tag_filter_search, groupNameSearch, companyTileDetails, businessLine, networkOrder, gender, todoSearch, ageOrderFilter, minAgeValue, maxAgeValue) {
 		$.ajax({
@@ -287,95 +287,95 @@ $(document).ready(function () {
 	$(document).on('click', '.show_more_filter', function () {
 
 
-			//variables for the filters
+		//variables for the filters
 
-			var nameFilterValue = $('input[name="name_filter_radio"]:checked').val(),
-				searchData_ = $("#name_filter_search").val(),
-				zoomLevel = $("#myrange").val(),
-				functionFilterValue = $('input[name="function_"]:checked').val(),
-				functionsearchData_ = $("#function_filter_search").val(),
-				lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
-				lastNameSearchFilter = $('#last_name_filter_search').val(),
-				clickedId = $(".li_dropdown").attr('id'),
-				tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
-				tag_filter_search = $('#tag_filter_search').val(),
-				groupNameSearch = $("#group_name_filter_search").val(),
-				networkOrder = $('input[name="network_filter"]:checked').val(),
-				gender = $('input[name="gender"]:checked').val(),
-				ageOrderFilter = $('input[name="age_filter_radio"]:checked').val(),
-				minAgeValue = $("#age_filter_search__").val(),
-				maxAgeValue = $("#age_filter_search_").val(),
-				id = $(this).attr('id');
+		var nameFilterValue = $('input[name="name_filter_radio"]:checked').val(),
+			searchData_ = $("#name_filter_search").val(),
+			zoomLevel = $("#myrange").val(),
+			functionFilterValue = $('input[name="function_"]:checked').val(),
+			functionsearchData_ = $("#function_filter_search").val(),
+			lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
+			lastNameSearchFilter = $('#last_name_filter_search').val(),
+			clickedId = $(".li_dropdown").attr('id'),
+			tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
+			tag_filter_search = $('#tag_filter_search').val(),
+			groupNameSearch = $("#group_name_filter_search").val(),
+			networkOrder = $('input[name="network_filter"]:checked').val(),
+			gender = $('input[name="gender"]:checked').val(),
+			ageOrderFilter = $('input[name="age_filter_radio"]:checked').val(),
+			minAgeValue = $("#age_filter_search__").val(),
+			maxAgeValue = $("#age_filter_search_").val(),
+			id = $(this).attr('id');
 
-				todoSearch = $('#todo_search').val(),
-				businessLine = [],
-				companyTileDetails = [],
-				selectedData = [];
+		todoSearch = $('#todo_search').val(),
+			businessLine = [],
+			companyTileDetails = [],
+			selectedData = [];
 
-			$('.same_slected_list').each(function () {
-				selectedData.push(this.id);
-			});
+		$('.same_slected_list').each(function () {
+			selectedData.push(this.id);
+		});
 
-			$('.business_tile_details:checkbox:checked').each(function () {
-				businessLine.push(this.id);
-			});
+		$('.business_tile_details:checkbox:checked').each(function () {
+			businessLine.push(this.id);
+		});
 
-			if (!minAgeValue && maxAgeValue) {
-				minAgeValue = 0;
+		if (!minAgeValue && maxAgeValue) {
+			minAgeValue = 0;
+		}
+
+		if (!maxAgeValue && minAgeValue) {
+			maxAgeValue = 10000;
+		}
+
+
+		$('.company_tile_details:checkbox:checked').each(function () {
+			companyTileDetails.push(this.id);
+		});
+
+
+		$('.list_btn').removeClass('active');
+		$('.grid_btn').addClass('active');
+		$('#myrange').val('1');
+
+		gridSelectedData = [];
+
+		this__ = $(this);
+
+		$('#' + clickedId).hide();
+
+		if (nameFilterValue) {
+			nameFilterValue = nameFilterValue;
+			if (nameFilterValue == '1') {
+				$("#asc").attr('checked', true);
 			}
-
-			if (!maxAgeValue && minAgeValue) {
-				maxAgeValue = 10000;
+			if (nameFilterValue == '2') {
+				$("#desc").attr('checked', true);
 			}
+		}
 
+		if (functionFilterValue) {
+			nameFilterValue = functionFilterValue;
+		}
 
-			$('.company_tile_details:checkbox:checked').each(function () {
-				companyTileDetails.push(this.id);
-			});
+		if (lastNameSearchFilter) {
+			$(".select_unselect_last_name").append("<div class='same_slected_list " + lastNameSearchFilter + " ' id=" + lastNameSearchFilter + ">" + lastNameSearchFilter + "<i class='fa fa-times-circle ml-1'></i></div>");
+		}
+		if (!tag_filter_search) {
+			tag_filter_search = '';
+		}
 
-
-			$('.list_btn').removeClass('active');
-			$('.grid_btn').addClass('active');
-			$('#myrange').val('1');
-
-			gridSelectedData = [];
-
-			this__ = $(this);
-
-			$('#' + clickedId).hide();
-
-			if (nameFilterValue) {
-				nameFilterValue = nameFilterValue;
-				if (nameFilterValue == '1') {
-					$("#asc").attr('checked', true);
-				}
-				if (nameFilterValue == '2') {
-					$("#desc").attr('checked', true);
-				}
-			}
-
-			if (functionFilterValue) {
-				nameFilterValue = functionFilterValue;
-			}
-
-			if (lastNameSearchFilter) {
-				$(".select_unselect_last_name").append("<div class='same_slected_list " + lastNameSearchFilter + " ' id=" + lastNameSearchFilter + ">" + lastNameSearchFilter + "<i class='fa fa-times-circle ml-1'></i></div>");
-			}
-			if (!tag_filter_search) {
-				tag_filter_search = '';
-			}
-
-			if (!selectedData) {
-				selectedData = '';
-			}
-			if (!nameFilterValue) {
-				nameFilterValue = '';
-			}
-			if (!searchData_) {
-				searchData_ = '';
-			} else {
-				$(".select_unselect_btns").append("<div class='same_slected_list " + searchData_ + " ' id=" + searchData_ + ">" + searchData_ + "<i class='fa fa-times-circle ml-1'></i></div>");
-			}
+		if (!selectedData) {
+			selectedData = '';
+		}
+		if (!nameFilterValue) {
+			nameFilterValue = '';
+		}
+		if (!searchData_) {
+			searchData_ = '';
+		} else {
+			$(".select_unselect_btns").append("<div class='same_slected_list " + searchData_ + " ' id=" + searchData_ + ">" + searchData_ + "<i class='fa fa-times-circle ml-1'></i></div>");
+		}
 
 		// $("#myrange").empty();
 
@@ -415,26 +415,26 @@ $(document).ready(function () {
 					url: base_url + 'loadNameFilter',
 					dataType: 'html',
 					data: {
-					id: nameFilterValue,
-					offsetValue: 0,
-					search: searchData_,
-					zoomLevel: zoomLevel,
-					selectedData: selectedData,
-					functionsearchData: functionsearchData_,
-					selectData: gridSelectedData,
-					lastSearch: lastNameSearchFilter,
-					lastNameOrderFilter: lastNameOrderFilter,
-					tagOrderFilter: tagOrderFilter,
-					groupNameSearch: groupNameSearch,
-					tagFilterSearch: tag_filter_search,
-					companyTileDetails: companyTileDetails,
-					businessLine: businessLine,
-					networkOrder: networkOrder,
-					gender: gender,
-					todoSearch: todoSearch,
-					ageOrderFilter: ageOrderFilter,
-					minAgeValue: minAgeValue,
-					maxAgeValue: maxAgeValue
+						id: nameFilterValue,
+						offsetValue: 0,
+						search: searchData_,
+						zoomLevel: zoomLevel,
+						selectedData: selectedData,
+						functionsearchData: functionsearchData_,
+						selectData: gridSelectedData,
+						lastSearch: lastNameSearchFilter,
+						lastNameOrderFilter: lastNameOrderFilter,
+						tagOrderFilter: tagOrderFilter,
+						groupNameSearch: groupNameSearch,
+						tagFilterSearch: tag_filter_search,
+						companyTileDetails: companyTileDetails,
+						businessLine: businessLine,
+						networkOrder: networkOrder,
+						gender: gender,
+						todoSearch: todoSearch,
+						ageOrderFilter: ageOrderFilter,
+						minAgeValue: minAgeValue,
+						maxAgeValue: maxAgeValue
 					},
 					success: function (html) {
 						// console.log(html);
@@ -546,78 +546,132 @@ $(document).ready(function () {
 	$(document).on("click", ".select_unselect_btns_tag .same_slected_list i", function () {
 		$(this).parent().remove();
 	});
-  
-   /*smart search functionlity*/
-    $('#smartSearch').keyup(function(){
-        var search = $('#smartSearch').val();
-         $.ajax({
-             url: '/smart',
-             data:{search:search},
-             success:function(response)
-             { 
-                 result = JSON.parse(response)
-                             	      
-                    html = '';
-             	  $.each(result,function(key,val){
-                       html+= '<li class="result-value" data-id="'+val.id+'" data-name="'+val.Name+'">';
-                       html+= val.Name;
-                       html+= '</li>';
-             	  
-             	  })
 
-             	   $('#result').html(html);
-              }
-         });
-    });
+	/*smart search functionlity*/
+	$('#smartSearch').keyup(function () {
+		var search = $('#smartSearch').val();
+		$.ajax({
+			url: '/smart',
+			data: {
+				search: search
+			},
+			success: function (response) {
+				result = JSON.parse(response)
 
-    $(document).on("click",'.result-value',function(){
+				html = '';
+				$.each(result, function (key, val) {
+					html += '<li class="result-value" data-id="' + val.id + '" data-name="' + val.Name + '">';
+					html += val.Name;
+					html += '</li>';
 
-         var id =$(this).data('id');
-         var name =  $(this).data('name');
-         // var view = 'load_contact';
-         $('#smartSearch').val(name);
-         var zoomLevel =  $("#myrange").val()
+				})
 
-        $.ajax({
-	      type:'GET',
-	      url: 'gettingresult',
-	      data:{ id: id,view:'load_contact'},
-		beforeSend: function(){
-			$("#result").html('');
-		},     
-	     success: function (html) {
+				$('#result').html(html);
+			}
+		});
+	});
+
+	$(document).on("click", '.result-value', function () {
+
+		var id = $(this).data('id');
+		var name = $(this).data('name');
+		// var view = 'load_contact';
+		$('#smartSearch').val(name);
+		var zoomLevel = $("#myrange").val()
+
+		$.ajax({
+			type: 'GET',
+			url: 'gettingresult',
+			data: {
+				id: id,
+				view: 'load_contact',
+				search: name
+			},
+			beforeSend: function () {
+				$("#result").html('');
+			},
+			success: function (html) {
 				$('#list_view_table_body').empty();
 				$('#list_view_table_body').append(html);
-				
-			        $.ajax({
-				      type:'GET',
-				      url: 'gettingresult',
-				      data:{ id: id,view:'load_contact_grid', zoomLevel: zoomLevel},
-				     
-				     success: function (html) {
-							$('#append_grid_view').empty();
-							$('#append_grid_view').append(html);
 
-						 }
-				  });
-			 }
-	  });
-	      
-    });
+				$.ajax({
+					type: 'GET',
+					url: 'gettingresult',
+					data: {
+						id: id,
+						view: 'load_contact_grid',
+						zoomLevel: zoomLevel,
+						search: name
+					},
+					success: function (html) {
+						$('#append_grid_view').empty();
+						$('#append_grid_view').append(html);
 
-    // $(document).on('click','#smartSearchBtn',function(){
-    // 	 var search = $('#smartSearch').val();
-    //      $.ajax({
-    //          url: '/smart',
-    //          data:{search:search},
-    //          success:function(data)
-    //          {
-    //          	 console.log(data);
-    //          }
-    //      });
-    // });  
+					}
+				});
+			}
+		});
+	});
+
+	// $(document).on('click','#smartSearchBtn',function(){
+	// 	 var search = $('#smartSearch').val();
+	//      $.ajax({
+	//          url: '/smart',
+	//          data:{search:search},
+	//          success:function(data)
+	//          {
+	//          	 console.log(data);
+	//          }
+	//      });
+	// });  
+	$("#smartSearch").bind('keypress', function (e) {
+		if (e.which === 13) {
+			CommonSmartSearch()
+		}
+	});
 });
 
+
+function CommonSmartSearch() {
+	var smartSearchElm = $('#smartSearch'),
+		zoomLevel = $("#myrange").val(),
+		id = '',
+		name = smartSearchElm.val();
+
+	$.ajax({
+		type: 'GET',
+		url: 'gettingresult',
+		data: {
+			id: id,
+			view: 'load_contact',
+			search: name
+		},
+		beforeSend: function () {
+			$("#result").html('');
+		},
+		success: function (html) {
+			$('#list_view_table_body').empty();
+			$('#list_view_table_body').append(html);
+
+			$.ajax({
+				type: 'GET',
+				url: 'gettingresult',
+				data: {
+					id: id,
+					view: 'load_contact_grid',
+					zoomLevel: zoomLevel,
+					search: name
+				},
+
+				success: function (html) {
+					$('#append_grid_view').empty();
+					$('#append_grid_view').append(html);
+
+				}
+			});
+		}
+	});
+}
 //Centeralised function in javscript to check the classes exist and remove 
 function removeZoomClasses() {
 
