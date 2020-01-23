@@ -3,15 +3,13 @@ $(document).ready(function () {
 });
 
 
-var base_url = window.location.href;
+var base_url = window.location.href + 'index.php/';
 
 var App_ = App_ || {
 
 
 	init: function () {
-		// alert(this.nameFilterValue);
 		Filters.FunctionFilter();
-		// Filters.FunctionFilterShowMore();
 	}
 };
 
@@ -29,26 +27,26 @@ var Filters = {
 			//variables for the filters
 
 			var nameFilterValue = $('input[name="name_filter_radio"]:checked').val(),
-				searchData_ = $("#name_filter_search").val(),
-				zoomLevel = $("#myrange").val(),
-				functionFilterValue = $('input[name="function_"]:checked').val(),
-				functionsearchData_ = $("#function_filter_search").val(),
-				lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
-				lastNameSearchFilter = $('#last_name_filter_search').val(),
-				clickedId = $(".li_dropdown").attr('id'),
-				tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
-				tag_filter_search = $('#tag_filter_search').val(),
-				groupNameSearch = $("#group_name_filter_search").val(),
-				networkOrder = $('input[name="network_filter"]:checked').val(),
-				gender = $('input[name="gender"]:checked').val(),
-				ageOrderFilter = $('input[name="age_filter_radio"]:checked').val(),
-				minAgeValue = $("#age_filter_search__").val(),
-				maxAgeValue = $("#age_filter_search_").val(),
+			searchData_ = $("#name_filter_search").val(),
+			zoomLevel = $("#myrange").val(),
+			functionFilterValue = $('input[name="function_"]:checked').val(),
+			functionsearchData_ = $("#function_filter_search").val(),
+			lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
+			lastNameSearchFilter = $('#last_name_filter_search').val(),
+			clickedId = $(".li_dropdown").attr('id'),
+			tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
+			tag_filter_search = $('#tag_filter_search').val(),
+			groupNameSearch = $("#group_name_filter_search").val(),
+			networkOrder = $('input[name="network_filter"]:checked').val(),
+			gender = $('input[name="gender"]:checked').val(),
+			ageOrderFilter = $('input[name="age_filter_radio"]:checked').val(),
+			minAgeValue = $("#age_filter_search__").val(),
+			maxAgeValue = $("#age_filter_search_").val(),
 
-				todoSearch = $('#todo_search').val(),
-				businessLine = [],
-				companyTileDetails = [],
-				selectedData = [];
+			todoSearch = $('#todo_search').val(),
+			businessLine = [],
+			companyTileDetails = [],
+			selectedData = [];
 
 			$('.same_slected_list').each(function () {
 				selectedData.push(this.id);
@@ -73,7 +71,6 @@ var Filters = {
 
 			$('.list_btn').removeClass('active');
 			$('.grid_btn').addClass('active');
-			// $('#myrange').val('1');
 
 			gridSelectedData = [];
 
@@ -123,13 +120,13 @@ var Filters = {
 			$(this).parents('li').find('span').removeClass('bg_white');
 
 			var id = 'append_grid_view',
-				requestUrl = 'loadNameFilter',
-				view = 'load_contact';
+			requestUrl = 'loadNameFilter',
+			view = 'load_contact';
 			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter, lastNameOrderFilter, tagOrderFilter, view, tag_filter_search, groupNameSearch, companyTileDetails, businessLine, networkOrder, gender, todoSearch, ageOrderFilter, minAgeValue, maxAgeValue);
 
 			var id = 'list_view_table_body',
-				requestUrl = 'loadNameFilterData',
-				view = 'load_contact_grid';
+			requestUrl = 'loadNameFilterData',
+			view = 'load_contact_grid';
 			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter, lastNameOrderFilter, tagOrderFilter, view, tag_filter_search, groupNameSearch, companyTileDetails, businessLine, networkOrder, gender, todoSearch, ageOrderFilter, minAgeValue, maxAgeValue);
 
 		});
@@ -203,18 +200,15 @@ $(document).ready(function () {
 		$("#age_filter_search_").val(minRange);
 	});
 
-	// getElementById('grid_view_show_more').removeAttribute("style")
 
 	$('button').click(function () {
 		if (this.id == 'btn1') {
 			alert(this.id);
 			$('#list_view').show();
 			$('#grid_view').hide();
-			// $(".grid_view_show_more").show();
 		} else {
 			$('#list_view').hide();
 			$('#grid_view').show();
-			// $(".grid_view_show_more").hide();
 		}
 	});
 
@@ -264,7 +258,7 @@ $(document).ready(function () {
 
 
 		var id = $(this).attr('id'),
-			zoomLevel = $("#myrange").val();
+		zoomLevel = $("#myrange").val();
 
 
 		$.ajax({
@@ -276,7 +270,6 @@ $(document).ready(function () {
 				zoomLevel: zoomLevel
 			},
 			success: function (html) {
-				// console.log(html);
 				$(".show_more_grid").attr("id", parseInt(id) + parseInt(10));
 				$('#grid_view .for_embed').append(html);
 			}
@@ -290,27 +283,27 @@ $(document).ready(function () {
 		//variables for the filters
 
 		var nameFilterValue = $('input[name="name_filter_radio"]:checked').val(),
-			searchData_ = $("#name_filter_search").val(),
-			zoomLevel = $("#myrange").val(),
-			functionFilterValue = $('input[name="function_"]:checked').val(),
-			functionsearchData_ = $("#function_filter_search").val(),
-			lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
-			lastNameSearchFilter = $('#last_name_filter_search').val(),
-			clickedId = $(".li_dropdown").attr('id'),
-			tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
-			tag_filter_search = $('#tag_filter_search').val(),
-			groupNameSearch = $("#group_name_filter_search").val(),
-			networkOrder = $('input[name="network_filter"]:checked').val(),
-			gender = $('input[name="gender"]:checked').val(),
-			ageOrderFilter = $('input[name="age_filter_radio"]:checked').val(),
-			minAgeValue = $("#age_filter_search__").val(),
-			maxAgeValue = $("#age_filter_search_").val(),
-			id = $(this).attr('id');
+		searchData_ = $("#name_filter_search").val(),
+		zoomLevel = $("#myrange").val(),
+		functionFilterValue = $('input[name="function_"]:checked').val(),
+		functionsearchData_ = $("#function_filter_search").val(),
+		lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
+		lastNameSearchFilter = $('#last_name_filter_search').val(),
+		clickedId = $(".li_dropdown").attr('id'),
+		tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
+		tag_filter_search = $('#tag_filter_search').val(),
+		groupNameSearch = $("#group_name_filter_search").val(),
+		networkOrder = $('input[name="network_filter"]:checked').val(),
+		gender = $('input[name="gender"]:checked').val(),
+		ageOrderFilter = $('input[name="age_filter_radio"]:checked').val(),
+		minAgeValue = $("#age_filter_search__").val(),
+		maxAgeValue = $("#age_filter_search_").val(),
+		id = $(this).attr('id');
 
 		todoSearch = $('#todo_search').val(),
-			businessLine = [],
-			companyTileDetails = [],
-			selectedData = [];
+		businessLine = [],
+		companyTileDetails = [],
+		selectedData = [];
 
 		$('.same_slected_list').each(function () {
 			selectedData.push(this.id);
@@ -377,8 +370,6 @@ $(document).ready(function () {
 			$(".select_unselect_btns").append("<div class='same_slected_list " + searchData_ + " ' id=" + searchData_ + ">" + searchData_ + "<i class='fa fa-times-circle ml-1'></i></div>");
 		}
 
-		// $("#myrange").empty();
-
 		$.ajax({
 			type: 'GET',
 			url: base_url + 'loadNameFilterData',
@@ -437,7 +428,6 @@ $(document).ready(function () {
 						maxAgeValue: maxAgeValue
 					},
 					success: function (html) {
-						// console.log(html);
 						$(".show_more_grid").attr("id", parseInt(id) + parseInt(10));
 						$('#grid_view .for_embed').append(html);
 					}
@@ -455,25 +445,25 @@ $(document).ready(function () {
 		//Switch statement to add the the classes on zoom in and out.
 		switch (rangeValue) {
 			case '1':
-				removeZoomClasses();
-				$(".user_pf_area").addClass('xs_zomm');
-				break;
+			removeZoomClasses();
+			$(".user_pf_area").addClass('xs_zomm');
+			break;
 			case '2':
-				removeZoomClasses();
-				$(".user_pf_area").addClass('s_zomm');
-				break;
+			removeZoomClasses();
+			$(".user_pf_area").addClass('s_zomm');
+			break;
 			case '3':
-				removeZoomClasses();
-				$(".user_pf_area").addClass('m_zomm');
-				break;
+			removeZoomClasses();
+			$(".user_pf_area").addClass('m_zomm');
+			break;
 			case '4':
-				removeZoomClasses();
-				$(".user_pf_area").addClass('l_zomm');
-				break;
+			removeZoomClasses();
+			$(".user_pf_area").addClass('l_zomm');
+			break;
 			case '5':
-				removeZoomClasses();
-				$(".user_pf_area").addClass('xl_zomm');
-				break;
+			removeZoomClasses();
+			$(".user_pf_area").addClass('xl_zomm');
+			break;
 		}
 	});
 
@@ -551,7 +541,7 @@ $(document).ready(function () {
 	$('#smartSearch').keyup(function () {
 		var search = $('#smartSearch').val();
 		$.ajax({
-			url: '/smart',
+			url: base_url +'smart',
 			data: {
 				search: search
 			},
@@ -567,6 +557,12 @@ $(document).ready(function () {
 				})
 
 				$('#result').html(html);
+				
+				if($('#smartSearch').val().length == 0)
+				{
+
+					$('#result').html('');
+				} 
 			}
 		});
 	});
@@ -581,7 +577,7 @@ $(document).ready(function () {
 
 		$.ajax({
 			type: 'GET',
-			url: 'gettingresult',
+			url: base_url + 'gettingresult',
 			data: {
 				id: id,
 				view: 'load_contact',
@@ -596,7 +592,7 @@ $(document).ready(function () {
 
 				$.ajax({
 					type: 'GET',
-					url: 'gettingresult',
+					url: base_url + 'gettingresult',
 					data: {
 						id: id,
 						view: 'load_contact_grid',
@@ -613,17 +609,7 @@ $(document).ready(function () {
 		});
 	});
 
-	// $(document).on('click','#smartSearchBtn',function(){
-	// 	 var search = $('#smartSearch').val();
-	//      $.ajax({
-	//          url: '/smart',
-	//          data:{search:search},
-	//          success:function(data)
-	//          {
-	//          	 console.log(data);
-	//          }
-	//      });
-	// });  
+
 	$("#smartSearch").bind('keypress', function (e) {
 		if (e.which === 13) {
 			CommonSmartSearch()
@@ -634,13 +620,13 @@ $(document).ready(function () {
 
 function CommonSmartSearch() {
 	var smartSearchElm = $('#smartSearch'),
-		zoomLevel = $("#myrange").val(),
-		id = '',
-		name = smartSearchElm.val();
+	zoomLevel = $("#myrange").val(),
+	id = '',
+	name = smartSearchElm.val();
 
 	$.ajax({
 		type: 'GET',
-		url: 'gettingresult',
+		url: base_url + 'gettingresult',
 		data: {
 			id: id,
 			view: 'load_contact',
@@ -655,7 +641,7 @@ function CommonSmartSearch() {
 
 			$.ajax({
 				type: 'GET',
-				url: 'gettingresult',
+				url: base_url + 'gettingresult',
 				data: {
 					id: id,
 					view: 'load_contact_grid',
