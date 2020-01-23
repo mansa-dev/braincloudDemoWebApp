@@ -44,6 +44,7 @@ class AjaxController extends Controller
 
         if (isset($_GET['offsetValue']))
         {
+          // print_r($_GET); die;
 
             $id = isset($_GET['id']) ? $_GET['id'] : '';
 
@@ -66,6 +67,7 @@ class AjaxController extends Controller
             $maxValue = isset($_GET['maxAgeValue']) ? $_GET['maxAgeValue'] : '';
 
             $searchResponse = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search'], $selectData, $groupNameSearch, $filteredCompanyValue, $gender, $todoSearch, $minValue, $maxValue);
+            var_dump($searchResponse); die; 
             $selectData = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
             $tagSearch = $this->checkIfNameEmpty($selectData);
             $tagOrder = isset($_GET['tagOrderFilter']) ? $_GET['tagOrderFilter'] : '';
@@ -97,7 +99,7 @@ class AjaxController extends Controller
 
     public function loadNameFilterGrid()
     {
-
+          // print_r($_GET); die;
         if (isset($_GET['offsetValue']))
         {
             $id = isset($_GET['id']) ? $_GET['id'] : '';
@@ -110,6 +112,7 @@ class AjaxController extends Controller
             $groupNameSearch = isset($_GET['groupNameSearch']) ? $_GET['groupNameSearch'] : '';
             $selectBoxFilter = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
             $selectData = $this->mergedSearchData($selectBoxFilter, $_GET['tagFilterSearch']);
+
             $companyTitle = isset($_GET['companyTileDetails']) ? $_GET['companyTileDetails'] : '';
             $filteredCompanyValue = $this->arrayToStringConversion($companyTitle);
             $gender = isset($_GET['gender']) ? $_GET['gender'] : '';
@@ -151,9 +154,25 @@ class AjaxController extends Controller
 
     public function checkIfSearchEmpty($functionData, $lastSearch, $searchName, $tagData, $groupNameSearch, $company, $gender, $todoSearch)
     {
+      // echo $functionData. $lastSearch.$searchName.$tagData.$groupNameSearch.$company.$gender.$todoSearch; die;
+     
+         $tagData = $this->checkValidString($tagData);
+         $company = $this->checkValidString($company);
 
-        if (!empty($functionData) || !empty($lastSearch) || !empty($tagData) || !empty($searchName) || !empty($groupNameSearch) || !empty($company) || !empty($gender) || $todoSearch)
+        if (!empty($functionData) || !empty($lastSearch) || !empty($searchName) || !empty($tagData) || !empty($groupNameSearch) || !empty($company) || !empty($gender) || !empty($todoSearch))
         {
+          // echo "sdfsd"; die; 
+          if(empty($tagData))
+          {
+            $tagData = "''";
+          }
+
+          if(empty($company))
+           {
+              $company = "''";
+           }
+
+
             return "OR First_Name like '$searchName' or Name like '$lastSearch' or Tag1 IN ($tagData) or Tag2 IN ($tagData) or Tag3 IN ($tagData) or Tag4 IN ($tagData) or Tag5 IN ($tagData) or Tag6 IN ($tagData) or Tag7 IN ($tagData) or Tag6 IN ($tagData) or `Group` like '$groupNameSearch' or Job1_Company IN ($company) or Gender like '$gender' or  `To Do` LIKE '$todoSearch'";
         }
         else
@@ -169,6 +188,7 @@ class AjaxController extends Controller
      */
     public function checkIfSortingTypeEmpty($sortingType, $lastNameOrder, $tagOrder, $networkOrder)
     {
+
 
         if (!empty($sortingType) || !empty($lastNameOrder) || !empty($tagOrder) || !empty($networkOrder))
         {
@@ -214,7 +234,7 @@ class AjaxController extends Controller
             }
 
             $concatinateOrder = $firstNameOrder . $lastNameOrder . $tagFilterOrder . $networkOrder;
-            $filteredOrderedValue = ltrim(trim($concatinateOrder) , ",");
+            $filteredOrderedValue = ltrim(trim($concatinateOrder) , ","); 
             return "order by $filteredOrderedValue";
 
         }
@@ -230,6 +250,7 @@ class AjaxController extends Controller
         if (!empty($nameArray))
         {
             $names = $this->arrayToStringConversion($nameArray);
+            $names = str_replace('#', '', $names);
             if (!empty($names))
             {
                 return "First_Name IN ($names)";
@@ -360,6 +381,7 @@ class AjaxController extends Controller
             }
         }
 
+
         $searchedArray = array(
             $searchBoxData
         );
@@ -395,6 +417,24 @@ class AjaxController extends Controller
         $zoomLevel = !empty($_GET['zoomLevel']) ? $_GET['zoomLevel'] : false;
         $response = view($request->view, ['data' => $responseData, 'zoomLevel' => $zoomLevel]);
         echo $response;
+    }
+
+    /**
+     * 
+    check if word contains letters or alphabeds
+     *
+     */
+
+    function checkValidString($string){
+       
+       if (!preg_match('/[^A-Za-z0-9]/', $string)) // '/[^a-z\d]/i' should also work.
+        {
+          return $string;
+        }
+        else
+        {
+          return false;
+        }
     }
 
 }

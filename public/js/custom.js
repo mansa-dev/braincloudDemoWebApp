@@ -73,7 +73,7 @@ var Filters = {
 
 			$('.list_btn').removeClass('active');
 			$('.grid_btn').addClass('active');
-			$('#myrange').val('1');
+			// $('#myrange').val('1');
 
 			gridSelectedData = [];
 

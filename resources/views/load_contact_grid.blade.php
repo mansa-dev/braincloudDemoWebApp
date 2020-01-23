@@ -38,7 +38,7 @@ $class='xs_zomm';
     <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
   </div>
   <div class="basic_info">
-    <h1 class="name">{{$value->First_Name}}</h1>
+    <h1 class="name"><?php echo $value->First_Name.' '.ucfirst(strtolower($value->Name)); ?></h1>
     <p class="little_description mb-2">{{$value->Job1_Title}} at {{$value->Job1_Company}}<b>, </b>{{$value->Age}}</p>
       <div class="private_info mb-3">
         <span class="d-block w-100">{{$value->PhoneNumber1}}</span>

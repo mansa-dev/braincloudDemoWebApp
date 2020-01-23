@@ -47,7 +47,7 @@ class contactModel extends Model
         $subQuery = "$jobResponse $filterSearchData $searchedData $sortingType";
         $filteredSubQuery = ltrim(trim($subQuery) , "OR");
 
-        if (empty($sortingType) || empty($offsetValue) || empty($searchedData) || empty($filterSearchData) || empty($jobResponse))
+        if (empty($sortingType) && empty($offsetValue) && empty($searchedData) && empty($filterSearchData) && empty($jobResponse))
         {
             $finalQueryValue = '';
         }
@@ -56,8 +56,8 @@ class contactModel extends Model
             $finalQueryValue = $where . $filteredSubQuery;
         }
 
-        $sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $finalQueryValue LIMIT 50 OFFSET $offsetValue";
-
+        $sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $finalQueryValue LIMIT 50 OFFSET $offsetValue"; 
+    var_dump($sqlQuery); die;
         return DB::select(DB::raw($sqlQuery));
 
     }

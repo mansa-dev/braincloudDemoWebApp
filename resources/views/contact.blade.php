@@ -4,14 +4,14 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="csrf-token" content="{{ csrf_token() }}" />
-      <link rel="stylesheet" href="{{ asset('/public/css/bootstrap.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('/public/css/common.css') }}">
-      <link rel="stylesheet" href="{{ asset('/public/css/style.css') }}">
+      <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('/css/common.css') }}">
+      <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
-      <script src="{{ asset('/public/js/popper.min.js') }}"></script>
-      <script src="{{ asset('/public/js/bootstrap.min.js') }}"></script>
-      <script src="{{ asset('/public/js/custom.js?v=123') }}"></script>
+      <script src="{{ asset('/js/popper.min.js') }}"></script>
+      <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+      <script src="{{ asset('/js/custom.js?v=123') }}"></script>
    </head>
    <body>
       <div class="g_wrapper">
@@ -510,7 +510,7 @@
                            @if(!empty($data))
                            @foreach($data as $value)
                            <?php $id = $value->id; ?>
-                           <div class="user_pf_area xs_zomm">
+                           <div class="user_pf_area s_zomm">
                               <div class="check_box">
                                  <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input gridCheckBox sm_ch" id="gridCustomCheck<?php echo $value->id; ?>" name="example1">
@@ -521,7 +521,7 @@
                                  <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
                               </div>
                               <div class="basic_info">
-                                 <h1 class="name">{{$value->First_Name}}</h1>
+                                 <h1 class="name"><?php echo $value->First_Name.' '.ucfirst(strtolower($value->Name)); ?></h1>
                                  <p class="little_description mb-2">{{$value->Job1_Title}} at {{$value->Job1_Company}}<b>, </b>{{$value->Age}}</p>
                                  <div class="private_info mb-3">
                                     <span class="d-block w-100">{{$value->PhoneNumber1}}</span>
@@ -656,7 +656,7 @@
                      <div class="volumne">
                         <span class="vlm_txt">
                            <div class="vlm_slider">
-                              <input type="range" min="1" max="5" value="1" class="slider" id="myrange">
+                              <input type="range" min="1" max="5" value="2" class="slider" id="myrange">
                            </div>
                         </span>
                      </div>
