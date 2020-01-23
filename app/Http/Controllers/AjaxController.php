@@ -67,7 +67,7 @@ class AjaxController extends Controller
             $maxValue = isset($_GET['maxAgeValue']) ? $_GET['maxAgeValue'] : '';
 
             $searchResponse = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search'], $selectData, $groupNameSearch, $filteredCompanyValue, $gender, $todoSearch, $minValue, $maxValue);
-            var_dump($searchResponse); die; 
+            // var_dump($searchResponse); die; 
             $selectData = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
             $tagSearch = $this->checkIfNameEmpty($selectData);
             $tagOrder = isset($_GET['tagOrderFilter']) ? $_GET['tagOrderFilter'] : '';

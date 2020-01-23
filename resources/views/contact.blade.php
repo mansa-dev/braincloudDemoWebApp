@@ -17,7 +17,7 @@
       <div class="g_wrapper">
       <div class="navbar_coustom_area d-flex align-items-center">
          <div class="site_navbar_logo">
-            <img src="{{ asset('/public/images/logo.png') }}" alt="">
+            <img src="{{ asset('/images/logo.png') }}" alt="">
          </div>
          <div class="navbar_ct d-flex align-items-center">
             <div class="top_tabs_area">
@@ -69,7 +69,7 @@
                      <li><span class="date_text">28 Nov</span></li>
                      <li class="nav-item dropdown d-flex justify-content-end">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        <img src="{{ asset('/public/images/face8.jpg') }}" alt="">
+                        <img src="{{ asset('/images/face8.jpg') }}" alt="">
                         </a>
                         <div class="dropdown-menu">
                            <ul>
@@ -518,7 +518,7 @@
                                  </div>
                               </div>
                               <div class="image">
-                                 <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                                 <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                               </div>
                               <div class="basic_info">
                                  <h1 class="name"><?php echo $value->First_Name.' '.ucfirst(strtolower($value->Name)); ?></h1>
@@ -544,27 +544,27 @@
                                  <ul>
                                     <li>
                                        <a href="javascript:void(0);">
-                                       <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                                       <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                                        </a>
                                     </li>
                                     <li>
                                        <a href="javascript:void(0);">
-                                       <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                                       <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                                        </a>
                                     </li>
                                     <li>
                                        <a href="javascript:void(0);">
-                                       <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                                       <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                                        </a>
                                     </li>
                                     <li>
                                        <a href="javascript:void(0);">
-                                       <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                                       <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                                        </a>
                                     </li>
                                     <li>
                                        <a href="javascript:void(0);">
-                                       <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+                                       <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
                                        </a>
                                     </li>
                                  </ul>
@@ -608,7 +608,7 @@
                                     </div>
                                  </td>
                                  <td>
-                                    <img src="{{ asset('/public/images/face8.jpg') }}" alt="">
+                                    <img src="{{ asset('/images/face8.jpg') }}" alt="">
                                  </td>
                                  <td>{{$value->First_Name}}</td>
                                  <td>{{$value->Name}}</td>

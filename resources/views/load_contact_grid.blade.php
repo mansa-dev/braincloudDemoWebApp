@@ -35,7 +35,7 @@ $class='xs_zomm';
     </div>
   </div>
   <div class="image">
-    <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+    <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
   </div>
   <div class="basic_info">
     <h1 class="name"><?php echo $value->First_Name.' '.ucfirst(strtolower($value->Name)); ?></h1>
@@ -61,27 +61,27 @@ $class='xs_zomm';
       <ul>
         <li>
           <a href="#">
-            <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+            <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+            <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+            <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+            <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="{{ asset('/public/images/face8.jpg') }}" alt="" class="rounded-circle">
+            <img src="{{ asset('/images/face8.jpg') }}" alt="" class="rounded-circle">
           </a>
         </li>
       </ul>
