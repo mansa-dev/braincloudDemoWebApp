@@ -44,7 +44,7 @@ class AjaxController extends Controller
 
         if (isset($_GET['offsetValue']))
         {
-          
+
             $id = isset($_GET['id']) ? $_GET['id'] : '';
 
             $functionSearch = isset($_GET['functionsearchData']) ? $_GET['functionsearchData'] : '';
@@ -54,7 +54,7 @@ class AjaxController extends Controller
             $lastNameSearch = isset($_GET['lastSearch']) ? $_GET['lastSearch'] : '';
             $selectBoxFilter = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
             $selectData = $this->mergedSearchData($selectBoxFilter, $_GET['tagFilterSearch']);
-          
+
             $groupNameSearch = isset($_GET['groupNameSearch']) ? $_GET['groupNameSearch'] : '';
             $companyTitle = isset($_GET['companyTileDetails']) ? $_GET['companyTileDetails'] : '';
             $filteredCompanyValue = $this->arrayToStringConversion($companyTitle);
@@ -62,9 +62,9 @@ class AjaxController extends Controller
             $businesLine = isset($_GET['businessLine']) ? $_GET['businessLine'] : '';
             $filteredbusinessValue = $this->arrayToStringConversion($businesLine);
 
-            $functionFilter = isset($_GET['functionFilterValue'])?$_GET['functionFilterValue']:'';
+            $functionFilter = isset($_GET['functionFilterValue']) ? $_GET['functionFilterValue'] : '';
             // $functionsearchData = isset($_GET['functionsearchData'])?$_GET['functionsearchData']:'';
- 
+            
 
             $networkOrder = isset($_GET['networkOrder']) ? $_GET['networkOrder'] : '';
             $gender = isset($_GET['gender']) ? $_GET['gender'] : '';
@@ -77,7 +77,7 @@ class AjaxController extends Controller
             $filteredDesignation = $this->arrayToStringConversion($designation);
 
             $searchResponse = $this->checkIfSearchEmpty($functionSearch, $lastNameSearch, $_GET['search'], $selectData, $groupNameSearch, $filteredCompanyValue, $gender, $todoSearch, $minValue, $maxValue, $filteredbusinessValue, $filteredDesignation, $networkOrder);
-            // var_dump($searchResponse); die; 
+            // var_dump($searchResponse); die;
             $selectData = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
             $tagSearch = $this->checkIfNameEmpty($selectData);
             $tagOrder = isset($_GET['tagOrderFilter']) ? $_GET['tagOrderFilter'] : '';
@@ -109,8 +109,7 @@ class AjaxController extends Controller
 
     public function loadNameFilterGrid()
     {
-        
- 
+
         if (isset($_GET['offsetValue']))
         {
             $id = isset($_GET['id']) ? $_GET['id'] : '';
@@ -123,14 +122,13 @@ class AjaxController extends Controller
             $groupNameSearch = isset($_GET['groupNameSearch']) ? $_GET['groupNameSearch'] : '';
             $selectBoxFilter = isset($_GET['selectedData']) ? $_GET['selectedData'] : '';
             $selectData = $this->mergedSearchData($selectBoxFilter, $_GET['tagFilterSearch']);
-       
+
             $companyTitle = isset($_GET['companyTileDetails']) ? $_GET['companyTileDetails'] : '';
             $filteredCompanyValue = $this->arrayToStringConversion($companyTitle);
-            // var_dump($filteredCompanyValue); 
-
+            // var_dump($filteredCompanyValue);
             $businesLine = isset($_GET['businessLine']) ? $_GET['businessLine'] : '';
             $filteredbusinessValue = $this->arrayToStringConversion($businesLine);
-            // var_dump($filteredbusinessValue);die; 
+            // var_dump($filteredbusinessValue);die;
             $designation = isset($_GET['designation']) ? $_GET['designation'] : '';
             $filteredDesignation = $this->arrayToStringConversion($designation);
 
@@ -146,12 +144,10 @@ class AjaxController extends Controller
             $tagSearch = $this->checkIfNameEmpty($selectData);
             $tagOrder = isset($_GET['tagOrderFilter']) ? $_GET['tagOrderFilter'] : '';
 
-            
-
             $ageOrderFilter = isset($_GET['ageOrderFilter']) ? $_GET['ageOrderFilter'] : '';
             $lastNameFilter = isset($_GET['lastNameOrderFilter']) ? $_GET['lastNameOrderFilter'] : '';
 
-            $functionFilter = isset($_GET['functionFilterValue'])?$_GET['functionFilterValue']:'';
+            $functionFilter = isset($_GET['functionFilterValue']) ? $_GET['functionFilterValue'] : '';
 
             $sortingType = $this->checkIfSortingTypeEmpty($id, $lastNameFilter, $tagOrder, $networkOrder, $ageOrderFilter, $functionFilter);
 
@@ -175,45 +171,44 @@ class AjaxController extends Controller
      *
      */
 
-
     public function checkIfSearchEmpty($functionData, $lastSearch, $searchName, $tagData, $groupNameSearch, $company, $gender, $todoSearch, $minValue, $maxValue, $filteredbusinessValue, $filteredDesignation, $networkSearch)
     {
-     
-         // $tagData_ = $this->checkValidString($tagData);
-         // $companyValidValue = $this->checkValidString($company);
-         // $businessValidValue = $this->checkValidString($filteredbusinessValue);
-         // $designationValidValue = $this->checkValidString($filteredDesignation);
-        // var_dump($groupNameSearch); var_dump($tagData); die; 
 
+        // $tagData_ = $this->checkValidString($tagData);
+        // $companyValidValue = $this->checkValidString($company);
+        // $businessValidValue = $this->checkValidString($filteredbusinessValue);
+        // $designationValidValue = $this->checkValidString($filteredDesignation);
+        // var_dump($groupNameSearch); var_dump($tagData); die;
         if (!empty($functionData) || !empty($lastSearch) || !empty($searchName) || !empty($tagData) || !empty($groupNameSearch) || !empty($company) || !empty($gender) || !empty($todoSearch) || !empty($filteredbusinessValue) || !empty($filteredDesignation) || !empty($networkSearch) || !empty($minValue) || !empty($maxValue))
         {
-          // echo "sdfsd"; die; 
-          if(empty($tagData))
-          {
-            $tagData = "''";
-          }
+            // echo "sdfsd"; die;
+            if (empty($tagData))
+            {
+                $tagData = "''";
+            }
 
-          if(empty($company))
-           {
-              $company = "''";
-           }
+            if (empty($company))
+            {
+                $company = "''";
+            }
 
-          if(empty($filteredbusinessValue))
-           {
-              $filteredbusinessValue = "''";
-           }
+            if (empty($filteredbusinessValue))
+            {
+                $filteredbusinessValue = "''";
+            }
 
-           if(empty($filteredDesignation)){
-              $filteredDesignation = "''";
-           }
+            if (empty($filteredDesignation))
+            {
+                $filteredDesignation = "''";
+            }
 
-           $minValue = !empty($minValue)?$minValue:'0';
-           $maxValue = !empty($maxValue)?$maxValue:'10000000';
-          
-           // if(!empty($minValue) && !empty($maxValue)){
-           //      $age = ""
-           // }
-           
+            $minValue = !empty($minValue) ? $minValue : '0';
+            $maxValue = !empty($maxValue) ? $maxValue : '10000000';
+
+            // if(!empty($minValue) && !empty($maxValue)){
+            //      $age = ""
+            // }
+            
 
             return "OR First_Name like '$searchName' or Name like '$lastSearch' or Tag1 IN ($tagData) or Tag2 IN ($tagData) or Tag3 IN ($tagData) or Tag4 IN ($tagData) or Tag5 IN ($tagData) or Tag6 IN ($tagData) or Tag7 IN ($tagData) or Tag6 IN ($tagData) or `Group` like '$groupNameSearch' or Job1_Company IN ($company) or `Business line` IN ($filteredbusinessValue) or Gender like '$gender' or  `To Do` LIKE '$todoSearch' or `Job1_Company` LIKE '$functionData' or Job1_Company IN ($filteredDesignation) or Network LIKE '$networkSearch' and Age BETWEEN $minValue AND $maxValue ";
         }
@@ -285,8 +280,8 @@ class AjaxController extends Controller
                 $functionOrder = '';
             }
 
-            $concatinateOrder = $firstNameOrder . $lastNameOrder . $tagFilterOrder . $networkOrder.$functionOrder;
-            $filteredOrderedValue = ltrim(trim($concatinateOrder) , ","); 
+            $concatinateOrder = $firstNameOrder . $lastNameOrder . $tagFilterOrder . $networkOrder . $functionOrder;
+            $filteredOrderedValue = ltrim(trim($concatinateOrder) , ",");
             return "order by $filteredOrderedValue";
 
         }
@@ -390,8 +385,9 @@ class AjaxController extends Controller
         }
         else
         {
-             return false; 
+            return false;
             // return "''";
+            
         }
     }
 
@@ -424,8 +420,9 @@ class AjaxController extends Controller
      */
     function mergedSearchData($selectBoxData, $searchBoxData)
     {
-       
-       if(!empty($selectBoxData) || !empty($searchBoxData)){
+
+        if (!empty($selectBoxData) || !empty($searchBoxData))
+        {
             $arrayInfo = array();
             if (!empty($selectBoxData))
             {
@@ -435,7 +432,6 @@ class AjaxController extends Controller
                 }
             }
 
-
             $searchedArray = array(
                 $searchBoxData
             );
@@ -443,10 +439,11 @@ class AjaxController extends Controller
             $finalArray = array_merge($searchedArray, $arrayInfo);
 
             return $this->arrayToStringConversion($finalArray);
-       }
-       else{
-          return false; 
-       }
+        }
+        else
+        {
+            return false;
+        }
 
     }
 
@@ -478,26 +475,24 @@ class AjaxController extends Controller
     }
 
     /**
-     * 
-    check if word contains letters or alphabeds
+     *
+     check if word contains letters or alphabeds
      *
      */
 
-    function checkValidString($string){
-       
-       if (preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $string)) // '/[^a-z\d]/i' should also work.
+    function checkValidString($string)
+    {
+
+        if (preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $string)) // '/[^a-z\d]/i' should also work.
+        
         {
-          return $string;
+            return $string;
         }
         else
         {
-          return false;
+            return false;
         }
     }
-
-
-
-
 
 }
 

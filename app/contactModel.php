@@ -57,7 +57,7 @@ class contactModel extends Model
         }
 
         $sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $finalQueryValue LIMIT 50 OFFSET $offsetValue";
-        // var_dump($sqlQuery); die;
+        
         return DB::select(DB::raw($sqlQuery));
 
     }

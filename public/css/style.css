@@ -564,6 +564,7 @@
   text-align: center;
   cursor: pointer;
 }
+
 .g_wrapper footer{
   position: fixed;
   bottom: 0;
@@ -1038,3 +1039,54 @@ border: 1px solid #ddd;
    height: 3.5rem;
    color: red;
  }
+
+
+ .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 0px solid #d3d3d3 !important;
+    background: #fff url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x !important;
+    border-radius: 50px !important;
+    position: absolute !important;
+    height: 24px !important;
+    width: 24px !important;
+    color: #555555 !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4) !important;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -7px !important;
+    margin-left: -.6em !important;
+}
+.ui-widget-content {
+    color: #222222 !important;
+    background: #e6e6e6 !important;
+    border:0px !important;
+    border-radius: 50px !important;
+}
+.ui-widget-header {
+    border: 0px !important;
+    background: #5cc3ec !important ;
+    color: #222222 !important;
+    font-weight: bold !important;
+}
+ .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default:focus{
+  outline:0 !important;
+  }
+  .type-1{
+    position: relative !important;
+  }
+  .number-range{
+    position: absolute !important;
+    margin-left: -11px !important;
+    top: -39px !important;
+    z-index: 3;
+    background-color: #1ABC9C !important;
+    color: #fff !important;
+    width: 61px !important;
+    border: 0px !important;
+    height: 30px !important;
+    border-radius: 28px !important;
+    -webkit-border-radius: 28px !important;
+    align-items: center !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }

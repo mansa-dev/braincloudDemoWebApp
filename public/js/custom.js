@@ -51,9 +51,9 @@ var Filters = {
 				companyTileDetails = [],
 				selectedData = [];
 
-            $(".custom_site_loader").show();
-            
-            $('.filter_check_box:checkbox:checked').each(function () {
+			$(".custom_site_loader").show();
+
+			$('.filter_check_box:checkbox:checked').each(function () {
 				designation.push(this.id);
 			});
 
@@ -122,7 +122,7 @@ var Filters = {
 			var id = 'append_grid_view',
 				requestUrl = 'loadNameFilter',
 				view = 'load_contact';
-			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter, lastNameOrderFilter, tagOrderFilter, view, tag_filter_search, groupNameSearch, companyTileDetails, businessLine, networkOrder, gender, todoSearch, ageOrderFilter, minAgeValue, maxAgeValue,functionFilterValue,designation );
+			this_.CommonFilterAjax(nameFilterValue, searchData_, zoomLevel, selectedData, functionsearchData_, gridSelectedData, id, requestUrl, lastNameSearchFilter, lastNameOrderFilter, tagOrderFilter, view, tag_filter_search, groupNameSearch, companyTileDetails, businessLine, networkOrder, gender, todoSearch, ageOrderFilter, minAgeValue, maxAgeValue, functionFilterValue, designation);
 
 			var id = 'list_view_table_body',
 				requestUrl = 'loadNameFilterData',
@@ -165,7 +165,7 @@ var Filters = {
 			},
 			dataType: 'html',
 			success: function (html) {
-                $(".custom_site_loader").hide();
+				$(".custom_site_loader").hide();
 				$('#' + id).empty();
 				$('#' + id).append(html);
 			}
@@ -190,17 +190,23 @@ $(document).ready(function () {
 	});
 
 	//function to change the age range filter data
-	$("#age_range").click(function () {
-		var minRange = $("#value_age_min").text();
+	$("#slider-distance").click(function () {
+
+		var minRange = $("input[name='min_price']").val();
+		var maxRange = $("input[name='max_price']").val();
+		// alert(minRange);
+		// alert(minRange); 
 		$("#age_filter_search__").val(minRange);
+		$("#age_filter_search_").val(maxRange);
+
 	});
 
 
 	//function to change the age range filter data
-	$("#age_range_max").click(function () {
-		var minRange = $("#value_age_max").text();
-		$("#age_filter_search_").val(minRange);
-	});
+	// $("#age_range_max").click(function () {
+	// 	var minRange = $("#value_age_max").text();
+	// 	$("#age_filter_search_").val(minRange);
+	// });
 
 	// getElementById('grid_view_show_more').removeAttribute("style")
 
@@ -242,7 +248,7 @@ $(document).ready(function () {
 	$(document).on('click', '.show_more', function () {
 
 		var id = $(this).attr('id');
-        $(".custom_site_loader").show();
+		$(".custom_site_loader").show();
 		$("#myrange").empty();
 
 		$.ajax({
@@ -290,32 +296,31 @@ $(document).ready(function () {
 
 		//variables for the filters
 
-			var nameFilterValue = $('input[name="name_filter_radio"]:checked').val(),
-				searchData_ = $("#name_filter_search").val(),
-				zoomLevel = $("#myrange").val(),
-				functionFilterValue = $('input[name="function_"]:checked').val(),
-				functionsearchData_ = $("#function_filter_search").val(),
-				lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
-				lastNameSearchFilter = $('#last_name_filter_search').val(),
-				clickedId = $(".li_dropdown").attr('id'),
-				tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
-				tag_filter_search = $('#tag_filter_search').val(),
-				groupNameSearch = $("#group_name_filter_search").val(),
-				networkOrder = $('#network_search').val(),
-				gender = $('input[name="gender"]:checked').val(),
-				ageOrderFilter = $('input[name="age_filter_radio"]:checked').val(),
-				minAgeValue = $("#age_filter_search__").val(),
-				maxAgeValue = $("#age_filter_search_").val(),
-				id = $(this).attr('id'),
-				designation = [],
+		var nameFilterValue = $('input[name="name_filter_radio"]:checked').val(),
+			searchData_ = $("#name_filter_search").val(),
+			zoomLevel = $("#myrange").val(),
+			functionFilterValue = $('input[name="function_"]:checked').val(),
+			functionsearchData_ = $("#function_filter_search").val(),
+			lastNameOrderFilter = $('input[name="asc_name_filter"]:checked').val(),
+			lastNameSearchFilter = $('#last_name_filter_search').val(),
+			clickedId = $(".li_dropdown").attr('id'),
+			tagOrderFilter = $('input[name="name_filter_order"]:checked').val(),
+			tag_filter_search = $('#tag_filter_search').val(),
+			groupNameSearch = $("#group_name_filter_search").val(),
+			networkOrder = $('#network_search').val(),
+			gender = $('input[name="gender"]:checked').val(),
+			ageOrderFilter = $('input[name="age_filter_radio"]:checked').val(),
+			minAgeValue = $("#age_filter_search__").val(),
+			maxAgeValue = $("#age_filter_search_").val(),
+			id = $(this).attr('id'),
+			designation = [],
 
-				todoSearch = $('input[name="todo_list_1"]:checked').val(),
-				businessLine = [],
-				companyTileDetails = [],
-				selectedData = [];
-           
+			todoSearch = $('input[name="todo_list_1"]:checked').val(),
+			businessLine = [],
+			companyTileDetails = [],
+			selectedData = [];
 
-          
+
 		$('.same_slected_list').each(function () {
 			selectedData.push(this.id);
 		});
@@ -332,7 +337,7 @@ $(document).ready(function () {
 			maxAgeValue = 10000;
 		}
 
-        $(".custom_site_loader").show();
+		$(".custom_site_loader").show();
 
 		$('.company_tile_details:checkbox:checked').each(function () {
 			companyTileDetails.push(this.id);
@@ -497,7 +502,7 @@ $(document).ready(function () {
 		$('div').removeClass('same_slected_list');
 	});
 
-     /* for last name dropdown clear functionlity*/
+	/* for last name dropdown clear functionlity*/
 	$('#clearBtn_last_name').click(function () {
 
 		$('#last_name_filter_search').val('');
@@ -534,7 +539,7 @@ $(document).ready(function () {
 		});
 	});
 
-		/* for Company clear functionlity*/
+	/* for Company clear functionlity*/
 	$('#clearBtn_line').click(function () {
 
 		$('.business_tile_details').each(function () {
@@ -542,7 +547,6 @@ $(document).ready(function () {
 		});
 	});
 
-	
 
 	/* for function dropdown clear functionlity */
 
@@ -562,7 +566,7 @@ $(document).ready(function () {
 
 	$('#clearBtn_network').click(function () {
 
-        var search = $('#network_search').val('');
+		var search = $('#network_search').val('');
 
 	});
 
@@ -575,7 +579,7 @@ $(document).ready(function () {
 		});
 
 	});
-	
+
 	/* for gender dropdown clear functionlity */
 
 	$('#clr_btn').click(function () {
@@ -585,7 +589,7 @@ $(document).ready(function () {
 		});
 
 	});
-	
+
 	/* for age dropdown clear functionlity */
 
 	$('#clear_btn_age').click(function () {
@@ -594,8 +598,8 @@ $(document).ready(function () {
 			this.checked = false;
 		});
 
-		 $('#age_filter_search__').val('');
-		 $('#age_filter_search_').val('');
+		$('#age_filter_search__').val('');
+		$('#age_filter_search_').val('');
 
 	});
 
@@ -630,7 +634,7 @@ $(document).ready(function () {
 		$(this).parent().remove();
 	});
 
-		// Remove tag filter with cross icon
+	// Remove tag filter with cross icon
 	$(document).on("click", ".select_unselect_last_name .same_slected_list i", function () {
 		$(this).parent().remove();
 	});
@@ -639,7 +643,7 @@ $(document).ready(function () {
 	$('#smartSearch').keyup(function () {
 		var search = $('#smartSearch').val();
 		$.ajax({
-			url: base_url +'smart',
+			url: base_url + 'smart',
 			data: {
 				search: search
 			},
@@ -655,12 +659,11 @@ $(document).ready(function () {
 				})
 
 				$('#result').html(html);
-				
-				if($('#smartSearch').val().length == 0)
-				{
 
-				$('#result').html('');
-				} 
+				if ($('#smartSearch').val().length == 0) {
+
+					$('#result').html('');
+				}
 			}
 		});
 	});
@@ -706,6 +709,21 @@ $(document).ready(function () {
 			}
 		});
 	});
+
+
+	$("#slider-distance").slider({
+		range: true,
+		min: 0,
+		max: 100000,
+		values: [0, 1000],
+		slide: function (event, ui) {
+			$("#amount").html("$" + ui.values[0] + " - $" + ui.values[1]);
+			$("#min").val(ui.values[0]);
+			$("#max").val(ui.values[1]);
+		}
+	});
+	$("#amount").html("$" + $("#slider-distance").slider("values", 0) +
+		" - $" + $("#slider-distance").slider("values", 1));
 
 
 	$("#smartSearch").bind('keypress', function (e) {
