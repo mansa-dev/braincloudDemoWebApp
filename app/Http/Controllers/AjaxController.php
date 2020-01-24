@@ -157,7 +157,7 @@ class AjaxController extends Controller
       // echo $functionData. $lastSearch.$searchName.$tagData.$groupNameSearch.$company.$gender.$todoSearch; die;
      
          $tagData = $this->checkValidString($tagData);
-         $company = $this->checkValidString($company);
+        // $company = $this->checkValidString($company);
 
         if (!empty($functionData) || !empty($lastSearch) || !empty($searchName) || !empty($tagData) || !empty($groupNameSearch) || !empty($company) || !empty($gender) || !empty($todoSearch))
         {

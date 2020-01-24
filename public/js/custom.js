@@ -3,7 +3,7 @@ $(document).ready(function () {
 });
 
 
-var base_url = window.location.href;
+var base_url = window.location.href + 'index.php/';
 
 var App_ = App_ || {
 
@@ -551,7 +551,7 @@ $(document).ready(function () {
 	$('#smartSearch').keyup(function () {
 		var search = $('#smartSearch').val();
 		$.ajax({
-			url: '/smart',
+			url: base_url +'smart',
 			data: {
 				search: search
 			},
@@ -567,6 +567,12 @@ $(document).ready(function () {
 				})
 
 				$('#result').html(html);
+				
+				if($('#smartSearch').val().length == 0)
+				{
+
+				$('#result').html('');
+				} 
 			}
 		});
 	});
@@ -581,7 +587,7 @@ $(document).ready(function () {
 
 		$.ajax({
 			type: 'GET',
-			url: 'gettingresult',
+			url: base_url + 'gettingresult',
 			data: {
 				id: id,
 				view: 'load_contact',
@@ -596,7 +602,7 @@ $(document).ready(function () {
 
 				$.ajax({
 					type: 'GET',
-					url: 'gettingresult',
+					url: base_url + 'gettingresult',
 					data: {
 						id: id,
 						view: 'load_contact_grid',
@@ -613,17 +619,7 @@ $(document).ready(function () {
 		});
 	});
 
-	// $(document).on('click','#smartSearchBtn',function(){
-	// 	 var search = $('#smartSearch').val();
-	//      $.ajax({
-	//          url: '/smart',
-	//          data:{search:search},
-	//          success:function(data)
-	//          {
-	//          	 console.log(data);
-	//          }
-	//      });
-	// });  
+
 	$("#smartSearch").bind('keypress', function (e) {
 		if (e.which === 13) {
 			CommonSmartSearch()
@@ -640,7 +636,7 @@ function CommonSmartSearch() {
 
 	$.ajax({
 		type: 'GET',
-		url: 'gettingresult',
+		url: base_url + 'gettingresult',
 		data: {
 			id: id,
 			view: 'load_contact',
@@ -655,7 +651,7 @@ function CommonSmartSearch() {
 
 			$.ajax({
 				type: 'GET',
-				url: 'gettingresult',
+				url: base_url + 'gettingresult',
 				data: {
 					id: id,
 					view: 'load_contact_grid',

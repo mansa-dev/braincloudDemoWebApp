@@ -123,10 +123,10 @@
   margin-bottom: 10px;
 }
 .g_wrapper .navbar_coustom_area .top_all_btns li{
-  padding-left: 15px;
+  padding-left: 10px;
 }
 .g_wrapper .navbar_coustom_area .top_all_btns li {
-  font-size: 14px;
+  font-size: 13px;
 }
 .g_wrapper .navbar_coustom_area .top_all_btns li.new_content a  {
   background-image: linear-gradient(to left, #8490f6, #56cdeb);
@@ -175,10 +175,12 @@
 }
 .g_wrapper .navbar_coustom_area .top_tabs_area .nav-tabs .nav-link {
   color: #000;
-  font-size: 14px;
+  font-size: 13px;
+    padding: .5rem 0.6rem;
 }
+
 .g_wrapper .navbar_coustom_area .top_tabs_area .nav-tabs .nav-item{
-  padding: 0 7px;
+  padding: 0 0px;
 }
 .g_wrapper .navbar_coustom_area .top_tabs_area .nav-tabs .nav-link.active{
   border-bottom: 2px solid #32cfe3;
@@ -264,7 +266,7 @@
 }
 .g_wrapper .select_tabs_area .tabs_li> li{
   position: relative;
-  font-size: 15px;
+  font-size: 13px;
   color: #444;
   cursor: pointer;
 }
@@ -973,7 +975,7 @@ border: 1px solid #ddd;
 .g_wrapper .navbar_coustom_area .user_profie_area #smartSearch {
     border: 1px solid #ccc;
     border-radius: 2px;
-    height: 33px;
+    height: 32px;
     padding: 10px 5px;
     font-size: 15px;
     font-weight: normal;

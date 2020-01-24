@@ -56,7 +56,8 @@ class contactModel extends Model
             $finalQueryValue = $where . $filteredSubQuery;
         }
 
-        $sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $finalQueryValue LIMIT 50 OFFSET $offsetValue"; 
+        $sqlQuery = "SELECT * FROM dataset_contacts_3_Feuil1 $finalQueryValue LIMIT 50 OFFSET $offsetValue";
+        // var_dump($sqlQuery); die;
         return DB::select(DB::raw($sqlQuery));
 
     }
@@ -68,7 +69,7 @@ class contactModel extends Model
 
     public static function smartSearch($search)
     {
-        $sql = "SELECT * FROM dataset_contacts_3_Feuil1 WHERE Name LIKE '%" . $search . "%' OR 
+        $sql = "SELECT * FROM dataset_contacts_3_Feuil1 WHERE Name LIKE '%" . $search . "%' OR
        First_Name LIKE  '%" . $search . "%' OR Tag1 LIKE  '%" . $search . "%' OR Tag2 LIKE '%" . $search . "%' OR `Group` LIKE '%" . $search . "%' LIMIT 0, 10";
         return DB::select(DB::raw($sql));
     }
@@ -85,8 +86,7 @@ class contactModel extends Model
 
         // return DB::table('dataset_contacts_3_Feuil1')->where('id',$id)->get();
         // return DB::select(DB::raw($sql));
-        
+
     }
 
 }
-
