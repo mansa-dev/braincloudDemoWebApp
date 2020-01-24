@@ -1014,3 +1014,27 @@ border: 1px solid #ddd;
   background: #f0f0f0;
 }
 
+.g_wrapper .select_tabs_area ul li .li_dropdown .select_unselect_last_name .same_slected_list {
+    padding: 6px 12px;
+    border: 0px;
+    border-radius: 6px;
+    color: #333;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    border: 1px solid #ddd;
+}
+ .custom_site_loader{
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   z-index: 99;
+ }
+ .custom_site_loader .spinner-border{
+   width: 3.5rem;
+   height: 3.5rem;
+   color: red;
+ }

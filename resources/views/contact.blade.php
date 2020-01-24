@@ -4,16 +4,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="csrf-token" content="{{ csrf_token() }}" />
-      <link rel="stylesheet" href="{{ asset('/public/css/bootstrap.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('/public/css/common.css') }}">
-      <link rel="stylesheet" href="{{ asset('/public/css/style.css') }}">
+      <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('/css/common.css') }}">
+      <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script type="text/javascript" src="{{ asset('/public/js/jquery.min.js') }}"></script>
-      <script src="{{ asset('/public/js/popper.min.js') }}"></script>
-      <script src="{{ asset('/public/js/bootstrap.min.js') }}"></script>
-      <script src="{{ asset('/public/js/custom.js?v=123') }}"></script>
+      <script type="text/javascript" src="{{ asset('/js/jquery.min.js') }}"></script>
+      <script src="{{ asset('/js/popper.min.js') }}"></script>
+      <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+      <script src="{{ asset('/js/custom.js?v=123') }}"></script>
    </head>
    <body>
+     <div class="custom_site_loader" style="display: none;">
+       <span class="spinner-border" ></span>
+     </div>
       <div class="g_wrapper">
       <div class="navbar_coustom_area d-flex align-items-center">
          <div class="site_navbar_logo">
@@ -192,7 +195,7 @@
                         </div>
                         <div class="apply_clear_btns mt-3">
                            <button class="apply_btn filters_apply" id="name_filters">Apply</button>
-                           <button class="clear_btn" id="clearBtn_name">Clear All</button>
+                           <button class="clear_btn" id="clearBtn_last_name">Clear All</button>
                         </div>
                      </div>
                   </li>
@@ -240,7 +243,7 @@
                         </div>
                         <div class="apply_clear_btns mt-3">
                            <button class="apply_btn filters_apply" id="name_filters">Apply</button>
-                           <button class="clear_btn" id="clearBtn_name">Clear All</button>
+                           <button class="clear_btn" id="clearBtn_tag">Clear All</button>
                         </div>
                      </div>
                   </li>
@@ -259,7 +262,7 @@
                         <!-- for showing error of search dropdown -->
                         <div class="apply_clear_btns mt-3">
                            <button class="apply_btn filters_apply" id="name_filters">Apply</button>
-                           <button class="clear_btn" id="clearBtn_name">Clear All</button>
+                           <button class="clear_btn" id="clearBtn_group">Clear All</button>
                         </div>
                      </div>
                   </li>
@@ -296,7 +299,7 @@
                            <!-- for showing error of search dropdown -->
                            <div class="apply_clear_btns mt-3">
                               <button class="apply_btn filters_apply" id="function_filter">Apply</button>
-                              <button class="clear_btn" id="clearBtn_function">Clear All</button>
+                              <button class="clear_btn" id="clearBtn_company">Clear All</button>
                            </div>
                         </div>
                      </div>
@@ -331,7 +334,7 @@
                               <!--     <button class="apply_btn filters_apply" id="function_filter">Apply</button>
                                  <button class="clear_btn">Clear All</button> -->
                               <button class="apply_btn filters_apply" id="function_filter">Apply</button>
-                              <button class="clear_btn" id="clearBtn_function">Clear All</button>
+                              <button class="clear_btn" id="clearBtn_line">Clear All</button>
                            </div>
                         </div>
                      </div>
@@ -394,17 +397,22 @@
                   <div class="li_dropdown" id="network_li_dropdown">
                   <div class="acending_decending d-flex mb-3">
                   <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="network_filter" value="1" name="network_filter">
-                  <label class="custom-control-label" for="network_filter">A-Z</label>
+                     <!-- <input type="text" class="form-control" id="network_search" placeholder="Search"> -->
+                     <div class="form-group has-search">
+                     <span class="fa fa-search form-control-feedback"></span>
+                     <input type="text" class="form-control" id="network_search" placeholder="Search">
+                     </div>
+<!--                   <input type="radio" class="custom-control-input" id="network_filter" value="1" name="network_filter">
+                  <label class="custom-control-label" for="network_filter">A-Z</label> -->
                   </div>
-                  <div class="custom-control custom-radio ml-3">
+<!--                   <div class="custom-control custom-radio ml-3">
                   <input type="radio" class="custom-control-input" id="network_filter_data" value="2" name="network_filter">
                   <label class="custom-control-label" for="network_filter_data">Z-A</label>
-                  </div>
+                  </div> -->
                   </div>
                   <div class="apply_clear_btns mt-3">
                   <button class="apply_btn filters_apply" id="gender_filter">Apply</button>
-                  <button class="clear_btn" id="clearBtn_gender">Clear All</button>
+                  <button class="clear_btn" id="clearBtn_network">Clear All</button>
                   </div>
                   </div>
                   </li>
@@ -481,23 +489,26 @@
                   </div>
                   <div class="apply_clear_btns mt-3">
                   <button class="apply_btn filters_apply" id="name_filters">Apply</button>
-                  <button class="clear_btn">Clear All</button>
+                  <button class="clear_btn" id="clear_btn_age">Clear All</button>
                   </div>
                   </div>
                   </li>
                   <li><span class="b_s white">ToDo
                   <i class="fa fa-angle-down"></i></span>
-                  <div class="li_dropdown" id="today_li_dropdown">
-                  <div class="form-group has-search">
-                  <span class="fa fa-search form-control-feedback"></span>
-                  <input type="text" class="form-control" id="todo_search" placeholder="Search">
+                  <div class="li_dropdown right-dropdowns" id="today_li_dropdown">
+                  <div class="acending_decending d-flex mb-3">
+                  <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="todo_1" name="todo_list_1" value="Non">
+                  <label class="custom-control-label" for="todo_1">Non</label>
                   </div>
-                  <!-- for showing error of search dropdown -->
-                  <div id="errorName"></div>
-                  <!-- for showing error of search dropdown -->
+                  <div class="custom-control custom-radio ml-3">
+                  <input type="radio" class="custom-control-input" id="todo_2" name="todo_list_1" value="Oui">
+                  <label class="custom-control-label" for="todo_2">Oui</label>
+                  </div>
+                  </div>
                   <div class="apply_clear_btns mt-3">
                   <button class="apply_btn filters_apply" id="name_filters">Apply</button>
-                  <button class="clear_btn" id="clearBtn_name">Clear All</button>
+                  <button class="clear_btn" id="clr_btn">Clear All</button>
                   </div>
                   </div>
                   </li>
